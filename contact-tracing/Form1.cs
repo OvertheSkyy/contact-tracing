@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace contact_tracing
 {
-    public partial class Form1 : Form
+    public partial class exitButton : Form
     {
-        public Form1()
+        public exitButton()
         {
             InitializeComponent();
         }
@@ -34,5 +34,9 @@ namespace contact_tracing
 
         }
 
+        private void saveInfoButton_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
