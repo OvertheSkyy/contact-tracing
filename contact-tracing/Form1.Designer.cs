@@ -69,13 +69,15 @@
             this.boosterShotCheckBox3 = new System.Windows.Forms.CheckBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.saveInfoButton = new System.Windows.Forms.Button();
+            this.clearInfoButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // appName
             // 
             this.appName.AutoSize = true;
-            this.appName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.appName.Location = new System.Drawing.Point(44, 9);
+            this.appName.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.appName.Location = new System.Drawing.Point(9, 15);
             this.appName.Name = "appName";
             this.appName.Size = new System.Drawing.Size(432, 29);
             this.appName.TabIndex = 0;
@@ -456,11 +458,31 @@
             this.label19.Size = new System.Drawing.Size(0, 24);
             this.label19.TabIndex = 40;
             // 
+            // saveInfoButton
+            // 
+            this.saveInfoButton.Location = new System.Drawing.Point(20, 480);
+            this.saveInfoButton.Name = "saveInfoButton";
+            this.saveInfoButton.Size = new System.Drawing.Size(226, 28);
+            this.saveInfoButton.TabIndex = 42;
+            this.saveInfoButton.Text = "Save Info";
+            this.saveInfoButton.UseVisualStyleBackColor = true;
+            // 
+            // clearInfoButton
+            // 
+            this.clearInfoButton.Location = new System.Drawing.Point(251, 480);
+            this.clearInfoButton.Name = "clearInfoButton";
+            this.clearInfoButton.Size = new System.Drawing.Size(226, 28);
+            this.clearInfoButton.TabIndex = 43;
+            this.clearInfoButton.Text = "Clear Info";
+            this.clearInfoButton.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 476);
+            this.ClientSize = new System.Drawing.Size(502, 528);
+            this.Controls.Add(this.clearInfoButton);
+            this.Controls.Add(this.saveInfoButton);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.boosterShotCheckBox3);
@@ -553,6 +575,8 @@
         private System.Windows.Forms.CheckBox boosterShotCheckBox3;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button saveInfoButton;
+        private System.Windows.Forms.Button clearInfoButton;
     }
 }
 
