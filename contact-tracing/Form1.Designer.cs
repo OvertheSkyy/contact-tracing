@@ -447,6 +447,7 @@
             this.firstDoseYes.TabIndex = 55;
             this.firstDoseYes.Text = "Yes";
             this.firstDoseYes.UseVisualStyleBackColor = true;
+            this.firstDoseYes.CheckedChanged += new System.EventHandler(this.firstDoseYes_CheckedChanged);
             // 
             // secondDoseYes
             // 
@@ -457,6 +458,7 @@
             this.secondDoseYes.TabIndex = 56;
             this.secondDoseYes.Text = "Yes";
             this.secondDoseYes.UseVisualStyleBackColor = true;
+            this.secondDoseYes.CheckedChanged += new System.EventHandler(this.secondDoseYes_CheckedChanged);
             // 
             // firstDoseNo
             // 
@@ -467,6 +469,7 @@
             this.firstDoseNo.TabIndex = 57;
             this.firstDoseNo.Text = "No";
             this.firstDoseNo.UseVisualStyleBackColor = true;
+            this.firstDoseNo.CheckedChanged += new System.EventHandler(this.firstDoseNo_CheckedChanged);
             // 
             // secondDoseNo
             // 
@@ -477,6 +480,7 @@
             this.secondDoseNo.TabIndex = 58;
             this.secondDoseNo.Text = "No";
             this.secondDoseNo.UseVisualStyleBackColor = true;
+            this.secondDoseNo.CheckedChanged += new System.EventHandler(this.secondDoseNo_CheckedChanged);
             // 
             // answerTextBox3
             // 
@@ -495,6 +499,7 @@
             this.checkShowBox1.TabIndex = 60;
             this.checkShowBox1.Text = "1";
             this.checkShowBox1.UseVisualStyleBackColor = true;
+            this.checkShowBox1.CheckedChanged += new System.EventHandler(this.checkShowBox1_CheckedChanged);
             // 
             // checkShotBox2
             // 
@@ -505,6 +510,7 @@
             this.checkShotBox2.TabIndex = 61;
             this.checkShotBox2.Text = "2";
             this.checkShotBox2.UseVisualStyleBackColor = true;
+            this.checkShotBox2.CheckedChanged += new System.EventHandler(this.checkShotBox2_CheckedChanged);
             // 
             // checkShotBox3
             // 
@@ -515,6 +521,7 @@
             this.checkShotBox3.TabIndex = 62;
             this.checkShotBox3.Text = "3";
             this.checkShotBox3.UseVisualStyleBackColor = true;
+            this.checkShotBox3.CheckedChanged += new System.EventHandler(this.checkShotBox3_CheckedChanged);
             // 
             // exitButton
             // 

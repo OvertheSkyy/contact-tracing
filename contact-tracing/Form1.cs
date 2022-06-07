@@ -71,5 +71,40 @@ namespace contact_tracing
         {
 
         }
+
+        private void firstDoseYes_CheckedChanged(object sender, EventArgs e)
+        {
+            answerTextBox1.Text = "Yes";
+        }
+
+        private void firstDoseNo_CheckedChanged(object sender, EventArgs e)
+        {
+            answerTextBox1.Text = "No";
+        }
+
+        private void secondDoseYes_CheckedChanged(object sender, EventArgs e)
+        {
+            answerTextBox2.Text = "Yes";
+        }
+
+        private void secondDoseNo_CheckedChanged(object sender, EventArgs e)
+        {
+            answerTextBox2.Text = "No";
+        }
+
+        private void checkShowBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            answerTextBox3.Text = "1";
+        }
+
+        private void checkShotBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            answerTextBox3.Text = "2";
+        }
+
+        private void checkShotBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            answerTextBox3.Text = "3";
+        }
     }
 }
