@@ -9,3 +9,10 @@ E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tra
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tracing.exe
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tracing.pdb
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact_tracing.exitButton.resources
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\Interop.MediaPlayer.dll
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\Interop.WMPLib.dll
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\AxInterop.WMPLib.dll
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tracing.csproj.ResolveComReference.cache
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact_tracing.Form2.resources
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\Interop.WMPLib.dll
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\AxInterop.WMPLib.dll

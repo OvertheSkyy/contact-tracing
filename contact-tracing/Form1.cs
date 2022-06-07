@@ -13,7 +13,6 @@ namespace contact_tracing
 {
     public partial class exitButton : Form
     {
-        bool click = true;
 
         public exitButton()
         {
@@ -28,122 +27,31 @@ namespace contact_tracing
         {
 
         }
-        private void nameLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void lastNameLabel_Click(object sender, EventArgs e)
-        {
-
-        }
+    
         private void label3_Click(object sender, EventArgs e)
         {
 
 
         }
 
-        private void firstDoseYes_CheckedChanged(object sender, EventArgs e)
-        {
-            answerTextBox1.Text = "Yes";
-        }
-
-        private void firstDoseNo_CheckedChanged(object sender, EventArgs e)
-        {
-            answerTextBox1.Text = "No";
-        }
-
-        private void secondDoseYes_CheckedChanged(object sender, EventArgs e)
-        {
-            answerTextBox2.Text = "Yes";
-        }
-
-        private void secondDoseNo_CheckedChanged(object sender, EventArgs e)
-        {
-            answerTextBox2.Text = "No";
-        }
-
-        private void checkShotBox0_CheckedChanged(object sender, EventArgs e)
-        {
-            answerTextBox3.Text = "0";
-        }
-
-        private void checkShowBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            answerTextBox3.Text = "1";
-        }
-
-        private void checkShotBox2_CheckedChanged(object sender, EventArgs e)
-        {
-            answerTextBox3.Text = "2";
-        }
-
-        private void checkShotBox3_CheckedChanged(object sender, EventArgs e)
-        {
-            answerTextBox3.Text = "3";
-        }
-
-        private void saveInfoButton_Click(object sender, EventArgs e)
-        {
-
-            StreamWriter file = new StreamWriter(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\contacts.txt", true);
-
-            file.WriteLine(personalInfoLabel.Text);
-            file.WriteLine(nameLabel.Text + " " + lastNameTextBox.Text + " " + firstNameTextBox.Text + " " + middleInitialTextBox.Text);
-            file.WriteLine(addressLabel.Text + " " + addressTextBox.Text);
-            file.WriteLine(dateOfBirthLabel.Text + " " + dateOfBirthTextBox.Text);
-            file.WriteLine(ageLabel.Text + " " + ageTextBox.Text);
-            file.WriteLine(sexLabel.Text + " " + sexTextBox.Text);
-            file.WriteLine(contactNoLabel.Text + " " + contactNoTextBox.Text);
-            file.WriteLine(healthFormLabel.Text);
-            file.WriteLine(firstDoseLabel.Text + " " + answerTextBox1.Text);
-            file.WriteLine(firstDoseDate.Text + " " + firstDoseDateTextBox.Text);
-            file.WriteLine(vaccineBrandLabel1.Text + " " + vaccineBrandTextBox1.Text);
-            file.WriteLine(secondDoseLabel.Text + " " + answerTextBox2.Text);
-            file.WriteLine(secondDoseDate.Text + " " + secondDoseDateTextBox.Text);
-            file.WriteLine(vaccineBrandLabel2.Text + " " + vaccineBrandTextBox2.Text);
-            file.WriteLine(boosterShotsLabel.Text + " " + answerTextBox3.Text);
-
-
-
-            file.Close();
-
-        }
-
-        private void clearInfoButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                firstDoseYes.Checked = false;
-                firstDoseNo.Checked = false;
-                secondDoseYes.Checked = false;
-                secondDoseNo.Checked = false;
-                checkShotBox0.Checked = false;
-                checkShotBox1.Checked = false;
-                checkShotBox2.Checked = false; 
-                checkShotBox3.Checked = false;
-
-                lastNameTextBox.Text = "";
-                firstNameTextBox.Text = "";
-                middleInitialTextBox.Text = "";
-                addressTextBox.Text = "";
-                dateOfBirthTextBox.Text = "";
-                ageTextBox.Text = "";
-                sexTextBox.Text = "";
-                contactNoTextBox.Text = "";
-                answerTextBox1.Text = "";
-                firstDoseDateTextBox.Text = "";
-                vaccineBrandTextBox1.Text = "";
-                answerTextBox2.Text = "";
-                secondDoseDateTextBox.Text = "";
-                vaccineBrandTextBox2.Text = "";
-                answerTextBox3.Text = "";
-            }
-            catch { }
-        }
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
+        {
+          
+
+        }
+
+        private void playButton_Click(object sender, EventArgs e)
+        {
+            string openThis = "E:\\Desktop\\contact-tracing\\contact-tracing\\contact-tracing\\COVID.mp4";
+            showCovidPresent.Text = openThis;
+            axWindowsMediaPlayer1.URL = showCovidPresent.Text;
+            axWindowsMediaPlayer1.Ctlcontrols.play();
         }
     }
 }
