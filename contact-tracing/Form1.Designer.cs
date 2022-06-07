@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.appName = new System.Windows.Forms.Label();
-            this.nameLabel = new System.Windows.Forms.Label();
             this.lastNameLabel = new System.Windows.Forms.Label();
             this.firstNameLabel = new System.Windows.Forms.Label();
             this.middleInitialLabel = new System.Windows.Forms.Label();
@@ -50,11 +49,7 @@
             this.personalInfoLabel = new System.Windows.Forms.Label();
             this.healthFormLabel = new System.Windows.Forms.Label();
             this.firstDoseLabel = new System.Windows.Forms.Label();
-            this.yesCheckBox1 = new System.Windows.Forms.CheckBox();
-            this.noCheckBox1 = new System.Windows.Forms.CheckBox();
             this.secondDoseLabel = new System.Windows.Forms.Label();
-            this.yesCheckBox2 = new System.Windows.Forms.CheckBox();
-            this.noCheckBox2 = new System.Windows.Forms.CheckBox();
             this.firstDoseDate = new System.Windows.Forms.Label();
             this.firstDoseDateTextBox = new System.Windows.Forms.TextBox();
             this.vaccineBrandLabel1 = new System.Windows.Forms.Label();
@@ -64,14 +59,22 @@
             this.vaccineBrandLabel2 = new System.Windows.Forms.Label();
             this.vaccineBrandTextBox2 = new System.Windows.Forms.TextBox();
             this.boosterShotsLabel = new System.Windows.Forms.Label();
-            this.boosterShotCheckBox1 = new System.Windows.Forms.CheckBox();
-            this.boosterShotCheckBox2 = new System.Windows.Forms.CheckBox();
-            this.boosterShotCheckBox3 = new System.Windows.Forms.CheckBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.saveInfoButton = new System.Windows.Forms.Button();
             this.clearInfoButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.exitBtn = new System.Windows.Forms.Button();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.answerTextBox1 = new System.Windows.Forms.TextBox();
+            this.answerTextBox2 = new System.Windows.Forms.TextBox();
+            this.firstDoseYes = new System.Windows.Forms.CheckBox();
+            this.secondDoseYes = new System.Windows.Forms.CheckBox();
+            this.firstDoseNo = new System.Windows.Forms.CheckBox();
+            this.secondDoseNo = new System.Windows.Forms.CheckBox();
+            this.answerTextBox3 = new System.Windows.Forms.TextBox();
+            this.checkShowBox1 = new System.Windows.Forms.CheckBox();
+            this.checkShotBox2 = new System.Windows.Forms.CheckBox();
+            this.checkShotBox3 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // appName
@@ -84,16 +87,6 @@
             this.appName.TabIndex = 0;
             this.appName.Text = "COVID 19 - Health Contact Tracing App";
             this.appName.Click += new System.EventHandler(this.appName_Click);
-            // 
-            // nameLabel
-            // 
-            this.nameLabel.AutoSize = true;
-            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameLabel.Location = new System.Drawing.Point(12, 90);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(41, 13);
-            this.nameLabel.TabIndex = 1;
-            this.nameLabel.Text = "NAME:";
             // 
             // lastNameLabel
             // 
@@ -273,61 +266,21 @@
             // 
             this.firstDoseLabel.AutoSize = true;
             this.firstDoseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstDoseLabel.Location = new System.Drawing.Point(16, 280);
+            this.firstDoseLabel.Location = new System.Drawing.Point(10, 277);
             this.firstDoseLabel.Name = "firstDoseLabel";
             this.firstDoseLabel.Size = new System.Drawing.Size(92, 24);
             this.firstDoseLabel.TabIndex = 21;
             this.firstDoseLabel.Text = "1st Dose?";
             // 
-            // yesCheckBox1
-            // 
-            this.yesCheckBox1.AutoSize = true;
-            this.yesCheckBox1.Location = new System.Drawing.Point(128, 287);
-            this.yesCheckBox1.Name = "yesCheckBox1";
-            this.yesCheckBox1.Size = new System.Drawing.Size(44, 17);
-            this.yesCheckBox1.TabIndex = 22;
-            this.yesCheckBox1.Text = "Yes";
-            this.yesCheckBox1.UseVisualStyleBackColor = true;
-            // 
-            // noCheckBox1
-            // 
-            this.noCheckBox1.AutoSize = true;
-            this.noCheckBox1.Location = new System.Drawing.Point(190, 287);
-            this.noCheckBox1.Name = "noCheckBox1";
-            this.noCheckBox1.Size = new System.Drawing.Size(40, 17);
-            this.noCheckBox1.TabIndex = 23;
-            this.noCheckBox1.Text = "No";
-            this.noCheckBox1.UseVisualStyleBackColor = true;
-            // 
             // secondDoseLabel
             // 
             this.secondDoseLabel.AutoSize = true;
             this.secondDoseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.secondDoseLabel.Location = new System.Drawing.Point(16, 355);
+            this.secondDoseLabel.Location = new System.Drawing.Point(10, 355);
             this.secondDoseLabel.Name = "secondDoseLabel";
             this.secondDoseLabel.Size = new System.Drawing.Size(101, 24);
             this.secondDoseLabel.TabIndex = 24;
             this.secondDoseLabel.Text = "2nd Dose?";
-            // 
-            // yesCheckBox2
-            // 
-            this.yesCheckBox2.AutoSize = true;
-            this.yesCheckBox2.Location = new System.Drawing.Point(123, 362);
-            this.yesCheckBox2.Name = "yesCheckBox2";
-            this.yesCheckBox2.Size = new System.Drawing.Size(44, 17);
-            this.yesCheckBox2.TabIndex = 25;
-            this.yesCheckBox2.Text = "Yes";
-            this.yesCheckBox2.UseVisualStyleBackColor = true;
-            // 
-            // noCheckBox2
-            // 
-            this.noCheckBox2.AutoSize = true;
-            this.noCheckBox2.Location = new System.Drawing.Point(185, 362);
-            this.noCheckBox2.Name = "noCheckBox2";
-            this.noCheckBox2.Size = new System.Drawing.Size(40, 17);
-            this.noCheckBox2.TabIndex = 26;
-            this.noCheckBox2.Text = "No";
-            this.noCheckBox2.UseVisualStyleBackColor = true;
             // 
             // firstDoseDate
             // 
@@ -360,7 +313,7 @@
             // vaccineBrandTextBox1
             // 
             this.vaccineBrandTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vaccineBrandTextBox1.Location = new System.Drawing.Point(310, 318);
+            this.vaccineBrandTextBox1.Location = new System.Drawing.Point(307, 318);
             this.vaccineBrandTextBox1.Name = "vaccineBrandTextBox1";
             this.vaccineBrandTextBox1.Size = new System.Drawing.Size(166, 20);
             this.vaccineBrandTextBox1.TabIndex = 30;
@@ -396,7 +349,7 @@
             // vaccineBrandTextBox2
             // 
             this.vaccineBrandTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vaccineBrandTextBox2.Location = new System.Drawing.Point(310, 397);
+            this.vaccineBrandTextBox2.Location = new System.Drawing.Point(307, 397);
             this.vaccineBrandTextBox2.Name = "vaccineBrandTextBox2";
             this.vaccineBrandTextBox2.Size = new System.Drawing.Size(166, 20);
             this.vaccineBrandTextBox2.TabIndex = 34;
@@ -405,41 +358,11 @@
             // 
             this.boosterShotsLabel.AutoSize = true;
             this.boosterShotsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boosterShotsLabel.Location = new System.Drawing.Point(16, 432);
+            this.boosterShotsLabel.Location = new System.Drawing.Point(10, 432);
             this.boosterShotsLabel.Name = "boosterShotsLabel";
             this.boosterShotsLabel.Size = new System.Drawing.Size(136, 24);
             this.boosterShotsLabel.TabIndex = 35;
             this.boosterShotsLabel.Text = "Booster Shots?";
-            // 
-            // boosterShotCheckBox1
-            // 
-            this.boosterShotCheckBox1.AutoSize = true;
-            this.boosterShotCheckBox1.Location = new System.Drawing.Point(158, 439);
-            this.boosterShotCheckBox1.Name = "boosterShotCheckBox1";
-            this.boosterShotCheckBox1.Size = new System.Drawing.Size(32, 17);
-            this.boosterShotCheckBox1.TabIndex = 36;
-            this.boosterShotCheckBox1.Text = "1";
-            this.boosterShotCheckBox1.UseVisualStyleBackColor = true;
-            // 
-            // boosterShotCheckBox2
-            // 
-            this.boosterShotCheckBox2.AutoSize = true;
-            this.boosterShotCheckBox2.Location = new System.Drawing.Point(196, 439);
-            this.boosterShotCheckBox2.Name = "boosterShotCheckBox2";
-            this.boosterShotCheckBox2.Size = new System.Drawing.Size(32, 17);
-            this.boosterShotCheckBox2.TabIndex = 37;
-            this.boosterShotCheckBox2.Text = "2";
-            this.boosterShotCheckBox2.UseVisualStyleBackColor = true;
-            // 
-            // boosterShotCheckBox3
-            // 
-            this.boosterShotCheckBox3.AutoSize = true;
-            this.boosterShotCheckBox3.Location = new System.Drawing.Point(233, 439);
-            this.boosterShotCheckBox3.Name = "boosterShotCheckBox3";
-            this.boosterShotCheckBox3.Size = new System.Drawing.Size(32, 17);
-            this.boosterShotCheckBox3.TabIndex = 38;
-            this.boosterShotCheckBox3.Text = "3";
-            this.boosterShotCheckBox3.UseVisualStyleBackColor = true;
             // 
             // label18
             // 
@@ -477,29 +400,143 @@
             this.clearInfoButton.TabIndex = 43;
             this.clearInfoButton.Text = "Clear Info";
             this.clearInfoButton.UseVisualStyleBackColor = true;
+            this.clearInfoButton.Click += new System.EventHandler(this.clearInfoButton_Click);
             // 
-            // button1
+            // exitBtn
             // 
-            this.button1.Location = new System.Drawing.Point(447, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(43, 23);
-            this.button1.TabIndex = 44;
-            this.button1.Text = "Exit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.exitBtn.Location = new System.Drawing.Point(437, 21);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(40, 23);
+            this.exitBtn.TabIndex = 44;
+            this.exitBtn.Text = "Exit";
+            this.exitBtn.UseVisualStyleBackColor = true;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.Location = new System.Drawing.Point(11, 90);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(41, 13);
+            this.nameLabel.TabIndex = 45;
+            this.nameLabel.Text = "NAME:";
+            // 
+            // answerTextBox1
+            // 
+            this.answerTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.answerTextBox1.Location = new System.Drawing.Point(229, 282);
+            this.answerTextBox1.Name = "answerTextBox1";
+            this.answerTextBox1.Size = new System.Drawing.Size(87, 20);
+            this.answerTextBox1.TabIndex = 53;
+            // 
+            // answerTextBox2
+            // 
+            this.answerTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.answerTextBox2.Location = new System.Drawing.Point(228, 361);
+            this.answerTextBox2.Name = "answerTextBox2";
+            this.answerTextBox2.Size = new System.Drawing.Size(87, 20);
+            this.answerTextBox2.TabIndex = 54;
+            // 
+            // firstDoseYes
+            // 
+            this.firstDoseYes.AutoSize = true;
+            this.firstDoseYes.Location = new System.Drawing.Point(117, 284);
+            this.firstDoseYes.Name = "firstDoseYes";
+            this.firstDoseYes.Size = new System.Drawing.Size(44, 17);
+            this.firstDoseYes.TabIndex = 55;
+            this.firstDoseYes.Text = "Yes";
+            this.firstDoseYes.UseVisualStyleBackColor = true;
+            // 
+            // secondDoseYes
+            // 
+            this.secondDoseYes.AutoSize = true;
+            this.secondDoseYes.Location = new System.Drawing.Point(117, 361);
+            this.secondDoseYes.Name = "secondDoseYes";
+            this.secondDoseYes.Size = new System.Drawing.Size(44, 17);
+            this.secondDoseYes.TabIndex = 56;
+            this.secondDoseYes.Text = "Yes";
+            this.secondDoseYes.UseVisualStyleBackColor = true;
+            // 
+            // firstDoseNo
+            // 
+            this.firstDoseNo.AutoSize = true;
+            this.firstDoseNo.Location = new System.Drawing.Point(173, 284);
+            this.firstDoseNo.Name = "firstDoseNo";
+            this.firstDoseNo.Size = new System.Drawing.Size(40, 17);
+            this.firstDoseNo.TabIndex = 57;
+            this.firstDoseNo.Text = "No";
+            this.firstDoseNo.UseVisualStyleBackColor = true;
+            // 
+            // secondDoseNo
+            // 
+            this.secondDoseNo.AutoSize = true;
+            this.secondDoseNo.Location = new System.Drawing.Point(173, 362);
+            this.secondDoseNo.Name = "secondDoseNo";
+            this.secondDoseNo.Size = new System.Drawing.Size(40, 17);
+            this.secondDoseNo.TabIndex = 58;
+            this.secondDoseNo.Text = "No";
+            this.secondDoseNo.UseVisualStyleBackColor = true;
+            // 
+            // answerTextBox3
+            // 
+            this.answerTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.answerTextBox3.Location = new System.Drawing.Point(275, 437);
+            this.answerTextBox3.Name = "answerTextBox3";
+            this.answerTextBox3.Size = new System.Drawing.Size(87, 20);
+            this.answerTextBox3.TabIndex = 59;
+            // 
+            // checkShowBox1
+            // 
+            this.checkShowBox1.AutoSize = true;
+            this.checkShowBox1.Location = new System.Drawing.Point(152, 438);
+            this.checkShowBox1.Name = "checkShowBox1";
+            this.checkShowBox1.Size = new System.Drawing.Size(32, 17);
+            this.checkShowBox1.TabIndex = 60;
+            this.checkShowBox1.Text = "1";
+            this.checkShowBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkShotBox2
+            // 
+            this.checkShotBox2.AutoSize = true;
+            this.checkShotBox2.Location = new System.Drawing.Point(193, 438);
+            this.checkShotBox2.Name = "checkShotBox2";
+            this.checkShotBox2.Size = new System.Drawing.Size(32, 17);
+            this.checkShotBox2.TabIndex = 61;
+            this.checkShotBox2.Text = "2";
+            this.checkShotBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkShotBox3
+            // 
+            this.checkShotBox3.AutoSize = true;
+            this.checkShotBox3.Location = new System.Drawing.Point(229, 438);
+            this.checkShotBox3.Name = "checkShotBox3";
+            this.checkShotBox3.Size = new System.Drawing.Size(32, 17);
+            this.checkShotBox3.TabIndex = 62;
+            this.checkShotBox3.Text = "3";
+            this.checkShotBox3.UseVisualStyleBackColor = true;
             // 
             // exitButton
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 533);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(485, 522);
+            this.Controls.Add(this.checkShotBox3);
+            this.Controls.Add(this.checkShotBox2);
+            this.Controls.Add(this.checkShowBox1);
+            this.Controls.Add(this.answerTextBox3);
+            this.Controls.Add(this.secondDoseNo);
+            this.Controls.Add(this.firstDoseNo);
+            this.Controls.Add(this.secondDoseYes);
+            this.Controls.Add(this.firstDoseYes);
+            this.Controls.Add(this.answerTextBox2);
+            this.Controls.Add(this.answerTextBox1);
+            this.Controls.Add(this.nameLabel);
+            this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.clearInfoButton);
             this.Controls.Add(this.saveInfoButton);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.boosterShotCheckBox3);
-            this.Controls.Add(this.boosterShotCheckBox2);
-            this.Controls.Add(this.boosterShotCheckBox1);
             this.Controls.Add(this.boosterShotsLabel);
             this.Controls.Add(this.vaccineBrandTextBox2);
             this.Controls.Add(this.vaccineBrandLabel2);
@@ -509,11 +546,7 @@
             this.Controls.Add(this.vaccineBrandLabel1);
             this.Controls.Add(this.firstDoseDateTextBox);
             this.Controls.Add(this.firstDoseDate);
-            this.Controls.Add(this.noCheckBox2);
-            this.Controls.Add(this.yesCheckBox2);
             this.Controls.Add(this.secondDoseLabel);
-            this.Controls.Add(this.noCheckBox1);
-            this.Controls.Add(this.yesCheckBox1);
             this.Controls.Add(this.firstDoseLabel);
             this.Controls.Add(this.healthFormLabel);
             this.Controls.Add(this.personalInfoLabel);
@@ -534,7 +567,6 @@
             this.Controls.Add(this.middleInitialLabel);
             this.Controls.Add(this.firstNameLabel);
             this.Controls.Add(this.lastNameLabel);
-            this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.appName);
             this.Name = "exitButton";
             this.Text = "Form1";
@@ -547,7 +579,6 @@
         #endregion
 
         private System.Windows.Forms.Label appName;
-        private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Label lastNameLabel;
         private System.Windows.Forms.Label firstNameLabel;
         private System.Windows.Forms.Label middleInitialLabel;
@@ -568,11 +599,7 @@
         private System.Windows.Forms.Label personalInfoLabel;
         private System.Windows.Forms.Label healthFormLabel;
         private System.Windows.Forms.Label firstDoseLabel;
-        private System.Windows.Forms.CheckBox yesCheckBox1;
-        private System.Windows.Forms.CheckBox noCheckBox1;
         private System.Windows.Forms.Label secondDoseLabel;
-        private System.Windows.Forms.CheckBox yesCheckBox2;
-        private System.Windows.Forms.CheckBox noCheckBox2;
         private System.Windows.Forms.Label firstDoseDate;
         private System.Windows.Forms.TextBox firstDoseDateTextBox;
         private System.Windows.Forms.Label vaccineBrandLabel1;
@@ -582,14 +609,22 @@
         private System.Windows.Forms.Label vaccineBrandLabel2;
         private System.Windows.Forms.TextBox vaccineBrandTextBox2;
         private System.Windows.Forms.Label boosterShotsLabel;
-        private System.Windows.Forms.CheckBox boosterShotCheckBox1;
-        private System.Windows.Forms.CheckBox boosterShotCheckBox2;
-        private System.Windows.Forms.CheckBox boosterShotCheckBox3;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button saveInfoButton;
         private System.Windows.Forms.Button clearInfoButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button exitBtn;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.TextBox answerTextBox1;
+        private System.Windows.Forms.TextBox answerTextBox2;
+        private System.Windows.Forms.CheckBox firstDoseYes;
+        private System.Windows.Forms.CheckBox secondDoseYes;
+        private System.Windows.Forms.CheckBox firstDoseNo;
+        private System.Windows.Forms.CheckBox secondDoseNo;
+        private System.Windows.Forms.TextBox answerTextBox3;
+        private System.Windows.Forms.CheckBox checkShowBox1;
+        private System.Windows.Forms.CheckBox checkShotBox2;
+        private System.Windows.Forms.CheckBox checkShotBox3;
     }
 }
 
