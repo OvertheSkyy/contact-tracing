@@ -9,12 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
+
 namespace contact_tracing
 {
-    public partial class exitButton : Form
+    public partial class Form1 : Form
     {
 
-        public exitButton()
+        public Form1()
         {
             InitializeComponent();
         }
@@ -34,24 +35,15 @@ namespace contact_tracing
 
         }
 
-
         private void exitBtn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
+        private void editInfoBtn_Click(object sender, EventArgs e)
         {
-          
-
-        }
-
-        private void playButton_Click(object sender, EventArgs e)
-        {
-            string openThis = "E:\\Desktop\\contact-tracing\\contact-tracing\\contact-tracing\\COVID.mp4";
-            showCovidPresent.Text = openThis;
-            axWindowsMediaPlayer1.URL = showCovidPresent.Text;
-            axWindowsMediaPlayer1.Ctlcontrols.play();
+            Form2 form = new Form2();
+            form.Show();
         }
     }
 }

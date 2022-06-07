@@ -13,9 +13,35 @@ namespace contact_tracing
 {
     public partial class Form2 : Form
     {
+
         public Form2()
         {
             InitializeComponent();
+        }
+
+        private void saveInfoBtn_Click(object sender, EventArgs e)
+        {
+  
+                StreamWriter file = new StreamWriter(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\contacts.txt", true);
+
+                file.WriteLine(personInfoLabel.Text);
+                file.WriteLine(nameLabel.Text + " " + lastNameTextBox.Text + " " + firstNameTextBox.Text + " " + middleInitialTextBox.Text);
+                file.WriteLine(addressLabel.Text + " " + addressTextBox.Text);
+                file.WriteLine(dateOfBirthLabel.Text + " " + dateOfBirthTextBox.Text);
+                file.WriteLine(ageLabel.Text + " " + ageTextBox.Text);
+                file.WriteLine(sexLabel.Text + " " + sexTextBox.Text);
+                file.WriteLine(contactNoLabel.Text + " " + contactNoTextBox.Text);
+                file.WriteLine(healthFormLabel.Text);
+                file.WriteLine(firstDoseLabel.Text + " " + answerTextBox1.Text);
+                file.WriteLine(firstDoseDate.Text + " " + firstDoseDateTextBox.Text);
+                file.WriteLine(vaccineBrandLabel1.Text + " " + vaccineBrandTextBox1.Text);
+                file.WriteLine(secondDoseLabel.Text + " " + answerTextBox2.Text);
+                file.WriteLine(secondDoseDate.Text + " " + secondDoseDateTextBox.Text);
+                file.WriteLine(vaccineBrandLabel2.Text + " " + vaccineBrandTextBox2.Text);
+                file.WriteLine(boosterShotsLabel.Text + " " + answerTextBox3.Text);
+
+            file.Close();
+      
         }
 
         private void firstDoseYes_CheckedChanged(object sender, EventArgs e)
@@ -56,38 +82,13 @@ namespace contact_tracing
         private void checkShotBox3_CheckedChanged(object sender, EventArgs e)
         {
             answerTextBox3.Text = "3";
-        }
-
-        private void saveInfoButton_Click(object sender, EventArgs e)
-        {
-
-            StreamWriter file = new StreamWriter(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\contacts.txt", true);
-
-          
-            file.WriteLine(nameLabel.Text + " " + lastNameTextBox.Text + " " + firstNameTextBox.Text + " " + middleInitialTextBox.Text);
-            file.WriteLine(addressLabel.Text + " " + addressTextBox.Text);
-            file.WriteLine(dateOfBirthLabel.Text + " " + dateOfBirthTextBox.Text);
-            file.WriteLine(ageLabel.Text + " " + ageTextBox.Text);
-            file.WriteLine(sexLabel.Text + " " + sexTextBox.Text);
-            file.WriteLine(contactNoLabel.Text + " " + contactNoTextBox.Text);
-         
-            file.WriteLine(firstDoseLabel.Text + " " + answerTextBox1.Text);
-            file.WriteLine(firstDoseDate.Text + " " + firstDoseDateTextBox.Text);
-            file.WriteLine(vaccineBrandLabel1.Text + " " + vaccineBrandTextBox1.Text);
-            file.WriteLine(secondDoseLabel.Text + " " + answerTextBox2.Text);
-            file.WriteLine(secondDoseDate.Text + " " + secondDoseDateTextBox.Text);
-            file.WriteLine(vaccineBrandLabel2.Text + " " + vaccineBrandTextBox2.Text);
-            file.WriteLine(boosterShotsLabel.Text + " " + answerTextBox3.Text);
-
-
-
-            file.Close();
+            
 
         }
 
-        private void clearInfoButton_Click(object sender, EventArgs e)
+        private void clearInfoBtn_Click(object sender, EventArgs e)
         {
-            try
+            
             {
                 firstDoseYes.Checked = false;
                 firstDoseNo.Checked = false;
@@ -114,7 +115,11 @@ namespace contact_tracing
                 vaccineBrandTextBox2.Text = "";
                 answerTextBox3.Text = "";
             }
-            catch { }
+        }
+
+        private void answerTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

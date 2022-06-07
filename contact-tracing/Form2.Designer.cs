@@ -37,8 +37,6 @@
             this.firstDoseNo = new System.Windows.Forms.CheckBox();
             this.secondDoseYes = new System.Windows.Forms.CheckBox();
             this.firstDoseYes = new System.Windows.Forms.CheckBox();
-            this.answerTextBox2 = new System.Windows.Forms.TextBox();
-            this.answerTextBox1 = new System.Windows.Forms.TextBox();
             this.boosterShotsLabel = new System.Windows.Forms.Label();
             this.vaccineBrandTextBox2 = new System.Windows.Forms.TextBox();
             this.vaccineBrandLabel2 = new System.Windows.Forms.Label();
@@ -67,6 +65,13 @@
             this.middleInitialLabel = new System.Windows.Forms.Label();
             this.firstNameLabel = new System.Windows.Forms.Label();
             this.lastNameLabel = new System.Windows.Forms.Label();
+            this.personInfoLabel = new System.Windows.Forms.Label();
+            this.healthFormLabel = new System.Windows.Forms.Label();
+            this.clearInfoBtn = new System.Windows.Forms.Button();
+            this.homebtn = new System.Windows.Forms.Button();
+            this.saveInfoBtn = new System.Windows.Forms.Button();
+            this.answerTextBox1 = new System.Windows.Forms.TextBox();
+            this.answerTextBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // checkShotBox0
@@ -74,7 +79,7 @@
             this.checkShotBox0.AutoSize = true;
             this.checkShotBox0.BackColor = System.Drawing.Color.Transparent;
             this.checkShotBox0.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkShotBox0.Location = new System.Drawing.Point(175, 342);
+            this.checkShotBox0.Location = new System.Drawing.Point(153, 348);
             this.checkShotBox0.Name = "checkShotBox0";
             this.checkShotBox0.Size = new System.Drawing.Size(32, 17);
             this.checkShotBox0.TabIndex = 85;
@@ -85,7 +90,7 @@
             // 
             this.checkShotBox3.AutoSize = true;
             this.checkShotBox3.BackColor = System.Drawing.Color.Transparent;
-            this.checkShotBox3.Location = new System.Drawing.Point(282, 343);
+            this.checkShotBox3.Location = new System.Drawing.Point(260, 349);
             this.checkShotBox3.Name = "checkShotBox3";
             this.checkShotBox3.Size = new System.Drawing.Size(32, 17);
             this.checkShotBox3.TabIndex = 84;
@@ -96,7 +101,7 @@
             // 
             this.checkShotBox2.AutoSize = true;
             this.checkShotBox2.BackColor = System.Drawing.Color.Transparent;
-            this.checkShotBox2.Location = new System.Drawing.Point(250, 343);
+            this.checkShotBox2.Location = new System.Drawing.Point(228, 349);
             this.checkShotBox2.Name = "checkShotBox2";
             this.checkShotBox2.Size = new System.Drawing.Size(32, 17);
             this.checkShotBox2.TabIndex = 83;
@@ -107,7 +112,7 @@
             // 
             this.checkShotBox1.AutoSize = true;
             this.checkShotBox1.BackColor = System.Drawing.Color.Transparent;
-            this.checkShotBox1.Location = new System.Drawing.Point(212, 343);
+            this.checkShotBox1.Location = new System.Drawing.Point(190, 349);
             this.checkShotBox1.Name = "checkShotBox1";
             this.checkShotBox1.Size = new System.Drawing.Size(32, 17);
             this.checkShotBox1.TabIndex = 82;
@@ -118,7 +123,7 @@
             // 
             this.answerTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.answerTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.answerTextBox3.Location = new System.Drawing.Point(321, 344);
+            this.answerTextBox3.Location = new System.Drawing.Point(299, 350);
             this.answerTextBox3.Name = "answerTextBox3";
             this.answerTextBox3.Size = new System.Drawing.Size(87, 13);
             this.answerTextBox3.TabIndex = 81;
@@ -127,7 +132,7 @@
             // 
             this.secondDoseNo.AutoSize = true;
             this.secondDoseNo.BackColor = System.Drawing.Color.Transparent;
-            this.secondDoseNo.Location = new System.Drawing.Point(190, 280);
+            this.secondDoseNo.Location = new System.Drawing.Point(168, 286);
             this.secondDoseNo.Name = "secondDoseNo";
             this.secondDoseNo.Size = new System.Drawing.Size(40, 17);
             this.secondDoseNo.TabIndex = 80;
@@ -138,7 +143,7 @@
             // 
             this.firstDoseNo.AutoSize = true;
             this.firstDoseNo.BackColor = System.Drawing.Color.Transparent;
-            this.firstDoseNo.Location = new System.Drawing.Point(190, 212);
+            this.firstDoseNo.Location = new System.Drawing.Point(168, 218);
             this.firstDoseNo.Name = "firstDoseNo";
             this.firstDoseNo.Size = new System.Drawing.Size(40, 17);
             this.firstDoseNo.TabIndex = 79;
@@ -149,7 +154,7 @@
             // 
             this.secondDoseYes.AutoSize = true;
             this.secondDoseYes.BackColor = System.Drawing.Color.Transparent;
-            this.secondDoseYes.Location = new System.Drawing.Point(141, 279);
+            this.secondDoseYes.Location = new System.Drawing.Point(119, 285);
             this.secondDoseYes.Name = "secondDoseYes";
             this.secondDoseYes.Size = new System.Drawing.Size(44, 17);
             this.secondDoseYes.TabIndex = 78;
@@ -160,37 +165,19 @@
             // 
             this.firstDoseYes.AutoSize = true;
             this.firstDoseYes.BackColor = System.Drawing.Color.Transparent;
-            this.firstDoseYes.Location = new System.Drawing.Point(140, 212);
+            this.firstDoseYes.Location = new System.Drawing.Point(118, 218);
             this.firstDoseYes.Name = "firstDoseYes";
             this.firstDoseYes.Size = new System.Drawing.Size(44, 17);
             this.firstDoseYes.TabIndex = 77;
             this.firstDoseYes.Text = "Yes";
             this.firstDoseYes.UseVisualStyleBackColor = false;
             // 
-            // answerTextBox2
-            // 
-            this.answerTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.answerTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.answerTextBox2.Location = new System.Drawing.Point(228, 279);
-            this.answerTextBox2.Name = "answerTextBox2";
-            this.answerTextBox2.Size = new System.Drawing.Size(87, 13);
-            this.answerTextBox2.TabIndex = 76;
-            // 
-            // answerTextBox1
-            // 
-            this.answerTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.answerTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.answerTextBox1.Location = new System.Drawing.Point(228, 214);
-            this.answerTextBox1.Name = "answerTextBox1";
-            this.answerTextBox1.Size = new System.Drawing.Size(62, 13);
-            this.answerTextBox1.TabIndex = 75;
-            // 
             // boosterShotsLabel
             // 
             this.boosterShotsLabel.AutoSize = true;
             this.boosterShotsLabel.BackColor = System.Drawing.Color.Transparent;
             this.boosterShotsLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boosterShotsLabel.Location = new System.Drawing.Point(33, 337);
+            this.boosterShotsLabel.Location = new System.Drawing.Point(11, 343);
             this.boosterShotsLabel.Name = "boosterShotsLabel";
             this.boosterShotsLabel.Size = new System.Drawing.Size(141, 23);
             this.boosterShotsLabel.TabIndex = 74;
@@ -200,7 +187,7 @@
             // 
             this.vaccineBrandTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.vaccineBrandTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vaccineBrandTextBox2.Location = new System.Drawing.Point(324, 309);
+            this.vaccineBrandTextBox2.Location = new System.Drawing.Point(302, 315);
             this.vaccineBrandTextBox2.Name = "vaccineBrandTextBox2";
             this.vaccineBrandTextBox2.Size = new System.Drawing.Size(135, 13);
             this.vaccineBrandTextBox2.TabIndex = 73;
@@ -209,7 +196,7 @@
             // 
             this.vaccineBrandLabel2.AutoSize = true;
             this.vaccineBrandLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vaccineBrandLabel2.Location = new System.Drawing.Point(213, 309);
+            this.vaccineBrandLabel2.Location = new System.Drawing.Point(191, 315);
             this.vaccineBrandLabel2.Name = "vaccineBrandLabel2";
             this.vaccineBrandLabel2.Size = new System.Drawing.Size(97, 13);
             this.vaccineBrandLabel2.TabIndex = 72;
@@ -219,7 +206,7 @@
             // 
             this.secondDoseDateTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.secondDoseDateTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.secondDoseDateTextBox.Location = new System.Drawing.Point(87, 310);
+            this.secondDoseDateTextBox.Location = new System.Drawing.Point(61, 315);
             this.secondDoseDateTextBox.Name = "secondDoseDateTextBox";
             this.secondDoseDateTextBox.Size = new System.Drawing.Size(121, 13);
             this.secondDoseDateTextBox.TabIndex = 71;
@@ -229,7 +216,7 @@
             this.secondDoseDate.AutoSize = true;
             this.secondDoseDate.BackColor = System.Drawing.Color.Transparent;
             this.secondDoseDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.secondDoseDate.Location = new System.Drawing.Point(38, 309);
+            this.secondDoseDate.Location = new System.Drawing.Point(13, 315);
             this.secondDoseDate.Name = "secondDoseDate";
             this.secondDoseDate.Size = new System.Drawing.Size(44, 13);
             this.secondDoseDate.TabIndex = 70;
@@ -239,7 +226,7 @@
             // 
             this.vaccineBrandTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.vaccineBrandTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vaccineBrandTextBox1.Location = new System.Drawing.Point(324, 244);
+            this.vaccineBrandTextBox1.Location = new System.Drawing.Point(302, 250);
             this.vaccineBrandTextBox1.Name = "vaccineBrandTextBox1";
             this.vaccineBrandTextBox1.Size = new System.Drawing.Size(135, 13);
             this.vaccineBrandTextBox1.TabIndex = 69;
@@ -249,7 +236,7 @@
             this.vaccineBrandLabel1.AutoSize = true;
             this.vaccineBrandLabel1.BackColor = System.Drawing.Color.Transparent;
             this.vaccineBrandLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vaccineBrandLabel1.Location = new System.Drawing.Point(210, 244);
+            this.vaccineBrandLabel1.Location = new System.Drawing.Point(188, 250);
             this.vaccineBrandLabel1.Name = "vaccineBrandLabel1";
             this.vaccineBrandLabel1.Size = new System.Drawing.Size(111, 13);
             this.vaccineBrandLabel1.TabIndex = 68;
@@ -259,7 +246,7 @@
             // 
             this.firstDoseDateTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.firstDoseDateTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstDoseDateTextBox.Location = new System.Drawing.Point(87, 245);
+            this.firstDoseDateTextBox.Location = new System.Drawing.Point(61, 250);
             this.firstDoseDateTextBox.Name = "firstDoseDateTextBox";
             this.firstDoseDateTextBox.Size = new System.Drawing.Size(121, 13);
             this.firstDoseDateTextBox.TabIndex = 67;
@@ -270,7 +257,7 @@
             this.firstDoseDate.BackColor = System.Drawing.Color.Transparent;
             this.firstDoseDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstDoseDate.ForeColor = System.Drawing.Color.Black;
-            this.firstDoseDate.Location = new System.Drawing.Point(38, 244);
+            this.firstDoseDate.Location = new System.Drawing.Point(12, 250);
             this.firstDoseDate.Name = "firstDoseDate";
             this.firstDoseDate.Size = new System.Drawing.Size(44, 13);
             this.firstDoseDate.TabIndex = 66;
@@ -281,7 +268,7 @@
             this.secondDoseLabel.AutoSize = true;
             this.secondDoseLabel.BackColor = System.Drawing.Color.Transparent;
             this.secondDoseLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.secondDoseLabel.Location = new System.Drawing.Point(33, 274);
+            this.secondDoseLabel.Location = new System.Drawing.Point(11, 280);
             this.secondDoseLabel.Name = "secondDoseLabel";
             this.secondDoseLabel.Size = new System.Drawing.Size(102, 23);
             this.secondDoseLabel.TabIndex = 65;
@@ -293,7 +280,7 @@
             this.firstDoseLabel.BackColor = System.Drawing.Color.Transparent;
             this.firstDoseLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstDoseLabel.ForeColor = System.Drawing.Color.Black;
-            this.firstDoseLabel.Location = new System.Drawing.Point(33, 205);
+            this.firstDoseLabel.Location = new System.Drawing.Point(11, 211);
             this.firstDoseLabel.Name = "firstDoseLabel";
             this.firstDoseLabel.Size = new System.Drawing.Size(93, 23);
             this.firstDoseLabel.TabIndex = 64;
@@ -304,7 +291,7 @@
             this.nameLabel.AutoSize = true;
             this.nameLabel.BackColor = System.Drawing.Color.Transparent;
             this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameLabel.Location = new System.Drawing.Point(34, 86);
+            this.nameLabel.Location = new System.Drawing.Point(12, 63);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(46, 13);
             this.nameLabel.TabIndex = 102;
@@ -314,7 +301,7 @@
             // 
             this.contactNoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.contactNoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactNoTextBox.Location = new System.Drawing.Point(340, 182);
+            this.contactNoTextBox.Location = new System.Drawing.Point(318, 159);
             this.contactNoTextBox.Name = "contactNoTextBox";
             this.contactNoTextBox.Size = new System.Drawing.Size(126, 13);
             this.contactNoTextBox.TabIndex = 101;
@@ -324,7 +311,7 @@
             this.contactNoLabel.AutoSize = true;
             this.contactNoLabel.BackColor = System.Drawing.Color.Transparent;
             this.contactNoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactNoLabel.Location = new System.Drawing.Point(242, 181);
+            this.contactNoLabel.Location = new System.Drawing.Point(220, 158);
             this.contactNoLabel.Name = "contactNoLabel";
             this.contactNoLabel.Size = new System.Drawing.Size(91, 13);
             this.contactNoLabel.TabIndex = 100;
@@ -335,7 +322,7 @@
             this.sexLabel.AutoSize = true;
             this.sexLabel.BackColor = System.Drawing.Color.Transparent;
             this.sexLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sexLabel.Location = new System.Drawing.Point(35, 177);
+            this.sexLabel.Location = new System.Drawing.Point(13, 154);
             this.sexLabel.Name = "sexLabel";
             this.sexLabel.Size = new System.Drawing.Size(35, 13);
             this.sexLabel.TabIndex = 99;
@@ -345,7 +332,7 @@
             // 
             this.sexTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sexTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sexTextBox.Location = new System.Drawing.Point(77, 178);
+            this.sexTextBox.Location = new System.Drawing.Point(55, 155);
             this.sexTextBox.Name = "sexTextBox";
             this.sexTextBox.Size = new System.Drawing.Size(160, 13);
             this.sexTextBox.TabIndex = 98;
@@ -354,7 +341,7 @@
             // 
             this.ageTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ageTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ageTextBox.Location = new System.Drawing.Point(345, 154);
+            this.ageTextBox.Location = new System.Drawing.Point(323, 131);
             this.ageTextBox.Name = "ageTextBox";
             this.ageTextBox.Size = new System.Drawing.Size(121, 13);
             this.ageTextBox.TabIndex = 97;
@@ -365,7 +352,7 @@
             this.ageLabel.BackColor = System.Drawing.Color.Transparent;
             this.ageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ageLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ageLabel.Location = new System.Drawing.Point(302, 153);
+            this.ageLabel.Location = new System.Drawing.Point(280, 130);
             this.ageLabel.Name = "ageLabel";
             this.ageLabel.Size = new System.Drawing.Size(36, 13);
             this.ageLabel.TabIndex = 96;
@@ -375,7 +362,7 @@
             // 
             this.dateOfBirthTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dateOfBirthTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateOfBirthTextBox.Location = new System.Drawing.Point(141, 151);
+            this.dateOfBirthTextBox.Location = new System.Drawing.Point(119, 128);
             this.dateOfBirthTextBox.Name = "dateOfBirthTextBox";
             this.dateOfBirthTextBox.Size = new System.Drawing.Size(155, 13);
             this.dateOfBirthTextBox.TabIndex = 95;
@@ -385,7 +372,7 @@
             this.dateOfBirthLabel.AutoSize = true;
             this.dateOfBirthLabel.BackColor = System.Drawing.Color.Transparent;
             this.dateOfBirthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateOfBirthLabel.Location = new System.Drawing.Point(35, 153);
+            this.dateOfBirthLabel.Location = new System.Drawing.Point(13, 130);
             this.dateOfBirthLabel.Name = "dateOfBirthLabel";
             this.dateOfBirthLabel.Size = new System.Drawing.Size(106, 13);
             this.dateOfBirthLabel.TabIndex = 94;
@@ -395,7 +382,7 @@
             // 
             this.addressTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.addressTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addressTextBox.Location = new System.Drawing.Point(105, 123);
+            this.addressTextBox.Location = new System.Drawing.Point(83, 100);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(361, 13);
             this.addressTextBox.TabIndex = 93;
@@ -405,7 +392,7 @@
             this.addressLabel.AutoSize = true;
             this.addressLabel.BackColor = System.Drawing.Color.Transparent;
             this.addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addressLabel.Location = new System.Drawing.Point(34, 122);
+            this.addressLabel.Location = new System.Drawing.Point(12, 99);
             this.addressLabel.Name = "addressLabel";
             this.addressLabel.Size = new System.Drawing.Size(70, 13);
             this.addressLabel.TabIndex = 92;
@@ -416,7 +403,7 @@
             this.middleInitialTextBox.BackColor = System.Drawing.Color.White;
             this.middleInitialTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.middleInitialTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.middleInitialTextBox.Location = new System.Drawing.Point(352, 84);
+            this.middleInitialTextBox.Location = new System.Drawing.Point(330, 61);
             this.middleInitialTextBox.Name = "middleInitialTextBox";
             this.middleInitialTextBox.Size = new System.Drawing.Size(114, 13);
             this.middleInitialTextBox.TabIndex = 91;
@@ -426,7 +413,7 @@
             this.firstNameTextBox.BackColor = System.Drawing.Color.White;
             this.firstNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.firstNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstNameTextBox.Location = new System.Drawing.Point(219, 84);
+            this.firstNameTextBox.Location = new System.Drawing.Point(197, 61);
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(127, 13);
             this.firstNameTextBox.TabIndex = 90;
@@ -436,7 +423,7 @@
             this.lastNameTextBox.BackColor = System.Drawing.Color.White;
             this.lastNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lastNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastNameTextBox.Location = new System.Drawing.Point(86, 83);
+            this.lastNameTextBox.Location = new System.Drawing.Point(64, 60);
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(127, 13);
             this.lastNameTextBox.TabIndex = 89;
@@ -446,7 +433,7 @@
             this.middleInitialLabel.AutoSize = true;
             this.middleInitialLabel.BackColor = System.Drawing.Color.Transparent;
             this.middleInitialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.middleInitialLabel.Location = new System.Drawing.Point(363, 99);
+            this.middleInitialLabel.Location = new System.Drawing.Point(341, 76);
             this.middleInitialLabel.Name = "middleInitialLabel";
             this.middleInitialLabel.Size = new System.Drawing.Size(102, 13);
             this.middleInitialLabel.TabIndex = 88;
@@ -457,7 +444,7 @@
             this.firstNameLabel.AutoSize = true;
             this.firstNameLabel.BackColor = System.Drawing.Color.Transparent;
             this.firstNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstNameLabel.Location = new System.Drawing.Point(238, 99);
+            this.firstNameLabel.Location = new System.Drawing.Point(216, 76);
             this.firstNameLabel.Name = "firstNameLabel";
             this.firstNameLabel.Size = new System.Drawing.Size(82, 13);
             this.firstNameLabel.TabIndex = 87;
@@ -468,17 +455,93 @@
             this.lastNameLabel.AutoSize = true;
             this.lastNameLabel.BackColor = System.Drawing.Color.Transparent;
             this.lastNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastNameLabel.Location = new System.Drawing.Point(107, 99);
+            this.lastNameLabel.Location = new System.Drawing.Point(85, 76);
             this.lastNameLabel.Name = "lastNameLabel";
             this.lastNameLabel.Size = new System.Drawing.Size(77, 13);
             this.lastNameLabel.TabIndex = 86;
             this.lastNameLabel.Text = "LAST NAME";
             // 
+            // personInfoLabel
+            // 
+            this.personInfoLabel.AutoSize = true;
+            this.personInfoLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.personInfoLabel.Location = new System.Drawing.Point(11, 34);
+            this.personInfoLabel.Name = "personInfoLabel";
+            this.personInfoLabel.Size = new System.Drawing.Size(246, 23);
+            this.personInfoLabel.TabIndex = 104;
+            this.personInfoLabel.Text = "PERSONAL INFORMATION";
+            // 
+            // healthFormLabel
+            // 
+            this.healthFormLabel.AutoSize = true;
+            this.healthFormLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.healthFormLabel.Location = new System.Drawing.Point(11, 188);
+            this.healthFormLabel.Name = "healthFormLabel";
+            this.healthFormLabel.Size = new System.Drawing.Size(230, 23);
+            this.healthFormLabel.TabIndex = 105;
+            this.healthFormLabel.Text = "HEALTH SENSING FORM";
+            // 
+            // clearInfoBtn
+            // 
+            this.clearInfoBtn.Location = new System.Drawing.Point(228, 385);
+            this.clearInfoBtn.Name = "clearInfoBtn";
+            this.clearInfoBtn.Size = new System.Drawing.Size(133, 23);
+            this.clearInfoBtn.TabIndex = 106;
+            this.clearInfoBtn.Text = "Clear Info";
+            this.clearInfoBtn.UseVisualStyleBackColor = true;
+            this.clearInfoBtn.Click += new System.EventHandler(this.clearInfoBtn_Click);
+            // 
+            // homebtn
+            // 
+            this.homebtn.Location = new System.Drawing.Point(159, 417);
+            this.homebtn.Name = "homebtn";
+            this.homebtn.Size = new System.Drawing.Size(133, 23);
+            this.homebtn.TabIndex = 107;
+            this.homebtn.Text = "Back";
+            this.homebtn.UseVisualStyleBackColor = true;
+            // 
+            // saveInfoBtn
+            // 
+            this.saveInfoBtn.Location = new System.Drawing.Point(88, 385);
+            this.saveInfoBtn.Name = "saveInfoBtn";
+            this.saveInfoBtn.Size = new System.Drawing.Size(133, 23);
+            this.saveInfoBtn.TabIndex = 108;
+            this.saveInfoBtn.Text = "Save Info";
+            this.saveInfoBtn.UseVisualStyleBackColor = true;
+            this.saveInfoBtn.Click += new System.EventHandler(this.saveInfoBtn_Click);
+            // 
+            // answerTextBox1
+            // 
+            this.answerTextBox1.BackColor = System.Drawing.Color.White;
+            this.answerTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.answerTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.answerTextBox1.Location = new System.Drawing.Point(205, 219);
+            this.answerTextBox1.Name = "answerTextBox1";
+            this.answerTextBox1.Size = new System.Drawing.Size(135, 13);
+            this.answerTextBox1.TabIndex = 109;
+            // 
+            // answerTextBox2
+            // 
+            this.answerTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.answerTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.answerTextBox2.Location = new System.Drawing.Point(205, 290);
+            this.answerTextBox2.Name = "answerTextBox2";
+            this.answerTextBox2.Size = new System.Drawing.Size(135, 13);
+            this.answerTextBox2.TabIndex = 110;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(496, 450);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(456, 452);
+            this.Controls.Add(this.answerTextBox2);
+            this.Controls.Add(this.answerTextBox1);
+            this.Controls.Add(this.saveInfoBtn);
+            this.Controls.Add(this.homebtn);
+            this.Controls.Add(this.clearInfoBtn);
+            this.Controls.Add(this.healthFormLabel);
+            this.Controls.Add(this.personInfoLabel);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.contactNoTextBox);
             this.Controls.Add(this.contactNoLabel);
@@ -505,8 +568,6 @@
             this.Controls.Add(this.firstDoseNo);
             this.Controls.Add(this.secondDoseYes);
             this.Controls.Add(this.firstDoseYes);
-            this.Controls.Add(this.answerTextBox2);
-            this.Controls.Add(this.answerTextBox1);
             this.Controls.Add(this.boosterShotsLabel);
             this.Controls.Add(this.vaccineBrandTextBox2);
             this.Controls.Add(this.vaccineBrandLabel2);
@@ -536,8 +597,6 @@
         private System.Windows.Forms.CheckBox firstDoseNo;
         private System.Windows.Forms.CheckBox secondDoseYes;
         private System.Windows.Forms.CheckBox firstDoseYes;
-        private System.Windows.Forms.TextBox answerTextBox2;
-        private System.Windows.Forms.TextBox answerTextBox1;
         private System.Windows.Forms.Label boosterShotsLabel;
         private System.Windows.Forms.TextBox vaccineBrandTextBox2;
         private System.Windows.Forms.Label vaccineBrandLabel2;
@@ -566,5 +625,12 @@
         private System.Windows.Forms.Label middleInitialLabel;
         private System.Windows.Forms.Label firstNameLabel;
         private System.Windows.Forms.Label lastNameLabel;
+        private System.Windows.Forms.Label personInfoLabel;
+        private System.Windows.Forms.Label healthFormLabel;
+        private System.Windows.Forms.Button clearInfoBtn;
+        private System.Windows.Forms.Button homebtn;
+        private System.Windows.Forms.Button saveInfoBtn;
+        private System.Windows.Forms.TextBox answerTextBox1;
+        private System.Windows.Forms.TextBox answerTextBox2;
     }
 }
