@@ -139,11 +139,11 @@
             this.youLabel.AutoSize = true;
             this.youLabel.BackColor = System.Drawing.Color.Transparent;
             this.youLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.youLabel.Location = new System.Drawing.Point(98, 138);
+            this.youLabel.Location = new System.Drawing.Point(87, 137);
             this.youLabel.Name = "youLabel";
-            this.youLabel.Size = new System.Drawing.Size(40, 21);
+            this.youLabel.Size = new System.Drawing.Size(62, 21);
             this.youLabel.TabIndex = 67;
-            this.youLabel.Text = "You";
+            this.youLabel.Text = "Person";
             // 
             // button1
             // 

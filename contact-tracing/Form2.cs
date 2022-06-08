@@ -88,5 +88,15 @@ namespace contact_tracing
                 file.Close();
       
         }
+
+        private void returnHomeBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
