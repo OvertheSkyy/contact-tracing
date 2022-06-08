@@ -19,6 +19,51 @@ namespace contact_tracing
             InitializeComponent();
         }
 
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void firstDoseYes_CheckedChanged(object sender, EventArgs e)
+        {
+            answerTextBox1.Text = "Yes";
+        }
+
+        private void firstDoseNo_CheckedChanged(object sender, EventArgs e)
+        {
+            answerTextBox1.Text = "No";
+        }
+
+        private void secondDoseYes_CheckedChanged_1(object sender, EventArgs e)
+        {
+            answerTextBox2.Text = "Yes";
+        }
+
+        private void secondDoseNo_CheckedChanged(object sender, EventArgs e)
+        {
+            answerTextBox2.Text = "No";
+        }
+
+        private void boosterShotBox0_CheckedChanged(object sender, EventArgs e)
+        {
+            answerTextBox3.Text = "0";
+        }
+
+        private void boosterShotBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            answerTextBox3.Text = "1";
+        }
+
+        private void boosterShotBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            answerTextBox3.Text = "2";
+        }
+
+        private void boosterShotBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            answerTextBox3.Text = "3";
+        }
+
         private void saveInfoBtn_Click(object sender, EventArgs e)
         {
   
@@ -40,86 +85,8 @@ namespace contact_tracing
                 file.WriteLine(vaccineBrandLabel2.Text + " " + vaccineBrandTextBox2.Text);
                 file.WriteLine(boosterShotsLabel.Text + " " + answerTextBox3.Text);
 
-            file.Close();
+                file.Close();
       
-        }
-
-        private void firstDoseYes_CheckedChanged(object sender, EventArgs e)
-        {
-            answerTextBox1.Text = "Yes";
-        }
-
-        private void firstDoseNo_CheckedChanged(object sender, EventArgs e)
-        {
-            answerTextBox1.Text = "No";
-        }
-
-        private void secondDoseYes_CheckedChanged(object sender, EventArgs e)
-        {
-            answerTextBox2.Text = "Yes";
-        }
-
-        private void secondDoseNo_CheckedChanged(object sender, EventArgs e)
-        {
-            answerTextBox2.Text = "No";
-        }
-
-        private void checkShotBox0_CheckedChanged(object sender, EventArgs e)
-        {
-            answerTextBox3.Text = "0";
-        }
-
-        private void checkShowBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            answerTextBox3.Text = "1";
-        }
-
-        private void checkShotBox2_CheckedChanged(object sender, EventArgs e)
-        {
-            answerTextBox3.Text = "2";
-        }
-
-        private void checkShotBox3_CheckedChanged(object sender, EventArgs e)
-        {
-            answerTextBox3.Text = "3";
-            
-
-        }
-
-        private void clearInfoBtn_Click(object sender, EventArgs e)
-        {
-            
-            {
-                firstDoseYes.Checked = false;
-                firstDoseNo.Checked = false;
-                secondDoseYes.Checked = false;
-                secondDoseNo.Checked = false;
-                checkShotBox0.Checked = false;
-                checkShotBox1.Checked = false;
-                checkShotBox2.Checked = false;
-                checkShotBox3.Checked = false;
-
-                lastNameTextBox.Text = "";
-                firstNameTextBox.Text = "";
-                middleInitialTextBox.Text = "";
-                addressTextBox.Text = "";
-                dateOfBirthTextBox.Text = "";
-                ageTextBox.Text = "";
-                sexTextBox.Text = "";
-                contactNoTextBox.Text = "";
-                answerTextBox1.Text = "";
-                firstDoseDateTextBox.Text = "";
-                vaccineBrandTextBox1.Text = "";
-                answerTextBox2.Text = "";
-                secondDoseDateTextBox.Text = "";
-                vaccineBrandTextBox2.Text = "";
-                answerTextBox3.Text = "";
-            }
-        }
-
-        private void answerTextBox1_TextChanged(object sender, EventArgs e)
-        {
-            
         }
     }
 }

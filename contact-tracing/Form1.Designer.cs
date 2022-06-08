@@ -37,10 +37,10 @@
             this.exitBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.youLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.addInfoBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.youLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -99,7 +99,7 @@
             // 
             // exitBtn
             // 
-            this.exitBtn.Location = new System.Drawing.Point(18, 298);
+            this.exitBtn.Location = new System.Drawing.Point(18, 311);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(196, 33);
             this.exitBtn.TabIndex = 44;
@@ -131,12 +131,23 @@
             this.panel1.Controls.Add(this.personalInfoLabel);
             this.panel1.Location = new System.Drawing.Point(15, 33);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(233, 341);
+            this.panel1.Size = new System.Drawing.Size(233, 356);
             this.panel1.TabIndex = 66;
+            // 
+            // youLabel
+            // 
+            this.youLabel.AutoSize = true;
+            this.youLabel.BackColor = System.Drawing.Color.Transparent;
+            this.youLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.youLabel.Location = new System.Drawing.Point(98, 138);
+            this.youLabel.Name = "youLabel";
+            this.youLabel.Size = new System.Drawing.Size(40, 21);
+            this.youLabel.TabIndex = 67;
+            this.youLabel.Text = "You";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(18, 262);
+            this.button1.Location = new System.Drawing.Point(18, 272);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(196, 33);
             this.button1.TabIndex = 66;
@@ -145,7 +156,7 @@
             // 
             // addInfoBtn
             // 
-            this.addInfoBtn.Location = new System.Drawing.Point(18, 224);
+            this.addInfoBtn.Location = new System.Drawing.Point(18, 233);
             this.addInfoBtn.Name = "addInfoBtn";
             this.addInfoBtn.Size = new System.Drawing.Size(196, 33);
             this.addInfoBtn.TabIndex = 65;
@@ -161,17 +172,6 @@
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 67;
             this.label1.Text = "ver 1.0";
-            // 
-            // youLabel
-            // 
-            this.youLabel.AutoSize = true;
-            this.youLabel.BackColor = System.Drawing.Color.Transparent;
-            this.youLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.youLabel.Location = new System.Drawing.Point(98, 138);
-            this.youLabel.Name = "youLabel";
-            this.youLabel.Size = new System.Drawing.Size(40, 21);
-            this.youLabel.TabIndex = 67;
-            this.youLabel.Text = "You";
             // 
             // Form1
             // 
