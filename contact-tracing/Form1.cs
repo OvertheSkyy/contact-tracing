@@ -44,5 +44,10 @@ namespace contact_tracing
             Form2 form = new Form2();
             form.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

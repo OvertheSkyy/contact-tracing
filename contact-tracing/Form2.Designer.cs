@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.answerTextBox3 = new System.Windows.Forms.TextBox();
             this.boosterShotsLabel = new System.Windows.Forms.Label();
             this.vaccineBrandTextBox2 = new System.Windows.Forms.TextBox();
@@ -78,10 +79,10 @@
             this.clearSec5 = new System.Windows.Forms.Button();
             this.clearSec6 = new System.Windows.Forms.Button();
             this.clearSec7 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.clearSec9 = new System.Windows.Forms.Button();
             this.appName = new System.Windows.Forms.Label();
             this.clearSec8 = new System.Windows.Forms.Button();
+            this.clearAllBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // answerTextBox3
@@ -116,10 +117,11 @@
             // vaccineBrandLabel2
             // 
             this.vaccineBrandLabel2.AutoSize = true;
-            this.vaccineBrandLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vaccineBrandLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.vaccineBrandLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vaccineBrandLabel2.Location = new System.Drawing.Point(191, 315);
             this.vaccineBrandLabel2.Name = "vaccineBrandLabel2";
-            this.vaccineBrandLabel2.Size = new System.Drawing.Size(97, 13);
+            this.vaccineBrandLabel2.Size = new System.Drawing.Size(111, 13);
             this.vaccineBrandLabel2.TabIndex = 72;
             this.vaccineBrandLabel2.Text = "VACCINE BRAND:";
             // 
@@ -385,6 +387,7 @@
             // personInfoLabel
             // 
             this.personInfoLabel.AutoSize = true;
+            this.personInfoLabel.BackColor = System.Drawing.Color.Transparent;
             this.personInfoLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.personInfoLabel.Location = new System.Drawing.Point(11, 34);
             this.personInfoLabel.Name = "personInfoLabel";
@@ -395,6 +398,7 @@
             // healthFormLabel
             // 
             this.healthFormLabel.AutoSize = true;
+            this.healthFormLabel.BackColor = System.Drawing.Color.Transparent;
             this.healthFormLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.healthFormLabel.Location = new System.Drawing.Point(11, 188);
             this.healthFormLabel.Name = "healthFormLabel";
@@ -424,45 +428,53 @@
             // secondDoseYes
             // 
             this.secondDoseYes.AutoSize = true;
+            this.secondDoseYes.BackColor = System.Drawing.Color.Transparent;
+            this.secondDoseYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.secondDoseYes.Location = new System.Drawing.Point(118, 281);
             this.secondDoseYes.Name = "secondDoseYes";
-            this.secondDoseYes.Size = new System.Drawing.Size(44, 17);
+            this.secondDoseYes.Size = new System.Drawing.Size(47, 17);
             this.secondDoseYes.TabIndex = 20;
             this.secondDoseYes.Text = "Yes";
-            this.secondDoseYes.UseVisualStyleBackColor = true;
+            this.secondDoseYes.UseVisualStyleBackColor = false;
             this.secondDoseYes.CheckedChanged += new System.EventHandler(this.secondDoseYes_CheckedChanged_1);
             // 
             // secondDoseNo
             // 
             this.secondDoseNo.AutoSize = true;
+            this.secondDoseNo.BackColor = System.Drawing.Color.Transparent;
+            this.secondDoseNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.secondDoseNo.Location = new System.Drawing.Point(168, 281);
             this.secondDoseNo.Name = "secondDoseNo";
-            this.secondDoseNo.Size = new System.Drawing.Size(40, 17);
+            this.secondDoseNo.Size = new System.Drawing.Size(42, 17);
             this.secondDoseNo.TabIndex = 21;
             this.secondDoseNo.Text = "No";
-            this.secondDoseNo.UseVisualStyleBackColor = true;
+            this.secondDoseNo.UseVisualStyleBackColor = false;
             this.secondDoseNo.CheckedChanged += new System.EventHandler(this.secondDoseNo_CheckedChanged);
             // 
             // firstDoseYes
             // 
             this.firstDoseYes.AutoSize = true;
+            this.firstDoseYes.BackColor = System.Drawing.Color.Transparent;
+            this.firstDoseYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstDoseYes.Location = new System.Drawing.Point(118, 219);
             this.firstDoseYes.Name = "firstDoseYes";
-            this.firstDoseYes.Size = new System.Drawing.Size(44, 17);
+            this.firstDoseYes.Size = new System.Drawing.Size(47, 17);
             this.firstDoseYes.TabIndex = 13;
             this.firstDoseYes.Text = "Yes";
-            this.firstDoseYes.UseVisualStyleBackColor = true;
+            this.firstDoseYes.UseVisualStyleBackColor = false;
             this.firstDoseYes.CheckedChanged += new System.EventHandler(this.firstDoseYes_CheckedChanged);
             // 
             // firstDoseNo
             // 
             this.firstDoseNo.AutoSize = true;
+            this.firstDoseNo.BackColor = System.Drawing.Color.Transparent;
+            this.firstDoseNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstDoseNo.Location = new System.Drawing.Point(168, 219);
             this.firstDoseNo.Name = "firstDoseNo";
-            this.firstDoseNo.Size = new System.Drawing.Size(40, 17);
+            this.firstDoseNo.Size = new System.Drawing.Size(42, 17);
             this.firstDoseNo.TabIndex = 14;
             this.firstDoseNo.Text = "No";
-            this.firstDoseNo.UseVisualStyleBackColor = true;
+            this.firstDoseNo.UseVisualStyleBackColor = false;
             this.firstDoseNo.CheckedChanged += new System.EventHandler(this.firstDoseNo_CheckedChanged);
             // 
             // answerTextBox1
@@ -478,10 +490,10 @@
             // 
             this.boosterShotBox1.AutoSize = true;
             this.boosterShotBox1.BackColor = System.Drawing.Color.Transparent;
-            this.boosterShotBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boosterShotBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boosterShotBox1.Location = new System.Drawing.Point(191, 350);
             this.boosterShotBox1.Name = "boosterShotBox1";
-            this.boosterShotBox1.Size = new System.Drawing.Size(32, 17);
+            this.boosterShotBox1.Size = new System.Drawing.Size(33, 17);
             this.boosterShotBox1.TabIndex = 27;
             this.boosterShotBox1.Text = "1";
             this.boosterShotBox1.UseVisualStyleBackColor = false;
@@ -491,10 +503,10 @@
             // 
             this.boosterShotBox0.AutoSize = true;
             this.boosterShotBox0.BackColor = System.Drawing.Color.Transparent;
-            this.boosterShotBox0.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boosterShotBox0.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boosterShotBox0.Location = new System.Drawing.Point(159, 350);
             this.boosterShotBox0.Name = "boosterShotBox0";
-            this.boosterShotBox0.Size = new System.Drawing.Size(32, 17);
+            this.boosterShotBox0.Size = new System.Drawing.Size(33, 17);
             this.boosterShotBox0.TabIndex = 27;
             this.boosterShotBox0.Text = "0";
             this.boosterShotBox0.UseVisualStyleBackColor = false;
@@ -504,10 +516,10 @@
             // 
             this.boosterShotBox2.AutoSize = true;
             this.boosterShotBox2.BackColor = System.Drawing.Color.Transparent;
-            this.boosterShotBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boosterShotBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boosterShotBox2.Location = new System.Drawing.Point(223, 350);
             this.boosterShotBox2.Name = "boosterShotBox2";
-            this.boosterShotBox2.Size = new System.Drawing.Size(32, 17);
+            this.boosterShotBox2.Size = new System.Drawing.Size(33, 17);
             this.boosterShotBox2.TabIndex = 120;
             this.boosterShotBox2.Text = "2";
             this.boosterShotBox2.UseVisualStyleBackColor = false;
@@ -517,10 +529,10 @@
             // 
             this.boosterShotBox3.AutoSize = true;
             this.boosterShotBox3.BackColor = System.Drawing.Color.Transparent;
-            this.boosterShotBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boosterShotBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boosterShotBox3.Location = new System.Drawing.Point(256, 350);
             this.boosterShotBox3.Name = "boosterShotBox3";
-            this.boosterShotBox3.Size = new System.Drawing.Size(32, 17);
+            this.boosterShotBox3.Size = new System.Drawing.Size(33, 17);
             this.boosterShotBox3.TabIndex = 28;
             this.boosterShotBox3.Text = "3";
             this.boosterShotBox3.UseVisualStyleBackColor = false;
@@ -545,6 +557,7 @@
             this.clearSec1.TabIndex = 4;
             this.clearSec1.Text = "CLEAR";
             this.clearSec1.UseVisualStyleBackColor = true;
+            this.clearSec1.Click += new System.EventHandler(this.clearSec1_Click);
             // 
             // clearSec2
             // 
@@ -555,6 +568,7 @@
             this.clearSec2.TabIndex = 6;
             this.clearSec2.Text = "CLEAR";
             this.clearSec2.UseVisualStyleBackColor = true;
+            this.clearSec2.Click += new System.EventHandler(this.clearSec2_Click);
             // 
             // clearSec3
             // 
@@ -565,6 +579,7 @@
             this.clearSec3.TabIndex = 9;
             this.clearSec3.Text = "CLEAR";
             this.clearSec3.UseVisualStyleBackColor = true;
+            this.clearSec3.Click += new System.EventHandler(this.clearSec3_Click);
             // 
             // clearSec4
             // 
@@ -575,6 +590,7 @@
             this.clearSec4.TabIndex = 12;
             this.clearSec4.Text = "CLEAR";
             this.clearSec4.UseVisualStyleBackColor = true;
+            this.clearSec4.Click += new System.EventHandler(this.clearSec4_Click);
             // 
             // clearSec5
             // 
@@ -585,6 +601,7 @@
             this.clearSec5.TabIndex = 16;
             this.clearSec5.Text = "CLEAR";
             this.clearSec5.UseVisualStyleBackColor = true;
+            this.clearSec5.Click += new System.EventHandler(this.clearSec5_Click);
             // 
             // clearSec6
             // 
@@ -595,6 +612,7 @@
             this.clearSec6.TabIndex = 19;
             this.clearSec6.Text = "CLEAR";
             this.clearSec6.UseVisualStyleBackColor = true;
+            this.clearSec6.Click += new System.EventHandler(this.clearSec6_Click);
             // 
             // clearSec7
             // 
@@ -605,26 +623,18 @@
             this.clearSec7.TabIndex = 23;
             this.clearSec7.Text = "CLEAR";
             this.clearSec7.UseVisualStyleBackColor = true;
+            this.clearSec7.Click += new System.EventHandler(this.clearSec7_Click);
             // 
-            // button9
+            // clearSec9
             // 
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(449, 349);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(68, 21);
-            this.button9.TabIndex = 30;
-            this.button9.Text = "CLEAR";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(188, 385);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(158, 33);
-            this.button10.TabIndex = 32;
-            this.button10.Text = "Clear All";
-            this.button10.UseVisualStyleBackColor = true;
+            this.clearSec9.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearSec9.Location = new System.Drawing.Point(449, 349);
+            this.clearSec9.Name = "clearSec9";
+            this.clearSec9.Size = new System.Drawing.Size(68, 21);
+            this.clearSec9.TabIndex = 30;
+            this.clearSec9.Text = "CLEAR";
+            this.clearSec9.UseVisualStyleBackColor = true;
+            this.clearSec9.Click += new System.EventHandler(this.clearSec9_Click);
             // 
             // appName
             // 
@@ -647,17 +657,30 @@
             this.clearSec8.TabIndex = 26;
             this.clearSec8.Text = "CLEAR";
             this.clearSec8.UseVisualStyleBackColor = true;
+            this.clearSec8.Click += new System.EventHandler(this.clearSec8_Click);
+            // 
+            // clearAllBtn
+            // 
+            this.clearAllBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearAllBtn.Location = new System.Drawing.Point(188, 385);
+            this.clearAllBtn.Name = "clearAllBtn";
+            this.clearAllBtn.Size = new System.Drawing.Size(158, 33);
+            this.clearAllBtn.TabIndex = 134;
+            this.clearAllBtn.Text = "Clear All";
+            this.clearAllBtn.UseVisualStyleBackColor = true;
+            this.clearAllBtn.Click += new System.EventHandler(this.clearAllBtn_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(529, 438);
+            this.Controls.Add(this.clearAllBtn);
             this.Controls.Add(this.clearSec8);
             this.Controls.Add(this.appName);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
+            this.Controls.Add(this.clearSec9);
             this.Controls.Add(this.clearSec7);
             this.Controls.Add(this.clearSec6);
             this.Controls.Add(this.clearSec5);
@@ -769,9 +792,9 @@
         private System.Windows.Forms.Button clearSec5;
         private System.Windows.Forms.Button clearSec6;
         private System.Windows.Forms.Button clearSec7;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button clearSec9;
         private System.Windows.Forms.Label appName;
         private System.Windows.Forms.Button clearSec8;
+        private System.Windows.Forms.Button clearAllBtn;
     }
 }
