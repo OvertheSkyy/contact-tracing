@@ -27,16 +27,16 @@ namespace contact_tracing
         {
 
         }
-    
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void label3_Click(object sender, EventArgs e)
         {
 
 
-        }
-
-        private void exitBtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void editInfoBtn_Click(object sender, EventArgs e)
@@ -45,9 +45,16 @@ namespace contact_tracing
             form.Show();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void aboutBtn_Click(object sender, EventArgs e)
         {
-
+            Form3 form = new Form3();
+            form.Show();
         }
+
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+ 
     }
 }

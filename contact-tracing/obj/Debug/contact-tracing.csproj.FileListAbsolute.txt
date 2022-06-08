@@ -12,3 +12,4 @@ E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\Interop.WMP
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tracing.csproj.ResolveComReference.cache
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact_tracing.Form2.resources
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact_tracing.Form1.resources
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact_tracing.Form3.resources

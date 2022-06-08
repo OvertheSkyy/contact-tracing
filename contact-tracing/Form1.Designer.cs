@@ -72,6 +72,7 @@
             this.personalInfoLabel.AutoSize = true;
             this.personalInfoLabel.BackColor = System.Drawing.Color.Transparent;
             this.personalInfoLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.personalInfoLabel.ForeColor = System.Drawing.Color.Black;
             this.personalInfoLabel.Location = new System.Drawing.Point(14, 194);
             this.personalInfoLabel.Name = "personalInfoLabel";
             this.personalInfoLabel.Size = new System.Drawing.Size(209, 21);
@@ -102,7 +103,7 @@
             this.exitBtn.FlatAppearance.BorderSize = 0;
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitBtn.ForeColor = System.Drawing.Color.White;
+            this.exitBtn.ForeColor = System.Drawing.Color.Black;
             this.exitBtn.Location = new System.Drawing.Point(18, 311);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(196, 33);
@@ -158,13 +159,14 @@
             this.aboutBtn.FlatAppearance.BorderSize = 0;
             this.aboutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.aboutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aboutBtn.ForeColor = System.Drawing.Color.White;
+            this.aboutBtn.ForeColor = System.Drawing.Color.Black;
             this.aboutBtn.Location = new System.Drawing.Point(18, 272);
             this.aboutBtn.Name = "aboutBtn";
             this.aboutBtn.Size = new System.Drawing.Size(196, 33);
             this.aboutBtn.TabIndex = 66;
             this.aboutBtn.Text = "About App";
             this.aboutBtn.UseVisualStyleBackColor = false;
+            this.aboutBtn.Click += new System.EventHandler(this.aboutBtn_Click);
             // 
             // addInfoBtn
             // 
@@ -173,6 +175,7 @@
             this.addInfoBtn.FlatAppearance.BorderSize = 0;
             this.addInfoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addInfoBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addInfoBtn.ForeColor = System.Drawing.Color.Black;
             this.addInfoBtn.Location = new System.Drawing.Point(18, 233);
             this.addInfoBtn.Name = "addInfoBtn";
             this.addInfoBtn.Size = new System.Drawing.Size(196, 33);
