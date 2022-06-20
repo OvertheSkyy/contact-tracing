@@ -11,10 +11,10 @@ using System.IO;
 
 namespace contact_tracing
 {
-    public partial class Form2 : Form
+    public partial class personalInfoForm : Form
     {
 
-        public Form2()
+        public personalInfoForm()
         {
             InitializeComponent();
         }
@@ -125,25 +125,39 @@ namespace contact_tracing
 
         private void saveInfoBtn_Click(object sender, EventArgs e)
         {
-            StreamWriter file = new StreamWriter(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\contacts.txt", true);
+            StreamWriter outputFile = new StreamWriter(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\contacts.txt", true);
 
-            file.WriteLine(personInfoLabel.Text);
-            file.WriteLine(nameLabel.Text + " " + lastNameTextBox.Text + " " + firstNameTextBox.Text + " " + middleInitialTextBox.Text);
-            file.WriteLine(addressLabel.Text + " " + addressTextBox.Text);
-            file.WriteLine(dateOfBirthLabel.Text + " " + dateOfBirthTextBox.Text);
-            file.WriteLine(ageLabel.Text + " " + ageTextBox.Text);
-            file.WriteLine(sexLabel.Text + " " + sexTextBox.Text);
-            file.WriteLine(contactNoLabel.Text + " " + contactNoTextBox.Text);
-            file.WriteLine(healthFormLabel.Text);
-            file.WriteLine(firstDoseLabel.Text + " " + answerTextBox1.Text);
-            file.WriteLine(firstDoseDate.Text + " " + firstDoseDateTextBox.Text);
-            file.WriteLine(vaccineBrandLabel1.Text + " " + vaccineBrandTextBox1.Text);
-            file.WriteLine(secondDoseLabel.Text + " " + answerTextBox2.Text);
-            file.WriteLine(secondDoseDate.Text + " " + secondDoseDateTextBox.Text);
-            file.WriteLine(vaccineBrandLabel2.Text + " " + vaccineBrandTextBox2.Text);
-            file.WriteLine(boosterShotsLabel.Text + " " + answerTextBox3.Text);
+            outputFile.WriteLine(personInfoLabel.Text);
+            outputFile.WriteLine(nameLabel.Text + " " + lastNameTextBox.Text + " " + firstNameTextBox.Text + " " + middleInitialTextBox.Text);
+            outputFile.WriteLine(addressLabel.Text + " " + addressTextBox.Text);
+            outputFile.WriteLine(dateOfBirthLabel.Text + " " + dateOfBirthTextBox.Text);
+            outputFile.WriteLine(ageLabel.Text + " " + ageTextBox.Text);
+            outputFile.WriteLine(sexLabel.Text + " " + sexTextBox.Text);
+            outputFile.WriteLine(contactNoLabel.Text + " " + contactNoTextBox.Text);
+            outputFile.WriteLine(healthFormLabel.Text);
+            outputFile.WriteLine(firstDoseLabel.Text + " " + answerTextBox1.Text);
+            outputFile.WriteLine(firstDoseDate.Text + " " + firstDoseDateTextBox.Text);
+            outputFile.WriteLine(vaccineBrandLabel1.Text + " " + vaccineBrandTextBox1.Text);
+            outputFile.WriteLine(secondDoseLabel.Text + " " + answerTextBox2.Text);
+            outputFile.WriteLine(secondDoseDate.Text + " " + secondDoseDateTextBox.Text);
+            outputFile.WriteLine(vaccineBrandLabel2.Text + " " + vaccineBrandTextBox2.Text);
+            outputFile.WriteLine(boosterShotsLabel.Text + " " + answerTextBox3.Text);
 
-            file.Close();
+            outputFile.Close();
+        }
+
+        private void getInfoBtn_Click(object sender, EventArgs e)
+        {
+            
+            StreamReader inputFile = new StreamReader(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\contacts.txt");
+            
+            while (!inputFile.EndOfStream)
+            {
+                String line = inputFile.ReadLine();
+                MessageBox.Show(line);
+            }
+
+            inputFile.Close();
         }
 
         private void clearAllBtn_Click(object sender, EventArgs e)
@@ -179,5 +193,7 @@ namespace contact_tracing
         {
             this.Close();
         }
+
+
     }
 }

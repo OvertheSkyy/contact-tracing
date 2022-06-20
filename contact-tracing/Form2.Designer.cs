@@ -1,6 +1,6 @@
 ﻿namespace contact_tracing
 {
-    partial class Form2
+    partial class personalInfoForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(personalInfoForm));
             this.answerTextBox3 = new System.Windows.Forms.TextBox();
             this.boosterShotsLabel = new System.Windows.Forms.Label();
             this.vaccineBrandTextBox2 = new System.Windows.Forms.TextBox();
@@ -53,7 +53,6 @@
             this.addressTextBox = new System.Windows.Forms.TextBox();
             this.addressLabel = new System.Windows.Forms.Label();
             this.middleInitialTextBox = new System.Windows.Forms.TextBox();
-            this.firstNameTextBox = new System.Windows.Forms.TextBox();
             this.lastNameTextBox = new System.Windows.Forms.TextBox();
             this.middleInitialLabel = new System.Windows.Forms.Label();
             this.firstNameLabel = new System.Windows.Forms.Label();
@@ -83,6 +82,8 @@
             this.appName = new System.Windows.Forms.Label();
             this.clearSec8 = new System.Windows.Forms.Button();
             this.clearAllBtn = new System.Windows.Forms.Button();
+            this.firstNameTextBox = new System.Windows.Forms.TextBox();
+            this.getInfoBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // answerTextBox3
@@ -331,16 +332,6 @@
             this.middleInitialTextBox.Size = new System.Drawing.Size(114, 13);
             this.middleInitialTextBox.TabIndex = 3;
             // 
-            // firstNameTextBox
-            // 
-            this.firstNameTextBox.BackColor = System.Drawing.Color.White;
-            this.firstNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.firstNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstNameTextBox.Location = new System.Drawing.Point(197, 61);
-            this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.Size = new System.Drawing.Size(127, 13);
-            this.firstNameTextBox.TabIndex = 2;
-            // 
             // lastNameTextBox
             // 
             this.lastNameTextBox.BackColor = System.Drawing.Color.White;
@@ -408,9 +399,9 @@
             // 
             // saveInfoBtn
             // 
-            this.saveInfoBtn.Location = new System.Drawing.Point(16, 385);
+            this.saveInfoBtn.Location = new System.Drawing.Point(33, 387);
             this.saveInfoBtn.Name = "saveInfoBtn";
-            this.saveInfoBtn.Size = new System.Drawing.Size(166, 33);
+            this.saveInfoBtn.Size = new System.Drawing.Size(103, 29);
             this.saveInfoBtn.TabIndex = 31;
             this.saveInfoBtn.Text = "Save Info";
             this.saveInfoBtn.UseVisualStyleBackColor = true;
@@ -540,9 +531,9 @@
             // 
             // returnHomeBtn
             // 
-            this.returnHomeBtn.Location = new System.Drawing.Point(355, 385);
+            this.returnHomeBtn.Location = new System.Drawing.Point(392, 387);
             this.returnHomeBtn.Name = "returnHomeBtn";
-            this.returnHomeBtn.Size = new System.Drawing.Size(162, 33);
+            this.returnHomeBtn.Size = new System.Drawing.Size(103, 29);
             this.returnHomeBtn.TabIndex = 33;
             this.returnHomeBtn.Text = "Back";
             this.returnHomeBtn.UseVisualStyleBackColor = true;
@@ -662,21 +653,43 @@
             // clearAllBtn
             // 
             this.clearAllBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearAllBtn.Location = new System.Drawing.Point(188, 385);
+            this.clearAllBtn.Location = new System.Drawing.Point(272, 387);
             this.clearAllBtn.Name = "clearAllBtn";
-            this.clearAllBtn.Size = new System.Drawing.Size(158, 33);
+            this.clearAllBtn.Size = new System.Drawing.Size(103, 29);
             this.clearAllBtn.TabIndex = 134;
             this.clearAllBtn.Text = "Clear All";
             this.clearAllBtn.UseVisualStyleBackColor = true;
             this.clearAllBtn.Click += new System.EventHandler(this.clearAllBtn_Click);
             // 
-            // Form2
+            // firstNameTextBox
+            // 
+            this.firstNameTextBox.BackColor = System.Drawing.Color.White;
+            this.firstNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.firstNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstNameTextBox.Location = new System.Drawing.Point(197, 61);
+            this.firstNameTextBox.Name = "firstNameTextBox";
+            this.firstNameTextBox.Size = new System.Drawing.Size(127, 13);
+            this.firstNameTextBox.TabIndex = 2;
+            // 
+            // getInfoBtn
+            // 
+            this.getInfoBtn.Location = new System.Drawing.Point(154, 387);
+            this.getInfoBtn.Name = "getInfoBtn";
+            this.getInfoBtn.Size = new System.Drawing.Size(103, 29);
+            this.getInfoBtn.TabIndex = 135;
+            this.getInfoBtn.Text = "Get Info ";
+            this.getInfoBtn.UseVisualStyleBackColor = true;
+            this.getInfoBtn.Click += new System.EventHandler(this.getInfoBtn_Click);
+            // 
+            // personalInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(529, 438);
+            this.ClientSize = new System.Drawing.Size(534, 434);
+            this.Controls.Add(this.getInfoBtn);
+            this.Controls.Add(this.firstNameTextBox);
             this.Controls.Add(this.clearAllBtn);
             this.Controls.Add(this.clearSec8);
             this.Controls.Add(this.appName);
@@ -714,7 +727,6 @@
             this.Controls.Add(this.addressTextBox);
             this.Controls.Add(this.addressLabel);
             this.Controls.Add(this.middleInitialTextBox);
-            this.Controls.Add(this.firstNameTextBox);
             this.Controls.Add(this.lastNameTextBox);
             this.Controls.Add(this.middleInitialLabel);
             this.Controls.Add(this.firstNameLabel);
@@ -732,7 +744,7 @@
             this.Controls.Add(this.secondDoseLabel);
             this.Controls.Add(this.firstDoseLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form2";
+            this.Name = "personalInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -766,7 +778,6 @@
         private System.Windows.Forms.TextBox addressTextBox;
         private System.Windows.Forms.Label addressLabel;
         private System.Windows.Forms.TextBox middleInitialTextBox;
-        private System.Windows.Forms.TextBox firstNameTextBox;
         private System.Windows.Forms.TextBox lastNameTextBox;
         private System.Windows.Forms.Label middleInitialLabel;
         private System.Windows.Forms.Label firstNameLabel;
@@ -796,5 +807,7 @@
         private System.Windows.Forms.Label appName;
         private System.Windows.Forms.Button clearSec8;
         private System.Windows.Forms.Button clearAllBtn;
+        private System.Windows.Forms.TextBox firstNameTextBox;
+        private System.Windows.Forms.Button getInfoBtn;
     }
 }

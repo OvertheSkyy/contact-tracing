@@ -41,7 +41,7 @@ namespace contact_tracing
 
         private void editInfoBtn_Click(object sender, EventArgs e)
         {
-            Form2 form = new Form2();
+            personalInfoForm form = new personalInfoForm();
             form.Show();
         }
 
