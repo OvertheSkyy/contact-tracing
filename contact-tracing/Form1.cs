@@ -39,7 +39,11 @@ namespace contact_tracing
 
         }
 
-        private void editInfoBtn_Click(object sender, EventArgs e)
+        private void personalInfoLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void loginBtn_Click(object sender, EventArgs e)
         {
             personalInfoForm form = new personalInfoForm();
             form.Show();
@@ -56,19 +60,7 @@ namespace contact_tracing
             this.Close();
         }
 
-        private void personalInfoLabel_Click(object sender, EventArgs e)
-        {
+ 
 
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

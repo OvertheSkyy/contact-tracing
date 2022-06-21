@@ -125,7 +125,239 @@ namespace contact_tracing
 
         private void saveInfoBtn_Click(object sender, EventArgs e)
         {
-            StreamWriter outputFile = new StreamWriter(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\contacts.txt");
+            if (lastNameTextBox.Text == "Mondragon")
+                personalInfo1();
+            else if (lastNameTextBox.Text == "Shah")
+                personalInfo2();
+            else if (lastNameTextBox.Text == "Doyle")
+                personalInfo3();
+            else if (lastNameTextBox.Text == "Rowland")
+                personalInfo4();
+            else if (lastNameTextBox.Text == "Berger")
+                personalInfo5();
+            else if (lastNameTextBox.Text == "Morgan")
+                personalInfo6();
+            else if (lastNameTextBox.Text == "Caldwell")
+                personalInfo7();
+            else if (lastNameTextBox.Text == "Burns")
+                personalInfo8();
+            else if (lastNameTextBox.Text == "Vaughan")
+                personalInfo9();
+            else if (lastNameTextBox.Text == "Love")
+                personalInfo10();
+  
+        }
+
+        private void personalInfo1()
+        {
+            StreamWriter outputFile = new StreamWriter(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\Cassie Mondgragon.txt");
+
+            outputFile.WriteLine(personInfoLabel.Text);
+            outputFile.WriteLine(nameLabel.Text + " " + lastNameTextBox.Text + "," + " " + firstNameTextBox.Text + " " + middleInitialTextBox.Text);
+            outputFile.WriteLine(addressLabel.Text + " " + addressTextBox.Text);
+            outputFile.WriteLine(dateOfBirthLabel.Text + " " + dateOfBirthTextBox.Text);
+            outputFile.WriteLine(ageLabel.Text + " " + ageTextBox.Text);
+            outputFile.WriteLine(sexLabel.Text + " " + sexTextBox.Text);
+            outputFile.WriteLine(contactNoLabel.Text + " " + contactNoTextBox.Text);
+            outputFile.WriteLine(healthFormLabel.Text);
+            outputFile.WriteLine(firstDoseLabel.Text + " " + answerTextBox1.Text);
+            outputFile.WriteLine(firstDoseDate.Text + " " + firstDoseDateTextBox.Text);
+            outputFile.WriteLine(vaccineBrandLabel1.Text + " " + vaccineBrandTextBox1.Text);
+            outputFile.WriteLine(secondDoseLabel.Text + " " + answerTextBox2.Text);
+            outputFile.WriteLine(secondDoseDate.Text + " " + secondDoseDateTextBox.Text);
+            outputFile.WriteLine(vaccineBrandLabel2.Text + " " + vaccineBrandTextBox2.Text);
+            outputFile.WriteLine(boosterShotsLabel.Text + " " + answerTextBox3.Text);
+
+            outputFile.Close();
+        }
+
+        private void personalInfo2()
+        {
+            StreamWriter outputFile = new StreamWriter(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\Sherri Shah.txt");
+
+            outputFile.WriteLine(personInfoLabel.Text);
+            outputFile.WriteLine(nameLabel.Text + " " + lastNameTextBox.Text + "," + " " + firstNameTextBox.Text + " " + middleInitialTextBox.Text);
+            outputFile.WriteLine(addressLabel.Text + " " + addressTextBox.Text);
+            outputFile.WriteLine(dateOfBirthLabel.Text + " " + dateOfBirthTextBox.Text);
+            outputFile.WriteLine(ageLabel.Text + " " + ageTextBox.Text);
+            outputFile.WriteLine(sexLabel.Text + " " + sexTextBox.Text);
+            outputFile.WriteLine(contactNoLabel.Text + " " + contactNoTextBox.Text);
+            outputFile.WriteLine(healthFormLabel.Text);
+            outputFile.WriteLine(firstDoseLabel.Text + " " + answerTextBox1.Text);
+            outputFile.WriteLine(firstDoseDate.Text + " " + firstDoseDateTextBox.Text);
+            outputFile.WriteLine(vaccineBrandLabel1.Text + " " + vaccineBrandTextBox1.Text);
+            outputFile.WriteLine(secondDoseLabel.Text + " " + answerTextBox2.Text);
+            outputFile.WriteLine(secondDoseDate.Text + " " + secondDoseDateTextBox.Text);
+            outputFile.WriteLine(vaccineBrandLabel2.Text + " " + vaccineBrandTextBox2.Text);
+            outputFile.WriteLine(boosterShotsLabel.Text + " " + answerTextBox3.Text);
+
+            outputFile.Close();
+        }
+        
+        private void personalInfo3()
+        {
+            StreamWriter outputFile = new StreamWriter(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\Rolando Doyle.txt");
+
+            outputFile.WriteLine(personInfoLabel.Text);
+            outputFile.WriteLine(nameLabel.Text + " " + lastNameTextBox.Text + "," + " " + firstNameTextBox.Text + " " + middleInitialTextBox.Text);
+            outputFile.WriteLine(addressLabel.Text + " " + addressTextBox.Text);
+            outputFile.WriteLine(dateOfBirthLabel.Text + " " + dateOfBirthTextBox.Text);
+            outputFile.WriteLine(ageLabel.Text + " " + ageTextBox.Text);
+            outputFile.WriteLine(sexLabel.Text + " " + sexTextBox.Text);
+            outputFile.WriteLine(contactNoLabel.Text + " " + contactNoTextBox.Text);
+            outputFile.WriteLine(healthFormLabel.Text);
+            outputFile.WriteLine(firstDoseLabel.Text + " " + answerTextBox1.Text);
+            outputFile.WriteLine(firstDoseDate.Text + " " + firstDoseDateTextBox.Text);
+            outputFile.WriteLine(vaccineBrandLabel1.Text + " " + vaccineBrandTextBox1.Text);
+            outputFile.WriteLine(secondDoseLabel.Text + " " + answerTextBox2.Text);
+            outputFile.WriteLine(secondDoseDate.Text + " " + secondDoseDateTextBox.Text);
+            outputFile.WriteLine(vaccineBrandLabel2.Text + " " + vaccineBrandTextBox2.Text);
+            outputFile.WriteLine(boosterShotsLabel.Text + " " + answerTextBox3.Text);
+
+            outputFile.Close();
+        }
+
+        private void personalInfo4()
+        {
+            StreamWriter outputFile = new StreamWriter(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\Mickey Rowland.txt");
+
+            outputFile.WriteLine(personInfoLabel.Text);
+            outputFile.WriteLine(nameLabel.Text + " " + lastNameTextBox.Text + "," + " " + firstNameTextBox.Text + " " + middleInitialTextBox.Text);
+            outputFile.WriteLine(addressLabel.Text + " " + addressTextBox.Text);
+            outputFile.WriteLine(dateOfBirthLabel.Text + " " + dateOfBirthTextBox.Text);
+            outputFile.WriteLine(ageLabel.Text + " " + ageTextBox.Text);
+            outputFile.WriteLine(sexLabel.Text + " " + sexTextBox.Text);
+            outputFile.WriteLine(contactNoLabel.Text + " " + contactNoTextBox.Text);
+            outputFile.WriteLine(healthFormLabel.Text);
+            outputFile.WriteLine(firstDoseLabel.Text + " " + answerTextBox1.Text);
+            outputFile.WriteLine(firstDoseDate.Text + " " + firstDoseDateTextBox.Text);
+            outputFile.WriteLine(vaccineBrandLabel1.Text + " " + vaccineBrandTextBox1.Text);
+            outputFile.WriteLine(secondDoseLabel.Text + " " + answerTextBox2.Text);
+            outputFile.WriteLine(secondDoseDate.Text + " " + secondDoseDateTextBox.Text);
+            outputFile.WriteLine(vaccineBrandLabel2.Text + " " + vaccineBrandTextBox2.Text);
+            outputFile.WriteLine(boosterShotsLabel.Text + " " + answerTextBox3.Text);
+
+            outputFile.Close();
+        }
+
+        private void personalInfo5()
+        {
+            StreamWriter outputFile = new StreamWriter(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\Ezequiel Berger.txt");
+
+            outputFile.WriteLine(personInfoLabel.Text);
+            outputFile.WriteLine(nameLabel.Text + " " + lastNameTextBox.Text + "," + " " + firstNameTextBox.Text + " " + middleInitialTextBox.Text);
+            outputFile.WriteLine(addressLabel.Text + " " + addressTextBox.Text);
+            outputFile.WriteLine(dateOfBirthLabel.Text + " " + dateOfBirthTextBox.Text);
+            outputFile.WriteLine(ageLabel.Text + " " + ageTextBox.Text);
+            outputFile.WriteLine(sexLabel.Text + " " + sexTextBox.Text);
+            outputFile.WriteLine(contactNoLabel.Text + " " + contactNoTextBox.Text);
+            outputFile.WriteLine(healthFormLabel.Text);
+            outputFile.WriteLine(firstDoseLabel.Text + " " + answerTextBox1.Text);
+            outputFile.WriteLine(firstDoseDate.Text + " " + firstDoseDateTextBox.Text);
+            outputFile.WriteLine(vaccineBrandLabel1.Text + " " + vaccineBrandTextBox1.Text);
+            outputFile.WriteLine(secondDoseLabel.Text + " " + answerTextBox2.Text);
+            outputFile.WriteLine(secondDoseDate.Text + " " + secondDoseDateTextBox.Text);
+            outputFile.WriteLine(vaccineBrandLabel2.Text + " " + vaccineBrandTextBox2.Text);
+            outputFile.WriteLine(boosterShotsLabel.Text + " " + answerTextBox3.Text);
+
+            outputFile.Close();
+        }
+
+        private void personalInfo6()
+        {
+            StreamWriter outputFile = new StreamWriter(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\Beatrice Morgan.txt");
+
+            outputFile.WriteLine(personInfoLabel.Text);
+            outputFile.WriteLine(nameLabel.Text + " " + lastNameTextBox.Text + "," + " " + firstNameTextBox.Text + " " + middleInitialTextBox.Text);
+            outputFile.WriteLine(addressLabel.Text + " " + addressTextBox.Text);
+            outputFile.WriteLine(dateOfBirthLabel.Text + " " + dateOfBirthTextBox.Text);
+            outputFile.WriteLine(ageLabel.Text + " " + ageTextBox.Text);
+            outputFile.WriteLine(sexLabel.Text + " " + sexTextBox.Text);
+            outputFile.WriteLine(contactNoLabel.Text + " " + contactNoTextBox.Text);
+            outputFile.WriteLine(healthFormLabel.Text);
+            outputFile.WriteLine(firstDoseLabel.Text + " " + answerTextBox1.Text);
+            outputFile.WriteLine(firstDoseDate.Text + " " + firstDoseDateTextBox.Text);
+            outputFile.WriteLine(vaccineBrandLabel1.Text + " " + vaccineBrandTextBox1.Text);
+            outputFile.WriteLine(secondDoseLabel.Text + " " + answerTextBox2.Text);
+            outputFile.WriteLine(secondDoseDate.Text + " " + secondDoseDateTextBox.Text);
+            outputFile.WriteLine(vaccineBrandLabel2.Text + " " + vaccineBrandTextBox2.Text);
+            outputFile.WriteLine(boosterShotsLabel.Text + " " + answerTextBox3.Text);
+
+            outputFile.Close();
+        }
+
+        private void personalInfo7()
+        {
+            StreamWriter outputFile = new StreamWriter(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\Lori Caldwell.txt");
+
+            outputFile.WriteLine(personInfoLabel.Text);
+            outputFile.WriteLine(nameLabel.Text + " " + lastNameTextBox.Text + "," + " " + firstNameTextBox.Text + " " + middleInitialTextBox.Text);
+            outputFile.WriteLine(addressLabel.Text + " " + addressTextBox.Text);
+            outputFile.WriteLine(dateOfBirthLabel.Text + " " + dateOfBirthTextBox.Text);
+            outputFile.WriteLine(ageLabel.Text + " " + ageTextBox.Text);
+            outputFile.WriteLine(sexLabel.Text + " " + sexTextBox.Text);
+            outputFile.WriteLine(contactNoLabel.Text + " " + contactNoTextBox.Text);
+            outputFile.WriteLine(healthFormLabel.Text);
+            outputFile.WriteLine(firstDoseLabel.Text + " " + answerTextBox1.Text);
+            outputFile.WriteLine(firstDoseDate.Text + " " + firstDoseDateTextBox.Text);
+            outputFile.WriteLine(vaccineBrandLabel1.Text + " " + vaccineBrandTextBox1.Text);
+            outputFile.WriteLine(secondDoseLabel.Text + " " + answerTextBox2.Text);
+            outputFile.WriteLine(secondDoseDate.Text + " " + secondDoseDateTextBox.Text);
+            outputFile.WriteLine(vaccineBrandLabel2.Text + " " + vaccineBrandTextBox2.Text);
+            outputFile.WriteLine(boosterShotsLabel.Text + " " + answerTextBox3.Text);
+
+            outputFile.Close();
+        }
+
+        private void personalInfo8()
+        {
+            StreamWriter outputFile = new StreamWriter(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\Eileen Burns.txt");
+
+            outputFile.WriteLine(personInfoLabel.Text);
+            outputFile.WriteLine(nameLabel.Text + " " + lastNameTextBox.Text + "," + " " + firstNameTextBox.Text + " " + middleInitialTextBox.Text);
+            outputFile.WriteLine(addressLabel.Text + " " + addressTextBox.Text);
+            outputFile.WriteLine(dateOfBirthLabel.Text + " " + dateOfBirthTextBox.Text);
+            outputFile.WriteLine(ageLabel.Text + " " + ageTextBox.Text);
+            outputFile.WriteLine(sexLabel.Text + " " + sexTextBox.Text);
+            outputFile.WriteLine(contactNoLabel.Text + " " + contactNoTextBox.Text);
+            outputFile.WriteLine(healthFormLabel.Text);
+            outputFile.WriteLine(firstDoseLabel.Text + " " + answerTextBox1.Text);
+            outputFile.WriteLine(firstDoseDate.Text + " " + firstDoseDateTextBox.Text);
+            outputFile.WriteLine(vaccineBrandLabel1.Text + " " + vaccineBrandTextBox1.Text);
+            outputFile.WriteLine(secondDoseLabel.Text + " " + answerTextBox2.Text);
+            outputFile.WriteLine(secondDoseDate.Text + " " + secondDoseDateTextBox.Text);
+            outputFile.WriteLine(vaccineBrandLabel2.Text + " " + vaccineBrandTextBox2.Text);
+            outputFile.WriteLine(boosterShotsLabel.Text + " " + answerTextBox3.Text);
+
+            outputFile.Close();
+        }
+
+        private void personalInfo9()
+        {
+            StreamWriter outputFile = new StreamWriter(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\Dana Love.txt");
+
+            outputFile.WriteLine(personInfoLabel.Text);
+            outputFile.WriteLine(nameLabel.Text + " " + lastNameTextBox.Text + "," + " " + firstNameTextBox.Text + " " + middleInitialTextBox.Text);
+            outputFile.WriteLine(addressLabel.Text + " " + addressTextBox.Text);
+            outputFile.WriteLine(dateOfBirthLabel.Text + " " + dateOfBirthTextBox.Text);
+            outputFile.WriteLine(ageLabel.Text + " " + ageTextBox.Text);
+            outputFile.WriteLine(sexLabel.Text + " " + sexTextBox.Text);
+            outputFile.WriteLine(contactNoLabel.Text + " " + contactNoTextBox.Text);
+            outputFile.WriteLine(healthFormLabel.Text);
+            outputFile.WriteLine(firstDoseLabel.Text + " " + answerTextBox1.Text);
+            outputFile.WriteLine(firstDoseDate.Text + " " + firstDoseDateTextBox.Text);
+            outputFile.WriteLine(vaccineBrandLabel1.Text + " " + vaccineBrandTextBox1.Text);
+            outputFile.WriteLine(secondDoseLabel.Text + " " + answerTextBox2.Text);
+            outputFile.WriteLine(secondDoseDate.Text + " " + secondDoseDateTextBox.Text);
+            outputFile.WriteLine(vaccineBrandLabel2.Text + " " + vaccineBrandTextBox2.Text);
+            outputFile.WriteLine(boosterShotsLabel.Text + " " + answerTextBox3.Text);
+
+            outputFile.Close();
+        }
+
+        private void personalInfo10()
+        {
+            StreamWriter outputFile = new StreamWriter(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\Vicky Vaughan.txt");
 
             outputFile.WriteLine(personInfoLabel.Text);
             outputFile.WriteLine(nameLabel.Text + " " + lastNameTextBox.Text + "," + " " + firstNameTextBox.Text + " " + middleInitialTextBox.Text);
