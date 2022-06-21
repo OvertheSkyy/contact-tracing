@@ -146,20 +146,6 @@ namespace contact_tracing
             outputFile.Close();
         }
 
-        private void getInfoBtn_Click(object sender, EventArgs e)
-        {
-            
-            StreamReader inputFile = new StreamReader(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\contacts.txt");
-            
-            while (!inputFile.EndOfStream)
-            {
-                String line = inputFile.ReadLine();
-                MessageBox.Show(line);
-            }
-
-            inputFile.Close();
-        }
-
         private void clearAllBtn_Click(object sender, EventArgs e)
         {
 
@@ -194,6 +180,10 @@ namespace contact_tracing
             this.Close();
         }
 
-
+        private void seeInfo_Click(object sender, EventArgs e)
+        {
+            Form4 form = new Form4();
+            form.Show();
+        }
     }
 }

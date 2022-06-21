@@ -78,6 +78,7 @@
             this.personalInfoLabel.Size = new System.Drawing.Size(209, 21);
             this.personalInfoLabel.TabIndex = 19;
             this.personalInfoLabel.Text = "PERSONAL INFORMATION";
+            this.personalInfoLabel.Click += new System.EventHandler(this.personalInfoLabel_Click);
             // 
             // label18
             // 

@@ -83,7 +83,8 @@
             this.clearSec8 = new System.Windows.Forms.Button();
             this.clearAllBtn = new System.Windows.Forms.Button();
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
-            this.getInfoBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.seeInfo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // answerTextBox3
@@ -671,15 +672,23 @@
             this.firstNameTextBox.Size = new System.Drawing.Size(127, 13);
             this.firstNameTextBox.TabIndex = 2;
             // 
-            // getInfoBtn
+            // label1
             // 
-            this.getInfoBtn.Location = new System.Drawing.Point(154, 387);
-            this.getInfoBtn.Name = "getInfoBtn";
-            this.getInfoBtn.Size = new System.Drawing.Size(103, 29);
-            this.getInfoBtn.TabIndex = 135;
-            this.getInfoBtn.Text = "Get Info ";
-            this.getInfoBtn.UseVisualStyleBackColor = true;
-            this.getInfoBtn.Click += new System.EventHandler(this.getInfoBtn_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(561, 288);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 136;
+            // 
+            // seeInfo
+            // 
+            this.seeInfo.Location = new System.Drawing.Point(154, 389);
+            this.seeInfo.Name = "seeInfo";
+            this.seeInfo.Size = new System.Drawing.Size(103, 29);
+            this.seeInfo.TabIndex = 137;
+            this.seeInfo.Text = "See Info";
+            this.seeInfo.UseVisualStyleBackColor = true;
+            this.seeInfo.Click += new System.EventHandler(this.seeInfo_Click);
             // 
             // personalInfoForm
             // 
@@ -687,8 +696,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(534, 434);
-            this.Controls.Add(this.getInfoBtn);
+            this.ClientSize = new System.Drawing.Size(534, 430);
+            this.Controls.Add(this.seeInfo);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.firstNameTextBox);
             this.Controls.Add(this.clearAllBtn);
             this.Controls.Add(this.clearSec8);
@@ -808,6 +818,7 @@
         private System.Windows.Forms.Button clearSec8;
         private System.Windows.Forms.Button clearAllBtn;
         private System.Windows.Forms.TextBox firstNameTextBox;
-        private System.Windows.Forms.Button getInfoBtn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button seeInfo;
     }
 }

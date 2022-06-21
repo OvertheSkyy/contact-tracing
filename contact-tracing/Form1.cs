@@ -55,6 +55,10 @@ namespace contact_tracing
         {
             this.Close();
         }
- 
+
+        private void personalInfoLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
