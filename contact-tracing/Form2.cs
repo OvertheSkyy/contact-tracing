@@ -125,10 +125,10 @@ namespace contact_tracing
 
         private void saveInfoBtn_Click(object sender, EventArgs e)
         {
-            StreamWriter outputFile = new StreamWriter(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\contacts.txt", true);
+            StreamWriter outputFile = new StreamWriter(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\contacts.txt");
 
             outputFile.WriteLine(personInfoLabel.Text);
-            outputFile.WriteLine(nameLabel.Text + " " + lastNameTextBox.Text + " " + firstNameTextBox.Text + " " + middleInitialTextBox.Text);
+            outputFile.WriteLine(nameLabel.Text + " " + lastNameTextBox.Text + "," + " " + firstNameTextBox.Text + " " + middleInitialTextBox.Text);
             outputFile.WriteLine(addressLabel.Text + " " + addressTextBox.Text);
             outputFile.WriteLine(dateOfBirthLabel.Text + " " + dateOfBirthTextBox.Text);
             outputFile.WriteLine(ageLabel.Text + " " + ageTextBox.Text);
@@ -145,7 +145,6 @@ namespace contact_tracing
 
             outputFile.Close();
         }
-
         private void clearAllBtn_Click(object sender, EventArgs e)
         {
 

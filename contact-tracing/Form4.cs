@@ -19,11 +19,16 @@ namespace contact_tracing
 
         private void savedInfoTextBox_TextChanged(object sender, EventArgs e)
         {
-            StreamReader inputFile = new StreamReader(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\contacts.txt");
-            while (inputFile.EndOfStream)
-            {
-                savedInfoTextBox.Text = inputFile.ReadLine();
-            }
+           
+        }
+
+        private void showInfoBtn_Click(object sender, EventArgs e)
+        {
+            StreamReader inputFile = new StreamReader(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\contacts.txt",true);
+            
+            savedInfoTextBox.Text = inputFile.ReadToEnd();
+          
+            inputFile.Close();
         }
     }
 }

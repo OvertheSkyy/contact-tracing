@@ -37,9 +37,13 @@
             this.exitBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.aboutBtn = new System.Windows.Forms.Button();
-            this.addInfoBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.verLabel = new System.Windows.Forms.Label();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.usernameTextBox = new System.Windows.Forms.TextBox();
+            this.usernameLabel = new System.Windows.Forms.Label();
+            this.pwdTextBox = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -73,11 +77,11 @@
             this.personalInfoLabel.BackColor = System.Drawing.Color.Transparent;
             this.personalInfoLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.personalInfoLabel.ForeColor = System.Drawing.Color.Black;
-            this.personalInfoLabel.Location = new System.Drawing.Point(14, 194);
+            this.personalInfoLabel.Location = new System.Drawing.Point(38, 185);
             this.personalInfoLabel.Name = "personalInfoLabel";
-            this.personalInfoLabel.Size = new System.Drawing.Size(209, 21);
+            this.personalInfoLabel.Size = new System.Drawing.Size(165, 21);
             this.personalInfoLabel.TabIndex = 19;
-            this.personalInfoLabel.Text = "PERSONAL INFORMATION";
+            this.personalInfoLabel.Text = "Contact Information";
             this.personalInfoLabel.Click += new System.EventHandler(this.personalInfoLabel_Click);
             // 
             // label18
@@ -105,7 +109,7 @@
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitBtn.ForeColor = System.Drawing.Color.Black;
-            this.exitBtn.Location = new System.Drawing.Point(18, 311);
+            this.exitBtn.Location = new System.Drawing.Point(18, 341);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(196, 33);
             this.exitBtn.TabIndex = 44;
@@ -118,9 +122,9 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(60, 48);
+            this.pictureBox1.Location = new System.Drawing.Point(51, 54);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 106);
+            this.pictureBox1.Size = new System.Drawing.Size(135, 111);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 64;
             this.pictureBox1.TabStop = false;
@@ -131,9 +135,13 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.pwdTextBox);
+            this.panel1.Controls.Add(this.usernameLabel);
+            this.panel1.Controls.Add(this.usernameTextBox);
+            this.panel1.Controls.Add(this.passwordTextBox);
+            this.panel1.Controls.Add(this.verLabel);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.aboutBtn);
-            this.panel1.Controls.Add(this.addInfoBtn);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.exitBtn);
             this.panel1.Controls.Add(this.label3);
@@ -144,16 +152,6 @@
             this.panel1.Size = new System.Drawing.Size(233, 377);
             this.panel1.TabIndex = 66;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(3, 359);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 67;
-            this.label1.Text = "ver 1.0";
-            // 
             // aboutBtn
             // 
             this.aboutBtn.BackColor = System.Drawing.Color.Transparent;
@@ -161,7 +159,7 @@
             this.aboutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.aboutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aboutBtn.ForeColor = System.Drawing.Color.Black;
-            this.aboutBtn.Location = new System.Drawing.Point(18, 272);
+            this.aboutBtn.Location = new System.Drawing.Point(18, 313);
             this.aboutBtn.Name = "aboutBtn";
             this.aboutBtn.Size = new System.Drawing.Size(196, 33);
             this.aboutBtn.TabIndex = 66;
@@ -169,21 +167,67 @@
             this.aboutBtn.UseVisualStyleBackColor = false;
             this.aboutBtn.Click += new System.EventHandler(this.aboutBtn_Click);
             // 
-            // addInfoBtn
+            // button1
             // 
-            this.addInfoBtn.BackColor = System.Drawing.Color.Transparent;
-            this.addInfoBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.addInfoBtn.FlatAppearance.BorderSize = 0;
-            this.addInfoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addInfoBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addInfoBtn.ForeColor = System.Drawing.Color.Black;
-            this.addInfoBtn.Location = new System.Drawing.Point(18, 233);
-            this.addInfoBtn.Name = "addInfoBtn";
-            this.addInfoBtn.Size = new System.Drawing.Size(196, 33);
-            this.addInfoBtn.TabIndex = 65;
-            this.addInfoBtn.Text = "Add Info";
-            this.addInfoBtn.UseVisualStyleBackColor = false;
-            this.addInfoBtn.Click += new System.EventHandler(this.editInfoBtn_Click);
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(18, 284);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(196, 33);
+            this.button1.TabIndex = 68;
+            this.button1.Text = "Login";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // verLabel
+            // 
+            this.verLabel.AutoSize = true;
+            this.verLabel.BackColor = System.Drawing.Color.Transparent;
+            this.verLabel.ForeColor = System.Drawing.Color.Black;
+            this.verLabel.Location = new System.Drawing.Point(3, 364);
+            this.verLabel.Name = "verLabel";
+            this.verLabel.Size = new System.Drawing.Size(40, 13);
+            this.verLabel.TabIndex = 69;
+            this.verLabel.Text = "ver 2.0";
+            // 
+            // passwordTextBox
+            // 
+            this.passwordTextBox.Location = new System.Drawing.Point(42, 258);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(152, 20);
+            this.passwordTextBox.TabIndex = 71;
+            // 
+            // usernameTextBox
+            // 
+            this.usernameTextBox.Location = new System.Drawing.Point(42, 219);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(152, 20);
+            this.usernameTextBox.TabIndex = 72;
+            // 
+            // usernameLabel
+            // 
+            this.usernameLabel.AutoSize = true;
+            this.usernameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.usernameLabel.ForeColor = System.Drawing.Color.Black;
+            this.usernameLabel.Location = new System.Drawing.Point(40, 203);
+            this.usernameLabel.Name = "usernameLabel";
+            this.usernameLabel.Size = new System.Drawing.Size(55, 13);
+            this.usernameLabel.TabIndex = 73;
+            this.usernameLabel.Text = "Username";
+            // 
+            // pwdTextBox
+            // 
+            this.pwdTextBox.AutoSize = true;
+            this.pwdTextBox.BackColor = System.Drawing.Color.Transparent;
+            this.pwdTextBox.ForeColor = System.Drawing.Color.Black;
+            this.pwdTextBox.Location = new System.Drawing.Point(40, 243);
+            this.pwdTextBox.Name = "pwdTextBox";
+            this.pwdTextBox.Size = new System.Drawing.Size(53, 13);
+            this.pwdTextBox.TabIndex = 74;
+            this.pwdTextBox.Text = "Password";
             // 
             // Form1
             // 
@@ -220,9 +264,13 @@
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button addInfoBtn;
         private System.Windows.Forms.Button aboutBtn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label verLabel;
+        private System.Windows.Forms.TextBox passwordTextBox;
+        private System.Windows.Forms.TextBox usernameTextBox;
+        private System.Windows.Forms.Label pwdTextBox;
+        private System.Windows.Forms.Label usernameLabel;
     }
 }
 

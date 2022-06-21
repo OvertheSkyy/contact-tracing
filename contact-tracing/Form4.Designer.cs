@@ -30,10 +30,13 @@
         {
             this.savedInfoTextBox = new System.Windows.Forms.RichTextBox();
             this.whatWeReceived = new System.Windows.Forms.Label();
+            this.showInfoBtn = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // savedInfoTextBox
             // 
+            this.savedInfoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.savedInfoTextBox.Location = new System.Drawing.Point(48, 37);
             this.savedInfoTextBox.Name = "savedInfoTextBox";
             this.savedInfoTextBox.Size = new System.Drawing.Size(559, 434);
@@ -45,17 +48,36 @@
             // 
             this.whatWeReceived.AutoSize = true;
             this.whatWeReceived.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.whatWeReceived.Location = new System.Drawing.Point(241, 18);
+            this.whatWeReceived.Location = new System.Drawing.Point(74, 18);
             this.whatWeReceived.Name = "whatWeReceived";
             this.whatWeReceived.Size = new System.Drawing.Size(183, 16);
             this.whatWeReceived.TabIndex = 1;
             this.whatWeReceived.Text = "Here\'s What We\'ve Received";
+            // 
+            // showInfoBtn
+            // 
+            this.showInfoBtn.Location = new System.Drawing.Point(417, 498);
+            this.showInfoBtn.Name = "showInfoBtn";
+            this.showInfoBtn.Size = new System.Drawing.Size(75, 23);
+            this.showInfoBtn.TabIndex = 2;
+            this.showInfoBtn.Text = "Show Info";
+            this.showInfoBtn.UseVisualStyleBackColor = true;
+            this.showInfoBtn.Click += new System.EventHandler(this.showInfoBtn_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(326, 20);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 3;
             // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(653, 540);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.showInfoBtn);
             this.Controls.Add(this.whatWeReceived);
             this.Controls.Add(this.savedInfoTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -71,5 +93,7 @@
 
         private System.Windows.Forms.RichTextBox savedInfoTextBox;
         private System.Windows.Forms.Label whatWeReceived;
+        private System.Windows.Forms.Button showInfoBtn;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
