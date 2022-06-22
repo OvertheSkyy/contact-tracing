@@ -85,6 +85,8 @@
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.seeInfo = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dateOfCreationComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // answerTextBox3
@@ -691,6 +693,29 @@
             this.seeInfo.UseVisualStyleBackColor = true;
             this.seeInfo.Click += new System.EventHandler(this.seeInfo_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(353, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 138;
+            this.label2.Text = "YEAR:";
+            // 
+            // dateOfCreationComboBox
+            // 
+            this.dateOfCreationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dateOfCreationComboBox.FormattingEnabled = true;
+            this.dateOfCreationComboBox.Items.AddRange(new object[] {
+            "2021",
+            "2022"});
+            this.dateOfCreationComboBox.Location = new System.Drawing.Point(401, 34);
+            this.dateOfCreationComboBox.Name = "dateOfCreationComboBox";
+            this.dateOfCreationComboBox.Size = new System.Drawing.Size(121, 21);
+            this.dateOfCreationComboBox.TabIndex = 139;
+            // 
             // personalInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -698,6 +723,8 @@
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(534, 430);
+            this.Controls.Add(this.dateOfCreationComboBox);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.seeInfo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.firstNameTextBox);
@@ -821,5 +848,7 @@
         private System.Windows.Forms.TextBox firstNameTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button seeInfo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox dateOfCreationComboBox;
     }
 }
