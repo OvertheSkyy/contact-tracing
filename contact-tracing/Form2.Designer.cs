@@ -342,6 +342,7 @@
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(127, 13);
             this.lastNameTextBox.TabIndex = 1;
+            this.lastNameTextBox.TextChanged += new System.EventHandler(this.lastNameTextBox_TextChanged);
             // 
             // middleInitialLabel
             // 

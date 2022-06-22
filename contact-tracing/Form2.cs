@@ -24,6 +24,12 @@ namespace contact_tracing
         {
 
         }
+
+        private void lastNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void firstDoseYes_CheckedChanged(object sender, EventArgs e)
         {
             answerTextBox1.Text = "Yes";
@@ -148,9 +154,13 @@ namespace contact_tracing
   
         }
 
+        private void dateOfSavedInfo()
+        {
+
+        }
         private void personalInfo1()
         {
-            StreamWriter outputFile = new StreamWriter(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\Cassie Mondgragon.txt");
+            StreamWriter outputFile = new StreamWriter(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\Cassie Mondragon.txt");
 
             outputFile.WriteLine(personInfoLabel.Text);
             outputFile.WriteLine(nameLabel.Text + " " + lastNameTextBox.Text + "," + " " + firstNameTextBox.Text + " " + middleInitialTextBox.Text);
@@ -416,5 +426,7 @@ namespace contact_tracing
             Form4 form = new Form4();
             form.Show();
         }
+
+
     }
 }
