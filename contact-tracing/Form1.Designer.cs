@@ -37,13 +37,13 @@
             this.exitBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.loginBtn = new System.Windows.Forms.Button();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.pwdTextBox = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.verLabel = new System.Windows.Forms.Label();
             this.aboutBtn = new System.Windows.Forms.Button();
-            this.loginBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -152,6 +152,22 @@
             this.panel1.Size = new System.Drawing.Size(233, 377);
             this.panel1.TabIndex = 66;
             // 
+            // loginBtn
+            // 
+            this.loginBtn.BackColor = System.Drawing.Color.Transparent;
+            this.loginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.loginBtn.FlatAppearance.BorderSize = 0;
+            this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginBtn.ForeColor = System.Drawing.Color.Black;
+            this.loginBtn.Location = new System.Drawing.Point(18, 259);
+            this.loginBtn.Name = "loginBtn";
+            this.loginBtn.Size = new System.Drawing.Size(196, 33);
+            this.loginBtn.TabIndex = 76;
+            this.loginBtn.Text = "Login";
+            this.loginBtn.UseVisualStyleBackColor = false;
+            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
+            // 
             // usernameLabel
             // 
             this.usernameLabel.AutoSize = true;
@@ -195,9 +211,9 @@
             this.verLabel.ForeColor = System.Drawing.Color.Black;
             this.verLabel.Location = new System.Drawing.Point(3, 363);
             this.verLabel.Name = "verLabel";
-            this.verLabel.Size = new System.Drawing.Size(40, 13);
+            this.verLabel.Size = new System.Drawing.Size(64, 13);
             this.verLabel.TabIndex = 69;
-            this.verLabel.Text = "ver 2.0";
+            this.verLabel.Text = "beta ver 2.0";
             // 
             // aboutBtn
             // 
@@ -213,22 +229,6 @@
             this.aboutBtn.Text = "About App";
             this.aboutBtn.UseVisualStyleBackColor = false;
             this.aboutBtn.Click += new System.EventHandler(this.aboutBtn_Click);
-            // 
-            // loginBtn
-            // 
-            this.loginBtn.BackColor = System.Drawing.Color.Transparent;
-            this.loginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.loginBtn.FlatAppearance.BorderSize = 0;
-            this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginBtn.ForeColor = System.Drawing.Color.Black;
-            this.loginBtn.Location = new System.Drawing.Point(18, 259);
-            this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(196, 33);
-            this.loginBtn.TabIndex = 76;
-            this.loginBtn.Text = "Login";
-            this.loginBtn.UseVisualStyleBackColor = false;
-            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
             // Form1
             // 

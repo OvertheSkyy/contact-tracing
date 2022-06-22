@@ -1,3 +1,6 @@
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\contact-tracing.exe.config
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\contact-tracing.exe
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\contact-tracing.pdb
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tracing.csproj.AssemblyReference.cache
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tracing.csproj.SuggestedBindingRedirects.cache
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\Interop.WMPLib.dll
@@ -9,8 +12,5 @@ E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact_tra
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact_tracing.Properties.Resources.resources
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tracing.csproj.GenerateResource.cache
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tracing.csproj.CoreCompileInputs.cache
-E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\contact-tracing.exe.config
-E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\contact-tracing.exe
-E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\contact-tracing.pdb
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tracing.exe
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tracing.pdb
