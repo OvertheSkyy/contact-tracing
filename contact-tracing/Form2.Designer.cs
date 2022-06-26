@@ -87,6 +87,10 @@
             this.seeInfo = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dateOfCreationComboBox = new System.Windows.Forms.ComboBox();
+            this.generatedQrCode = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.generateQRBtn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.generatedQrCode)).BeginInit();
             this.SuspendLayout();
             // 
             // answerTextBox3
@@ -716,13 +720,47 @@
             this.dateOfCreationComboBox.Size = new System.Drawing.Size(121, 21);
             this.dateOfCreationComboBox.TabIndex = 139;
             // 
+            // generatedQrCode
+            // 
+            this.generatedQrCode.BackColor = System.Drawing.Color.White;
+            this.generatedQrCode.Location = new System.Drawing.Point(528, 58);
+            this.generatedQrCode.Name = "generatedQrCode";
+            this.generatedQrCode.Size = new System.Drawing.Size(363, 312);
+            this.generatedQrCode.TabIndex = 140;
+            this.generatedQrCode.TabStop = false;
+            this.generatedQrCode.Click += new System.EventHandler(this.generatedQrCode_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(538, 34);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(127, 16);
+            this.label3.TabIndex = 141;
+            this.label3.Text = "Generated QR Code";
+            // 
+            // generateQRBtn
+            // 
+            this.generateQRBtn.Location = new System.Drawing.Point(645, 387);
+            this.generateQRBtn.Name = "generateQRBtn";
+            this.generateQRBtn.Size = new System.Drawing.Size(147, 29);
+            this.generateQRBtn.TabIndex = 142;
+            this.generateQRBtn.Text = "Generate Unique QR Code";
+            this.generateQRBtn.UseVisualStyleBackColor = true;
+            this.generateQRBtn.Click += new System.EventHandler(this.generateQRBtn_Click);
+            // 
             // personalInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(534, 430);
+            this.ClientSize = new System.Drawing.Size(903, 432);
+            this.Controls.Add(this.generateQRBtn);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.generatedQrCode);
             this.Controls.Add(this.dateOfCreationComboBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.seeInfo);
@@ -786,6 +824,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.generatedQrCode)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -850,5 +889,8 @@
         private System.Windows.Forms.Button seeInfo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox dateOfCreationComboBox;
+        private System.Windows.Forms.PictureBox generatedQrCode;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button generateQRBtn;
     }
 }

@@ -14,3 +14,5 @@ E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tra
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tracing.csproj.CoreCompileInputs.cache
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tracing.exe
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tracing.pdb
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\QRCoder.dll
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tracing.csproj.CopyComplete

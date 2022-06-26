@@ -43,10 +43,28 @@ namespace contact_tracing
         {
 
         }
+
+        private void passwordTextBox_TextChanged(object sender, EventArgs e)
+        {
+            passwordTextBox.PasswordChar = '*';
+        }
+
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            personalInfoForm form = new personalInfoForm();
-            form.Show();
+            string username = usernameTextBox.Text;
+            string password = passwordTextBox.Text;
+
+            if (username == usernameTextBox.Text || password == passwordTextBox.Text)
+            {
+                MessageBox.Show("Successfully Login!");
+                personalInfoForm form = new personalInfoForm();
+                form.Show();
+            }
+        }
+
+        private void hidePassword()
+        {
+            
         }
 
         private void aboutBtn_Click(object sender, EventArgs e)
@@ -60,7 +78,6 @@ namespace contact_tracing
             this.Close();
         }
 
- 
 
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using QRCoder;
 
 namespace contact_tracing
 {
@@ -173,8 +174,8 @@ namespace contact_tracing
             else if (lastNameTextBox.Text == "Love" && dateOfCreationComboBox.Text == "2022")
                 person10yr2022();
 
-
         }
+
 
         private void person1yr2021()
         {
@@ -696,6 +697,17 @@ namespace contact_tracing
             form.Show();
         }
 
+        private void generatedQrCode_Click(object sender, EventArgs e)
+        {
+            
+        }
 
+        private void generateQRBtn_Click(object sender, EventArgs e)
+        {
+            QRCodeGenerator QR = new QRCodeGenerator();
+            QRCodeData personInfo = QR.CreateQrCode(saveInfoBtn.ToString(), QRCodeGenerator.ECCLevel.Q);
+            QRCode code = new QRCode(personInfo);
+            generatedQrCode.Image = code.GetGraphic(5);
+        }
     }
 }
