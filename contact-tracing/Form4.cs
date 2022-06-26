@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using QRCoder;
 
 namespace contact_tracing
 {
@@ -257,5 +258,12 @@ namespace contact_tracing
             this.Close();
         }
 
+        private void generateQRCode_Click(object sender, EventArgs e)
+        {
+            QRCodeGenerator QR = new QRCodeGenerator();
+            QRCodeData personInfo = QR.CreateQrCode(savedInfoTextBox.Text, QRCodeGenerator.ECCLevel.Q);
+            QRCode code = new QRCode(personInfo);
+            QRGeneratePictureBox.Image = code.GetGraphic(3);
+        }
     }
 }

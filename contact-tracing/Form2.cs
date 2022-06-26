@@ -132,7 +132,7 @@ namespace contact_tracing
 
         private void saveInfoBtn_Click(object sender, EventArgs e)
         {
-        
+
             if (lastNameTextBox.Text == "Mondragon" && dateOfCreationComboBox.Text == "2021")
                 person1yr2021();
             if (lastNameTextBox.Text == "Mondragon" && dateOfCreationComboBox.Text == "2022")
@@ -174,6 +174,50 @@ namespace contact_tracing
             else if (lastNameTextBox.Text == "Love" && dateOfCreationComboBox.Text == "2022")
                 person10yr2022();
 
+        }
+
+        private void personInfoQRCode()
+        {
+            if (lastNameTextBox.Text == "Mondragon" && dateOfCreationComboBox.Text == "2021")
+                person1yr2021();
+            if (lastNameTextBox.Text == "Mondragon" && dateOfCreationComboBox.Text == "2022")
+                person1yr2022();
+            else if (lastNameTextBox.Text == "Shah" && dateOfCreationComboBox.Text == "2021")
+                person2yr2021();
+            else if (lastNameTextBox.Text == "Shah" && dateOfCreationComboBox.Text == "2022")
+                person2yr2022();
+            else if (lastNameTextBox.Text == "Doyle" && dateOfCreationComboBox.Text == "2021")
+                person3yr2021();
+            else if (lastNameTextBox.Text == "Doyle" && dateOfCreationComboBox.Text == "2022")
+                person3yr2022();
+            else if (lastNameTextBox.Text == "Rowland" && dateOfCreationComboBox.Text == "2021")
+                person4yr2021();
+            else if (lastNameTextBox.Text == "Rowland" && dateOfCreationComboBox.Text == "2022")
+                person4yr2022();
+            else if (lastNameTextBox.Text == "Berger" && dateOfCreationComboBox.Text == "2021")
+                person5yr2021();
+            else if (lastNameTextBox.Text == "Berger" && dateOfCreationComboBox.Text == "2022")
+                person5yr2022();
+            else if (lastNameTextBox.Text == "Morgan" && dateOfCreationComboBox.Text == "2021")
+                person6yr2021();
+            else if (lastNameTextBox.Text == "Morgan" && dateOfCreationComboBox.Text == "2022")
+                person6yr2022();
+            else if (lastNameTextBox.Text == "Caldwell" && dateOfCreationComboBox.Text == "2021")
+                person7yr2021();
+            else if (lastNameTextBox.Text == "Caldwell" && dateOfCreationComboBox.Text == "2022")
+                person7yr2022();
+            else if (lastNameTextBox.Text == "Burns" && dateOfCreationComboBox.Text == "2021")
+                person8yr2021();
+            else if (lastNameTextBox.Text == "Burns" && dateOfCreationComboBox.Text == "2022")
+                person8yr2022();
+            else if (lastNameTextBox.Text == "Vaughan" && dateOfCreationComboBox.Text == "2021")
+                person9yr2021();
+            else if (lastNameTextBox.Text == "Vaughan" && dateOfCreationComboBox.Text == "2022")
+                person9yr2022();
+            else if (lastNameTextBox.Text == "Love" && dateOfCreationComboBox.Text == "2021")
+                person10yr2021();
+            else if (lastNameTextBox.Text == "Love" && dateOfCreationComboBox.Text == "2022")
+                person10yr2022();
         }
 
 
@@ -224,7 +268,7 @@ namespace contact_tracing
 
             outputFile.Close();
         }
-        
+
         private void person3yr2021()
         {
             StreamWriter outputFile = new StreamWriter(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\2021\Rolando Doyle.txt");
@@ -693,21 +737,10 @@ namespace contact_tracing
 
         private void seeInfo_Click(object sender, EventArgs e)
         {
+            Form3 closeform = new Form3();
+            closeform.Close();
             Form4 form = new Form4();
             form.Show();
-        }
-
-        private void generatedQrCode_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void generateQRBtn_Click(object sender, EventArgs e)
-        {
-            QRCodeGenerator QR = new QRCodeGenerator();
-            QRCodeData personInfo = QR.CreateQrCode(saveInfoBtn.ToString(), QRCodeGenerator.ECCLevel.Q);
-            QRCode code = new QRCode(personInfo);
-            generatedQrCode.Image = code.GetGraphic(5);
         }
     }
 }
