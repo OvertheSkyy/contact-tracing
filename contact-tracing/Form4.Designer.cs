@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.savedInfoTextBox = new System.Windows.Forms.RichTextBox();
-            this.seePersonInfo = new System.Windows.Forms.ComboBox();
             this.dateOfCreation = new System.Windows.Forms.ComboBox();
             this.dateFilterLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,6 +40,7 @@
             this.generateQRCode = new System.Windows.Forms.Button();
             this.QRGeneratePictureBox = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.seePersonInfo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.QRGeneratePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,27 +56,6 @@
             this.savedInfoTextBox.TabIndex = 3;
             this.savedInfoTextBox.Text = "";
             this.savedInfoTextBox.TextChanged += new System.EventHandler(this.savedInfoTextBox_TextChanged);
-            // 
-            // seePersonInfo
-            // 
-            this.seePersonInfo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.seePersonInfo.FormattingEnabled = true;
-            this.seePersonInfo.Items.AddRange(new object[] {
-            "Cassie Mondragon",
-            "Sherri Shah",
-            "Rolando Doyle",
-            "Mickey Rowland",
-            "Ezequiel Berger",
-            "Beatrice Morgan",
-            "Lori Caldwell",
-            "Eileen Burns",
-            "Dana Love",
-            "Vicky Vaughan"});
-            this.seePersonInfo.Location = new System.Drawing.Point(114, 59);
-            this.seePersonInfo.Name = "seePersonInfo";
-            this.seePersonInfo.Size = new System.Drawing.Size(133, 21);
-            this.seePersonInfo.TabIndex = 2;
-            this.seePersonInfo.SelectedIndexChanged += new System.EventHandler(this.seePersonInfo_SelectedIndexChanged);
             // 
             // dateOfCreation
             // 
@@ -108,9 +87,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 63);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 12);
+            this.label1.Size = new System.Drawing.Size(89, 12);
             this.label1.TabIndex = 8;
-            this.label1.Text = "NAME OF CONTACT";
+            this.label1.Text = "TYPE NAME HERE:";
             // 
             // label3
             // 
@@ -202,6 +181,16 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "GENERATED QR CODE";
             // 
+            // seePersonInfo
+            // 
+            this.seePersonInfo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.seePersonInfo.FormattingEnabled = true;
+            this.seePersonInfo.Location = new System.Drawing.Point(114, 59);
+            this.seePersonInfo.Name = "seePersonInfo";
+            this.seePersonInfo.Size = new System.Drawing.Size(133, 21);
+            this.seePersonInfo.TabIndex = 2;
+            this.seePersonInfo.SelectedIndexChanged += new System.EventHandler(this.seePersonInfo_SelectedIndexChanged);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,7 +223,6 @@
 
         #endregion
         private System.Windows.Forms.RichTextBox savedInfoTextBox;
-        private System.Windows.Forms.ComboBox seePersonInfo;
         private System.Windows.Forms.ComboBox dateOfCreation;
         private System.Windows.Forms.Label dateFilterLabel;
         private System.Windows.Forms.Label label1;
@@ -246,5 +234,6 @@
         private System.Windows.Forms.Button generateQRCode;
         private System.Windows.Forms.PictureBox QRGeneratePictureBox;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox seePersonInfo;
     }
 }

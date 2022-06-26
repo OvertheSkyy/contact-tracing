@@ -31,51 +31,14 @@ namespace contact_tracing
 
         private void seePersonInfo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (seePersonInfo.Text == "Cassie Mondragon" && dateOfCreation.Text == "2021")
+            if (seePersonInfo.Text == seePersonInfo.Text)
                 person1yr2021();
-            if (seePersonInfo.Text == "Cassie Mondragon" && dateOfCreation.Text == "2022")
-                person1yr2022();
-            else if (seePersonInfo.Text == "Sherri Shah" && dateOfCreation.Text == "2021")
-                person2yr2021();
-            else if (seePersonInfo.Text == "Sherri Shah" && dateOfCreation.Text == "2022")
-                person2yr2022();
-            else if (seePersonInfo.Text == "Rolando Doyle" && dateOfCreation.Text == "2021")
-                person3yr2021();
-            else if (seePersonInfo.Text == "Rolando Doyle" && dateOfCreation.Text == "2022")
-                person3yr2022();
-            else if (seePersonInfo.Text == "Mickey Rowland" && dateOfCreation.Text == "2021")
-                person4yr2021();
-            else if (seePersonInfo.Text == "Mickey Rowland" && dateOfCreation.Text == "2022")
-                person4yr2022();
-            else if (seePersonInfo.Text == "Ezequiel Berger" && dateOfCreation.Text == "2021")
-                person5yr2021();
-            else if (seePersonInfo.Text == "Ezequiel Berger" && dateOfCreation.Text == "2022")
-                person5yr2022();
-            else if (seePersonInfo.Text == "Beatrice Morgan" && dateOfCreation.Text == "2021")
-                person6yr2021();
-            else if (seePersonInfo.Text == "Beatrice Morgan" && dateOfCreation.Text == "2022")
-                person6yr2022();
-            else if (seePersonInfo.Text == "Lori Caldwell" && dateOfCreation.Text == "2021")
-                person7yr2021();
-            else if (seePersonInfo.Text == "Lori Caldwell" && dateOfCreation.Text == "2022")
-                person7yr2022();
-            else if (seePersonInfo.Text == "Eileen Burns" && dateOfCreation.Text == "2021")
-                person8yr2021();
-            else if (seePersonInfo.Text == "Eileen Burns" && dateOfCreation.Text == "2022")
-                person8yr2022();
-            else if (seePersonInfo.Text == "Dana Love" && dateOfCreation.Text == "2021")
-                person9yr2021();
-            else if (seePersonInfo.Text == "Dana Love" && dateOfCreation.Text == "2022")
-                person9yr2022();
-            else if (seePersonInfo.Text == "Vicky Vaughan" && dateOfCreation.Text == "2021")
-                person10yr2021();
-            else if (seePersonInfo.Text == "Vicky Vaughan" && dateOfCreation.Text == "2022")
-                person10yr2022();
+            
         }
 
         private void person1yr2021()
         {
-            StreamReader inputFile = new StreamReader(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\2021\Cassie Mondragon.txt");
+            StreamReader inputFile = new StreamReader(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\2021\" + ".txt");
 
             savedInfoTextBox.Text = inputFile.ReadToEnd();
 
