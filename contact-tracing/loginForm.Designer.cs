@@ -1,6 +1,6 @@
 ﻿namespace contact_tracing
 {
-    partial class Form1
+    partial class loginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loginForm));
             this.appName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.personalInfoLabel = new System.Windows.Forms.Label();
@@ -212,9 +212,9 @@
             this.verLabel.ForeColor = System.Drawing.Color.Black;
             this.verLabel.Location = new System.Drawing.Point(3, 363);
             this.verLabel.Name = "verLabel";
-            this.verLabel.Size = new System.Drawing.Size(64, 13);
+            this.verLabel.Size = new System.Drawing.Size(40, 13);
             this.verLabel.TabIndex = 69;
-            this.verLabel.Text = "beta ver 2.0";
+            this.verLabel.Text = "ver 1.0";
             // 
             // aboutBtn
             // 
@@ -231,7 +231,7 @@
             this.aboutBtn.UseVisualStyleBackColor = false;
             this.aboutBtn.Click += new System.EventHandler(this.aboutBtn_Click);
             // 
-            // Form1
+            // loginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -244,7 +244,7 @@
             this.Controls.Add(this.label18);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "loginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

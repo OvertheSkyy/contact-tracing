@@ -12,46 +12,19 @@ using QRCoder;
 
 namespace contact_tracing
 {
-    public partial class Form4 : Form
+    public partial class checkInfoForm : Form
     {
-        public Form4()
+        public checkInfoForm()
         {
             InitializeComponent();
-        }
-
-        private void savedInfoTextBox_TextChanged(object sender, EventArgs e)
-        {
-         
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void seePersonInfo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void generateQRCode_Click(object sender, EventArgs e)
         {
             QRCodeGenerator QR = new QRCodeGenerator();
-            QRCodeData personInfo = QR.CreateQrCode(savedInfoTextBox.Text, QRCodeGenerator.ECCLevel.Q);
+            QRCodeData personInfo = QR.CreateQrCode(savedInfoRichTextBox.Text, QRCodeGenerator.ECCLevel.Q);
             QRCode code = new QRCode(personInfo);
-            QRGeneratePictureBox.Image = code.GetGraphic(3);
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
+            generatedQRPictureBox.Image = code.GetGraphic(3);
         }
 
         private void showNameBtn_Click(object sender, EventArgs e)
@@ -60,8 +33,15 @@ namespace contact_tracing
 
             foreach (string filePath in filePathToString)
             {
-                seePersonInfo.Items.Add(filePath);
+                seePersonInfoComboBox.Items.Add(filePath);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            personalInfoForm form = new personalInfoForm();
+            form.Hide();
+            this.Close();
         }
     }
 }

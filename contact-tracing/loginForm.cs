@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 
 namespace contact_tracing
 {
-    public partial class Form1 : Form
+    public partial class loginForm : Form
     {
+        private Thread th;
+        private Thread thread;
 
-        public Form1()
+        public loginForm()
         {
             InitializeComponent();
         }
@@ -54,22 +57,30 @@ namespace contact_tracing
             string username = usernameTextBox.Text;
             string password = passwordTextBox.Text;
 
-            if (username == usernameTextBox.Text || password == passwordTextBox.Text)
+            
+            if ((username == "") || (password == ""))
+            {
+                MessageBox.Show("Invalid Login Credentials!");
+            }
+            else if (username == usernameTextBox.Text || password == passwordTextBox.Text)
             {
                 MessageBox.Show("Successfully Login!");
-                personalInfoForm form = new personalInfoForm();
-                form.Show();
+                this.Close();
+                thread = new Thread(openNewForm);
+                thread.SetApartmentState(ApartmentState.STA);
+                thread.Start();
+   
             }
         }
 
-        private void hidePassword()
+        private void openNewForm()
         {
-            
+            Application.Run(new personalInfoForm());
         }
 
         private void aboutBtn_Click(object sender, EventArgs e)
         {
-            Form3 form = new Form3();
+            privacyPolicyForm form = new privacyPolicyForm();
             form.Show();
         }
 

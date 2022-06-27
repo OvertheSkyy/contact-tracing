@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace contact_tracing
 {
-    public partial class Form3 : Form
+    public partial class privacyPolicyForm : Form
     {
-        public Form3()
+        Thread thread;
+        public privacyPolicyForm()
         {
             InitializeComponent();
         }
@@ -20,6 +22,14 @@ namespace contact_tracing
         private void returnHomeBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+            thread = new Thread(backToLoginForm);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+        }
+
+        private void backToLoginForm()
+        {
+            Application.Run(new loginForm());
         }
     }
 }

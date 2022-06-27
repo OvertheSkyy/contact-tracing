@@ -9,24 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using QRCoder;
+using System.Threading;
 
 namespace contact_tracing
 {
     public partial class personalInfoForm : Form
     {
+        Thread thread;
 
         public personalInfoForm()
         {
             InitializeComponent();
         }
 
-
         private void Form2_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lastNameTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -187,7 +183,13 @@ namespace contact_tracing
                 }
             }
         }
-       
+
+        private void checkInfoBtn_Click(object sender, EventArgs e)
+        {
+            checkInfoForm form = new checkInfoForm();
+            form.Show();
+        }
+
         private void clearAllBtn_Click(object sender, EventArgs e)
         {
 
@@ -217,17 +219,18 @@ namespace contact_tracing
             answerTextBox3.Text = "";
         }
 
-        private void returnHomeBtn_Click(object sender, EventArgs e)
+        private void logoutBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+            thread = new Thread(backToLoginForm);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
         }
 
-        private void seeInfo_Click(object sender, EventArgs e)
+        private void backToLoginForm()
         {
-            Form3 closeform = new Form3();
-            closeform.Close();
-            Form4 form = new Form4();
-            form.Show();
+            Application.Run(new loginForm());
         }
+
     }
 }

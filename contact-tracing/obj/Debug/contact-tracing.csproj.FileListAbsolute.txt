@@ -5,10 +5,7 @@ E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tra
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tracing.csproj.SuggestedBindingRedirects.cache
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\Interop.WMPLib.dll
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tracing.csproj.ResolveComReference.cache
-E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact_tracing.Form1.resources
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact_tracing.personalInfoForm.resources
-E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact_tracing.Form3.resources
-E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact_tracing.Form4.resources
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact_tracing.Properties.Resources.resources
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tracing.csproj.GenerateResource.cache
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tracing.csproj.CoreCompileInputs.cache
@@ -16,3 +13,6 @@ E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tra
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tracing.pdb
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\QRCoder.dll
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tracing.csproj.CopyComplete
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact_tracing.loginForm.resources
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact_tracing.privacyPolicyForm.resources
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact_tracing.checkInfoForm.resources

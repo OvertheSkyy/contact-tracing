@@ -1,6 +1,6 @@
 ﻿namespace contact_tracing
 {
-    partial class Form3
+    partial class privacyPolicyForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(privacyPolicyForm));
+            this.privacyPolicyParagraph = new System.Windows.Forms.Label();
             this.returnHomeBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // privacyPolicyParagraph
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(921, 750);
-            this.label1.TabIndex = 0;
-            this.label1.Text = resources.GetString("label1.Text");
+            this.privacyPolicyParagraph.AutoSize = true;
+            this.privacyPolicyParagraph.BackColor = System.Drawing.Color.Transparent;
+            this.privacyPolicyParagraph.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.privacyPolicyParagraph.Font = new System.Drawing.Font("Microsoft Tai Le", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.privacyPolicyParagraph.Location = new System.Drawing.Point(11, 14);
+            this.privacyPolicyParagraph.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.privacyPolicyParagraph.Name = "privacyPolicyParagraph";
+            this.privacyPolicyParagraph.Size = new System.Drawing.Size(921, 750);
+            this.privacyPolicyParagraph.TabIndex = 0;
+            this.privacyPolicyParagraph.Text = resources.GetString("privacyPolicyParagraph.Text");
             // 
             // returnHomeBtn
             // 
@@ -57,18 +57,18 @@
             this.returnHomeBtn.UseVisualStyleBackColor = true;
             this.returnHomeBtn.Click += new System.EventHandler(this.returnHomeBtn_Click);
             // 
-            // Form3
+            // privacyPolicyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(939, 800);
             this.Controls.Add(this.returnHomeBtn);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.privacyPolicyParagraph);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.Name = "Form3";
+            this.Name = "privacyPolicyForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "        ";
             this.ResumeLayout(false);
@@ -78,7 +78,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label privacyPolicyParagraph;
         private System.Windows.Forms.Button returnHomeBtn;
     }
 }

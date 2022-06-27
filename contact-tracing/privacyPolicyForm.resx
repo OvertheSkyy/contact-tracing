@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label1.Text" xml:space="preserve">
+  <data name="privacyPolicyParagraph.Text" xml:space="preserve">
     <value>Privacy Policy
 OvertheSkyy built the COVID 19 - Health Contact Tracing App app as a Free app. This SERVICE is provided by OvertheSkyy at no cost and is intended for use as is.
 

@@ -53,7 +53,6 @@
             this.addressTextBox = new System.Windows.Forms.TextBox();
             this.addressLabel = new System.Windows.Forms.Label();
             this.middleInitialTextBox = new System.Windows.Forms.TextBox();
-            this.lastNameTextBox = new System.Windows.Forms.TextBox();
             this.middleInitialLabel = new System.Windows.Forms.Label();
             this.firstNameLabel = new System.Windows.Forms.Label();
             this.lastNameLabel = new System.Windows.Forms.Label();
@@ -70,7 +69,6 @@
             this.boosterShotBox0 = new System.Windows.Forms.CheckBox();
             this.boosterShotBox2 = new System.Windows.Forms.CheckBox();
             this.boosterShotBox3 = new System.Windows.Forms.CheckBox();
-            this.returnHomeBtn = new System.Windows.Forms.Button();
             this.clearSec1 = new System.Windows.Forms.Button();
             this.clearSec2 = new System.Windows.Forms.Button();
             this.clearSec3 = new System.Windows.Forms.Button();
@@ -84,11 +82,13 @@
             this.clearAllBtn = new System.Windows.Forms.Button();
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.seeInfo = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dateOfCreationComboBox = new System.Windows.Forms.ComboBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.logoutBtn = new System.Windows.Forms.Button();
+            this.checkInfoBtn = new System.Windows.Forms.Button();
+            this.lastNameTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // answerTextBox3
@@ -337,17 +337,6 @@
             this.middleInitialTextBox.Size = new System.Drawing.Size(114, 13);
             this.middleInitialTextBox.TabIndex = 3;
             // 
-            // lastNameTextBox
-            // 
-            this.lastNameTextBox.BackColor = System.Drawing.Color.White;
-            this.lastNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lastNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastNameTextBox.Location = new System.Drawing.Point(64, 61);
-            this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(127, 13);
-            this.lastNameTextBox.TabIndex = 1;
-            this.lastNameTextBox.TextChanged += new System.EventHandler(this.lastNameTextBox_TextChanged);
-            // 
             // middleInitialLabel
             // 
             this.middleInitialLabel.AutoSize = true;
@@ -535,16 +524,6 @@
             this.boosterShotBox3.UseVisualStyleBackColor = false;
             this.boosterShotBox3.CheckedChanged += new System.EventHandler(this.boosterShotBox3_CheckedChanged);
             // 
-            // returnHomeBtn
-            // 
-            this.returnHomeBtn.Location = new System.Drawing.Point(392, 387);
-            this.returnHomeBtn.Name = "returnHomeBtn";
-            this.returnHomeBtn.Size = new System.Drawing.Size(103, 29);
-            this.returnHomeBtn.TabIndex = 33;
-            this.returnHomeBtn.Text = "Back";
-            this.returnHomeBtn.UseVisualStyleBackColor = true;
-            this.returnHomeBtn.Click += new System.EventHandler(this.returnHomeBtn_Click);
-            // 
             // clearSec1
             // 
             this.clearSec1.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -685,16 +664,6 @@
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 136;
             // 
-            // seeInfo
-            // 
-            this.seeInfo.Location = new System.Drawing.Point(154, 389);
-            this.seeInfo.Name = "seeInfo";
-            this.seeInfo.Size = new System.Drawing.Size(103, 29);
-            this.seeInfo.TabIndex = 137;
-            this.seeInfo.Text = "See Info";
-            this.seeInfo.UseVisualStyleBackColor = true;
-            this.seeInfo.Click += new System.EventHandler(this.seeInfo_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -726,6 +695,36 @@
             this.richTextBox1.TabIndex = 140;
             this.richTextBox1.Text = "PLANNING TO ADD SCANNER HERE TO AUTOCOMPLETE THE INFORMATION ON THE LEFT";
             // 
+            // logoutBtn
+            // 
+            this.logoutBtn.Location = new System.Drawing.Point(391, 387);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(103, 29);
+            this.logoutBtn.TabIndex = 141;
+            this.logoutBtn.Text = "Logout";
+            this.logoutBtn.UseVisualStyleBackColor = true;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
+            // 
+            // checkInfoBtn
+            // 
+            this.checkInfoBtn.Location = new System.Drawing.Point(153, 387);
+            this.checkInfoBtn.Name = "checkInfoBtn";
+            this.checkInfoBtn.Size = new System.Drawing.Size(103, 29);
+            this.checkInfoBtn.TabIndex = 142;
+            this.checkInfoBtn.Text = "Check Info";
+            this.checkInfoBtn.UseVisualStyleBackColor = true;
+            this.checkInfoBtn.Click += new System.EventHandler(this.checkInfoBtn_Click);
+            // 
+            // lastNameTextBox
+            // 
+            this.lastNameTextBox.BackColor = System.Drawing.Color.White;
+            this.lastNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lastNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastNameTextBox.Location = new System.Drawing.Point(61, 61);
+            this.lastNameTextBox.Name = "lastNameTextBox";
+            this.lastNameTextBox.Size = new System.Drawing.Size(127, 13);
+            this.lastNameTextBox.TabIndex = 143;
+            // 
             // personalInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -733,10 +732,12 @@
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(938, 432);
+            this.Controls.Add(this.lastNameTextBox);
+            this.Controls.Add(this.checkInfoBtn);
+            this.Controls.Add(this.logoutBtn);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.dateOfCreationComboBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.seeInfo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.firstNameTextBox);
             this.Controls.Add(this.clearAllBtn);
@@ -750,7 +751,6 @@
             this.Controls.Add(this.clearSec3);
             this.Controls.Add(this.clearSec2);
             this.Controls.Add(this.clearSec1);
-            this.Controls.Add(this.returnHomeBtn);
             this.Controls.Add(this.boosterShotBox3);
             this.Controls.Add(this.boosterShotBox2);
             this.Controls.Add(this.boosterShotBox0);
@@ -776,7 +776,6 @@
             this.Controls.Add(this.addressTextBox);
             this.Controls.Add(this.addressLabel);
             this.Controls.Add(this.middleInitialTextBox);
-            this.Controls.Add(this.lastNameTextBox);
             this.Controls.Add(this.middleInitialLabel);
             this.Controls.Add(this.firstNameLabel);
             this.Controls.Add(this.lastNameLabel);
@@ -827,7 +826,6 @@
         private System.Windows.Forms.TextBox addressTextBox;
         private System.Windows.Forms.Label addressLabel;
         private System.Windows.Forms.TextBox middleInitialTextBox;
-        private System.Windows.Forms.TextBox lastNameTextBox;
         private System.Windows.Forms.Label middleInitialLabel;
         private System.Windows.Forms.Label firstNameLabel;
         private System.Windows.Forms.Label lastNameLabel;
@@ -844,7 +842,6 @@
         private System.Windows.Forms.CheckBox boosterShotBox0;
         private System.Windows.Forms.CheckBox boosterShotBox2;
         private System.Windows.Forms.CheckBox boosterShotBox3;
-        private System.Windows.Forms.Button returnHomeBtn;
         private System.Windows.Forms.Button clearSec1;
         private System.Windows.Forms.Button clearSec2;
         private System.Windows.Forms.Button clearSec3;
@@ -858,10 +855,12 @@
         private System.Windows.Forms.Button clearAllBtn;
         private System.Windows.Forms.TextBox firstNameTextBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button seeInfo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox dateOfCreationComboBox;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button logoutBtn;
+        private System.Windows.Forms.Button checkInfoBtn;
+        private System.Windows.Forms.TextBox lastNameTextBox;
     }
 }
