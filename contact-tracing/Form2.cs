@@ -132,37 +132,62 @@ namespace contact_tracing
 
         private void saveInfoBtn_Click(object sender, EventArgs e)
         {
-            if (lastNameTextBox.Text == lastNameTextBox.Text)
-            person1yr2021();
+            if (dateOfCreationComboBox.Text == "2021")
+            {
+                string personFilePath = @"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\2021\" + lastNameTextBox.Text + "," + firstNameTextBox.Text + ".txt";
 
+                StreamWriter outputFile = new StreamWriter(personFilePath);
+                using (outputFile)
+                {
+                    outputFile.WriteLine(personInfoLabel.Text);
+                    outputFile.WriteLine(nameLabel.Text + " " + lastNameTextBox.Text + "," + " " + firstNameTextBox.Text + " " + middleInitialTextBox.Text);
+                    outputFile.WriteLine(addressLabel.Text + " " + addressTextBox.Text);
+                    outputFile.WriteLine(dateOfBirthLabel.Text + " " + dateOfBirthTextBox.Text);
+                    outputFile.WriteLine(ageLabel.Text + " " + ageTextBox.Text);
+                    outputFile.WriteLine(sexLabel.Text + " " + sexTextBox.Text);
+                    outputFile.WriteLine(contactNoLabel.Text + " " + contactNoTextBox.Text);
+                    outputFile.WriteLine(healthFormLabel.Text);
+                    outputFile.WriteLine(firstDoseLabel.Text + " " + answerTextBox1.Text);
+                    outputFile.WriteLine(firstDoseDate.Text + " " + firstDoseDateTextBox.Text);
+                    outputFile.WriteLine(vaccineBrandLabel1.Text + " " + vaccineBrandTextBox1.Text);
+                    outputFile.WriteLine(secondDoseLabel.Text + " " + answerTextBox2.Text);
+                    outputFile.WriteLine(secondDoseDate.Text + " " + secondDoseDateTextBox.Text);
+                    outputFile.WriteLine(vaccineBrandLabel2.Text + " " + vaccineBrandTextBox2.Text);
+                    outputFile.WriteLine(boosterShotsLabel.Text + " " + answerTextBox3.Text);
+                    outputFile.WriteLine("Year of creation:" + " " + dateOfCreationComboBox.Text);
+
+                    outputFile.Close();
+                }
+            }
+            else if (dateOfCreationComboBox.Text == "2023")
+            {
+                string personFilePath = @"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\2022\" + lastNameTextBox.Text + "" + firstNameTextBox.Text + ".txt";
+
+                StreamWriter outputFile = new StreamWriter(personFilePath);
+                using (outputFile)
+                {
+                    outputFile.WriteLine(personInfoLabel.Text);
+                    outputFile.WriteLine(nameLabel.Text + " " + lastNameTextBox.Text + "," + " " + firstNameTextBox.Text + " " + middleInitialTextBox.Text);
+                    outputFile.WriteLine(addressLabel.Text + " " + addressTextBox.Text);
+                    outputFile.WriteLine(dateOfBirthLabel.Text + " " + dateOfBirthTextBox.Text);
+                    outputFile.WriteLine(ageLabel.Text + " " + ageTextBox.Text);
+                    outputFile.WriteLine(sexLabel.Text + " " + sexTextBox.Text);
+                    outputFile.WriteLine(contactNoLabel.Text + " " + contactNoTextBox.Text);
+                    outputFile.WriteLine(healthFormLabel.Text);
+                    outputFile.WriteLine(firstDoseLabel.Text + " " + answerTextBox1.Text);
+                    outputFile.WriteLine(firstDoseDate.Text + " " + firstDoseDateTextBox.Text);
+                    outputFile.WriteLine(vaccineBrandLabel1.Text + " " + vaccineBrandTextBox1.Text);
+                    outputFile.WriteLine(secondDoseLabel.Text + " " + answerTextBox2.Text);
+                    outputFile.WriteLine(secondDoseDate.Text + " " + secondDoseDateTextBox.Text);
+                    outputFile.WriteLine(vaccineBrandLabel2.Text + " " + vaccineBrandTextBox2.Text);
+                    outputFile.WriteLine(boosterShotsLabel.Text + " " + answerTextBox3.Text);
+                    outputFile.WriteLine("Year of creation:" + " " + dateOfCreationComboBox.Text);
+
+                    outputFile.Close();
+                }
+            }
         }
-
-        private void person1yr2021()
-        {
-            StreamWriter outputFile = new StreamWriter(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\2021\" + lastNameTextBox.Text + "" + firstNameTextBox.Text + ".txt");
-
-            outputFile.WriteLine(personInfoLabel.Text);
-            outputFile.WriteLine(nameLabel.Text + " " + lastNameTextBox.Text + "," + " " + firstNameTextBox.Text + " " + middleInitialTextBox.Text);
-            outputFile.WriteLine(addressLabel.Text + " " + addressTextBox.Text);
-            outputFile.WriteLine(dateOfBirthLabel.Text + " " + dateOfBirthTextBox.Text);
-            outputFile.WriteLine(ageLabel.Text + " " + ageTextBox.Text);
-            outputFile.WriteLine(sexLabel.Text + " " + sexTextBox.Text);
-            outputFile.WriteLine(contactNoLabel.Text + " " + contactNoTextBox.Text);
-            outputFile.WriteLine(healthFormLabel.Text);
-            outputFile.WriteLine(firstDoseLabel.Text + " " + answerTextBox1.Text);
-            outputFile.WriteLine(firstDoseDate.Text + " " + firstDoseDateTextBox.Text);
-            outputFile.WriteLine(vaccineBrandLabel1.Text + " " + vaccineBrandTextBox1.Text);
-            outputFile.WriteLine(secondDoseLabel.Text + " " + answerTextBox2.Text);
-            outputFile.WriteLine(secondDoseDate.Text + " " + secondDoseDateTextBox.Text);
-            outputFile.WriteLine(vaccineBrandLabel2.Text + " " + vaccineBrandTextBox2.Text);
-            outputFile.WriteLine(boosterShotsLabel.Text + " " + answerTextBox3.Text);
-            outputFile.WriteLine("Year of creation:" + " " + dateOfCreationComboBox.Text);
-
-            outputFile.Close();
-        }
-
-        
-
+       
         private void clearAllBtn_Click(object sender, EventArgs e)
         {
 
