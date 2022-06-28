@@ -1,20 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Threading;
+using System.Windows.Forms;
 
 
 namespace contact_tracing
 {
     public partial class loginForm : Form
     {
-        private Thread th;
         private Thread thread;
 
         public loginForm()
@@ -22,27 +14,7 @@ namespace contact_tracing
             InitializeComponent();
         }
 
-        private void appName_Click(object sender, EventArgs e)
-        {
-
-        }
         private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void personalInfoLabel_Click(object sender, EventArgs e)
         {
 
         }
@@ -60,11 +32,11 @@ namespace contact_tracing
             
             if ((username == "") || (password == ""))
             {
-                MessageBox.Show("Invalid Login Credentials!");
+                MessageBox.Show("Invalid login credentials!");
             }
             else if (username == usernameTextBox.Text || password == passwordTextBox.Text)
             {
-                MessageBox.Show("Successfully Login!");
+                MessageBox.Show("Welcome back," + " " + usernameTextBox.Text + "!");
                 this.Close();
                 thread = new Thread(openNewForm);
                 thread.SetApartmentState(ApartmentState.STA);
@@ -88,7 +60,6 @@ namespace contact_tracing
         {
             this.Close();
         }
-
 
     }
 }

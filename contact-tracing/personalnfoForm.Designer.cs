@@ -45,7 +45,6 @@
             this.contactNoTextBox = new System.Windows.Forms.TextBox();
             this.contactNoLabel = new System.Windows.Forms.Label();
             this.sexLabel = new System.Windows.Forms.Label();
-            this.sexTextBox = new System.Windows.Forms.TextBox();
             this.ageTextBox = new System.Windows.Forms.TextBox();
             this.ageLabel = new System.Windows.Forms.Label();
             this.dateOfBirthTextBox = new System.Windows.Forms.TextBox();
@@ -83,12 +82,15 @@
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTodayLabel = new System.Windows.Forms.Label();
-            this.dateOfCreationComboBox = new System.Windows.Forms.ComboBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.logoutBtn = new System.Windows.Forms.Button();
             this.checkInfoBtn = new System.Windows.Forms.Button();
             this.lastNameTextBox = new System.Windows.Forms.TextBox();
+            this.yearOfCreationComboBox = new System.Windows.Forms.ComboBox();
+            this.dayOfCreationComboBox = new System.Windows.Forms.ComboBox();
+            this.monthOfCreationComboBox = new System.Windows.Forms.ComboBox();
+            this.sexSelectionComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // answerTextBox3
@@ -251,20 +253,11 @@
             this.sexLabel.AutoSize = true;
             this.sexLabel.BackColor = System.Drawing.Color.Transparent;
             this.sexLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sexLabel.Location = new System.Drawing.Point(13, 154);
+            this.sexLabel.Location = new System.Drawing.Point(13, 157);
             this.sexLabel.Name = "sexLabel";
             this.sexLabel.Size = new System.Drawing.Size(35, 13);
             this.sexLabel.TabIndex = 99;
             this.sexLabel.Text = "SEX:";
-            // 
-            // sexTextBox
-            // 
-            this.sexTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.sexTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sexTextBox.Location = new System.Drawing.Point(55, 155);
-            this.sexTextBox.Name = "sexTextBox";
-            this.sexTextBox.Size = new System.Drawing.Size(160, 13);
-            this.sexTextBox.TabIndex = 10;
             // 
             // ageTextBox
             // 
@@ -675,23 +668,11 @@
             this.dateTodayLabel.TabIndex = 138;
             this.dateTodayLabel.Text = "DATE TODAY:";
             // 
-            // dateOfCreationComboBox
-            // 
-            this.dateOfCreationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.dateOfCreationComboBox.FormattingEnabled = true;
-            this.dateOfCreationComboBox.Items.AddRange(new object[] {
-            "2021",
-            "2022"});
-            this.dateOfCreationComboBox.Location = new System.Drawing.Point(373, 34);
-            this.dateOfCreationComboBox.Name = "dateOfCreationComboBox";
-            this.dateOfCreationComboBox.Size = new System.Drawing.Size(121, 21);
-            this.dateOfCreationComboBox.TabIndex = 139;
-            // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(528, 34);
+            this.richTextBox1.Location = new System.Drawing.Point(546, 34);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(398, 382);
+            this.richTextBox1.Size = new System.Drawing.Size(380, 382);
             this.richTextBox1.TabIndex = 140;
             this.richTextBox1.Text = "PLANNING TO ADD SCANNER HERE TO AUTOCOMPLETE THE INFORMATION ON THE LEFT";
             // 
@@ -725,6 +706,97 @@
             this.lastNameTextBox.Size = new System.Drawing.Size(127, 13);
             this.lastNameTextBox.TabIndex = 143;
             // 
+            // yearOfCreationComboBox
+            // 
+            this.yearOfCreationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.yearOfCreationComboBox.FormattingEnabled = true;
+            this.yearOfCreationComboBox.Items.AddRange(new object[] {
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023"});
+            this.yearOfCreationComboBox.Location = new System.Drawing.Point(482, 34);
+            this.yearOfCreationComboBox.Name = "yearOfCreationComboBox";
+            this.yearOfCreationComboBox.Size = new System.Drawing.Size(58, 21);
+            this.yearOfCreationComboBox.TabIndex = 144;
+            // 
+            // dayOfCreationComboBox
+            // 
+            this.dayOfCreationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dayOfCreationComboBox.FormattingEnabled = true;
+            this.dayOfCreationComboBox.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.dayOfCreationComboBox.Location = new System.Drawing.Point(429, 34);
+            this.dayOfCreationComboBox.Name = "dayOfCreationComboBox";
+            this.dayOfCreationComboBox.Size = new System.Drawing.Size(47, 21);
+            this.dayOfCreationComboBox.TabIndex = 145;
+            // 
+            // monthOfCreationComboBox
+            // 
+            this.monthOfCreationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.monthOfCreationComboBox.FormattingEnabled = true;
+            this.monthOfCreationComboBox.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.monthOfCreationComboBox.Location = new System.Drawing.Point(376, 34);
+            this.monthOfCreationComboBox.Name = "monthOfCreationComboBox";
+            this.monthOfCreationComboBox.Size = new System.Drawing.Size(47, 21);
+            this.monthOfCreationComboBox.TabIndex = 146;
+            // 
+            // sexSelectionComboBox
+            // 
+            this.sexSelectionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.sexSelectionComboBox.FormattingEnabled = true;
+            this.sexSelectionComboBox.Items.AddRange(new object[] {
+            "Female",
+            "Male"});
+            this.sexSelectionComboBox.Location = new System.Drawing.Point(54, 154);
+            this.sexSelectionComboBox.Name = "sexSelectionComboBox";
+            this.sexSelectionComboBox.Size = new System.Drawing.Size(160, 21);
+            this.sexSelectionComboBox.TabIndex = 147;
+            // 
             // personalInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -732,11 +804,14 @@
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(938, 432);
+            this.Controls.Add(this.sexSelectionComboBox);
+            this.Controls.Add(this.monthOfCreationComboBox);
+            this.Controls.Add(this.dayOfCreationComboBox);
+            this.Controls.Add(this.yearOfCreationComboBox);
             this.Controls.Add(this.lastNameTextBox);
             this.Controls.Add(this.checkInfoBtn);
             this.Controls.Add(this.logoutBtn);
             this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.dateOfCreationComboBox);
             this.Controls.Add(this.dateTodayLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.firstNameTextBox);
@@ -768,7 +843,6 @@
             this.Controls.Add(this.contactNoTextBox);
             this.Controls.Add(this.contactNoLabel);
             this.Controls.Add(this.sexLabel);
-            this.Controls.Add(this.sexTextBox);
             this.Controls.Add(this.ageTextBox);
             this.Controls.Add(this.ageLabel);
             this.Controls.Add(this.dateOfBirthTextBox);
@@ -818,7 +892,6 @@
         private System.Windows.Forms.TextBox contactNoTextBox;
         private System.Windows.Forms.Label contactNoLabel;
         private System.Windows.Forms.Label sexLabel;
-        private System.Windows.Forms.TextBox sexTextBox;
         private System.Windows.Forms.TextBox ageTextBox;
         private System.Windows.Forms.Label ageLabel;
         private System.Windows.Forms.TextBox dateOfBirthTextBox;
@@ -856,11 +929,14 @@
         private System.Windows.Forms.TextBox firstNameTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label dateTodayLabel;
-        private System.Windows.Forms.ComboBox dateOfCreationComboBox;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button logoutBtn;
         private System.Windows.Forms.Button checkInfoBtn;
         private System.Windows.Forms.TextBox lastNameTextBox;
+        private System.Windows.Forms.ComboBox yearOfCreationComboBox;
+        private System.Windows.Forms.ComboBox dayOfCreationComboBox;
+        private System.Windows.Forms.ComboBox monthOfCreationComboBox;
+        private System.Windows.Forms.ComboBox sexSelectionComboBox;
     }
 }

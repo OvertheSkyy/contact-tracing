@@ -42,7 +42,17 @@ namespace contact_tracing
 
         private void dateOfCreation_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (dateOfCreation.Text == "2021")
+            if (dateOfCreation.Text == "2019")
+            {
+                dateOfCreationyr2019();
+            }
+
+            else if (dateOfCreation.Text == "2020")
+            {
+                dateOfCreationyr2020();
+            }
+
+            else if (dateOfCreation.Text == "2021")
             {
                 dateOfCreationyr2021();
             }
@@ -51,8 +61,33 @@ namespace contact_tracing
             {
                 dateOfCreationyr2022();
             }
+
+            else if (dateOfCreation.Text == "2023")
+            {
+                dateOfCreationyr2023();
+            }
         }
-        
+
+        private void dateOfCreationyr2019()
+        {
+            string[] filePathToString = Directory.GetFiles(@"E:\Desktop\contact-tracing\2019\");
+
+            foreach (string filePath in filePathToString)
+            {
+                seePersonInfoComboBox.Items.Add(filePath);
+            }
+        }
+
+        private void dateOfCreationyr2020()
+        {
+            string[] filePathToString = Directory.GetFiles(@"E:\Desktop\contact-tracing\2020\");
+
+            foreach (string filePath in filePathToString)
+            {
+                seePersonInfoComboBox.Items.Add(filePath);
+            }
+        }
+
         private void dateOfCreationyr2021()
         {
             string[] filePathToString = Directory.GetFiles(@"E:\Desktop\contact-tracing\2021\");
@@ -66,6 +101,16 @@ namespace contact_tracing
         private void dateOfCreationyr2022()
         {
             string[] filePathToString = Directory.GetFiles(@"E:\Desktop\contact-tracing\2022\");
+
+            foreach (string filePath in filePathToString)
+            {
+                seePersonInfoComboBox.Items.Add(filePath);
+            }
+        }
+
+        private void dateOfCreationyr2023()
+        {
+            string[] filePathToString = Directory.GetFiles(@"E:\Desktop\contact-tracing\2023\");
 
             foreach (string filePath in filePathToString)
             {

@@ -29,60 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loginForm));
-            this.appName = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.personalInfoLabel = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.exitBtn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.designPanel = new System.Windows.Forms.Panel();
+            this.personPictureBox = new System.Windows.Forms.PictureBox();
+            this.contactInfoLabel = new System.Windows.Forms.Label();
             this.loginBtn = new System.Windows.Forms.Button();
             this.usernameLabel = new System.Windows.Forms.Label();
-            this.pwdTextBox = new System.Windows.Forms.Label();
-            this.usernameTextBox = new System.Windows.Forms.TextBox();
+            this.passwordLabel = new System.Windows.Forms.Label();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.verLabel = new System.Windows.Forms.Label();
             this.aboutBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.appNameLabel = new System.Windows.Forms.Label();
+            this.usernameTextBox = new System.Windows.Forms.TextBox();
+            this.designPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.personPictureBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // appName
-            // 
-            this.appName.AutoSize = true;
-            this.appName.BackColor = System.Drawing.Color.Transparent;
-            this.appName.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.appName.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.appName.Location = new System.Drawing.Point(9, 14);
-            this.appName.Name = "appName";
-            this.appName.Size = new System.Drawing.Size(250, 16);
-            this.appName.TabIndex = 0;
-            this.appName.Text = "COVID 19 - Health Contact Tracing App";
-            this.appName.Click += new System.EventHandler(this.appName_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(267, 138);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // personalInfoLabel
-            // 
-            this.personalInfoLabel.AutoSize = true;
-            this.personalInfoLabel.BackColor = System.Drawing.Color.Transparent;
-            this.personalInfoLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.personalInfoLabel.ForeColor = System.Drawing.Color.Black;
-            this.personalInfoLabel.Location = new System.Drawing.Point(39, 148);
-            this.personalInfoLabel.Name = "personalInfoLabel";
-            this.personalInfoLabel.Size = new System.Drawing.Size(165, 21);
-            this.personalInfoLabel.TabIndex = 19;
-            this.personalInfoLabel.Text = "Contact Information";
-            this.personalInfoLabel.Click += new System.EventHandler(this.personalInfoLabel_Click);
             // 
             // label18
             // 
@@ -117,40 +80,50 @@
             this.exitBtn.UseVisualStyleBackColor = false;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
-            // pictureBox1
+            // designPanel
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(149, 121);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 64;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.designPanel.BackColor = System.Drawing.Color.White;
+            this.designPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("designPanel.BackgroundImage")));
+            this.designPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.designPanel.Controls.Add(this.usernameTextBox);
+            this.designPanel.Controls.Add(this.personPictureBox);
+            this.designPanel.Controls.Add(this.contactInfoLabel);
+            this.designPanel.Controls.Add(this.loginBtn);
+            this.designPanel.Controls.Add(this.usernameLabel);
+            this.designPanel.Controls.Add(this.passwordLabel);
+            this.designPanel.Controls.Add(this.passwordTextBox);
+            this.designPanel.Controls.Add(this.verLabel);
+            this.designPanel.Controls.Add(this.aboutBtn);
+            this.designPanel.Controls.Add(this.exitBtn);
+            this.designPanel.ForeColor = System.Drawing.Color.White;
+            this.designPanel.Location = new System.Drawing.Point(15, 33);
+            this.designPanel.Name = "designPanel";
+            this.designPanel.Size = new System.Drawing.Size(233, 377);
+            this.designPanel.TabIndex = 66;
             // 
-            // panel1
+            // personPictureBox
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.loginBtn);
-            this.panel1.Controls.Add(this.usernameLabel);
-            this.panel1.Controls.Add(this.pwdTextBox);
-            this.panel1.Controls.Add(this.usernameTextBox);
-            this.panel1.Controls.Add(this.passwordTextBox);
-            this.panel1.Controls.Add(this.verLabel);
-            this.panel1.Controls.Add(this.aboutBtn);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.exitBtn);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.personalInfoLabel);
-            this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(15, 33);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(233, 377);
-            this.panel1.TabIndex = 66;
+            this.personPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.personPictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("personPictureBox.BackgroundImage")));
+            this.personPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.personPictureBox.Location = new System.Drawing.Point(46, 24);
+            this.personPictureBox.Name = "personPictureBox";
+            this.personPictureBox.Size = new System.Drawing.Size(149, 121);
+            this.personPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.personPictureBox.TabIndex = 78;
+            this.personPictureBox.TabStop = false;
+            // 
+            // contactInfoLabel
+            // 
+            this.contactInfoLabel.AutoSize = true;
+            this.contactInfoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.contactInfoLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactInfoLabel.ForeColor = System.Drawing.Color.Black;
+            this.contactInfoLabel.Location = new System.Drawing.Point(38, 148);
+            this.contactInfoLabel.Name = "contactInfoLabel";
+            this.contactInfoLabel.Size = new System.Drawing.Size(165, 21);
+            this.contactInfoLabel.TabIndex = 77;
+            this.contactInfoLabel.Text = "Contact Information";
             // 
             // loginBtn
             // 
@@ -179,23 +152,16 @@
             this.usernameLabel.TabIndex = 75;
             this.usernameLabel.Text = "Username";
             // 
-            // pwdTextBox
+            // passwordLabel
             // 
-            this.pwdTextBox.AutoSize = true;
-            this.pwdTextBox.BackColor = System.Drawing.Color.Transparent;
-            this.pwdTextBox.ForeColor = System.Drawing.Color.Black;
-            this.pwdTextBox.Location = new System.Drawing.Point(42, 217);
-            this.pwdTextBox.Name = "pwdTextBox";
-            this.pwdTextBox.Size = new System.Drawing.Size(53, 13);
-            this.pwdTextBox.TabIndex = 74;
-            this.pwdTextBox.Text = "Password";
-            // 
-            // usernameTextBox
-            // 
-            this.usernameTextBox.Location = new System.Drawing.Point(43, 194);
-            this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(152, 20);
-            this.usernameTextBox.TabIndex = 72;
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
+            this.passwordLabel.ForeColor = System.Drawing.Color.Black;
+            this.passwordLabel.Location = new System.Drawing.Point(42, 217);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(53, 13);
+            this.passwordLabel.TabIndex = 74;
+            this.passwordLabel.Text = "Password";
             // 
             // passwordTextBox
             // 
@@ -231,6 +197,25 @@
             this.aboutBtn.UseVisualStyleBackColor = false;
             this.aboutBtn.Click += new System.EventHandler(this.aboutBtn_Click);
             // 
+            // appNameLabel
+            // 
+            this.appNameLabel.AutoSize = true;
+            this.appNameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.appNameLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.appNameLabel.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.appNameLabel.Location = new System.Drawing.Point(3, 14);
+            this.appNameLabel.Name = "appNameLabel";
+            this.appNameLabel.Size = new System.Drawing.Size(250, 16);
+            this.appNameLabel.TabIndex = 67;
+            this.appNameLabel.Text = "COVID 19 - Health Contact Tracing App";
+            // 
+            // usernameTextBox
+            // 
+            this.usernameTextBox.Location = new System.Drawing.Point(42, 194);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(152, 20);
+            this.usernameTextBox.TabIndex = 79;
+            // 
             // loginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,41 +223,39 @@
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(262, 423);
-            this.Controls.Add(this.appName);
+            this.ClientSize = new System.Drawing.Size(264, 423);
+            this.Controls.Add(this.appNameLabel);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.designPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "loginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.designPanel.ResumeLayout(false);
+            this.designPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.personPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label appName;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label personalInfoLabel;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button exitBtn;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel designPanel;
         private System.Windows.Forms.Button aboutBtn;
         private System.Windows.Forms.Label verLabel;
         private System.Windows.Forms.TextBox passwordTextBox;
-        private System.Windows.Forms.TextBox usernameTextBox;
-        private System.Windows.Forms.Label pwdTextBox;
+        private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.Button loginBtn;
+        private System.Windows.Forms.Label contactInfoLabel;
+        private System.Windows.Forms.PictureBox personPictureBox;
+        private System.Windows.Forms.Label appNameLabel;
+        private System.Windows.Forms.TextBox usernameTextBox;
     }
 }
 
