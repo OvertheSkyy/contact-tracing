@@ -130,7 +130,7 @@ namespace contact_tracing
         {
             if (dateOfCreationComboBox.Text == "2021")
             {
-                string personFilePath = @"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\2021\" + lastNameTextBox.Text + "," + firstNameTextBox.Text + ".txt";
+                string personFilePath = @"E:\Desktop\contact-tracing\2021\" + lastNameTextBox.Text + "," + firstNameTextBox.Text + ".txt";
 
                 StreamWriter outputFile = new StreamWriter(personFilePath);
                 using (outputFile)
@@ -155,9 +155,9 @@ namespace contact_tracing
                     outputFile.Close();
                 }
             }
-            else if (dateOfCreationComboBox.Text == "2023")
+            else if (dateOfCreationComboBox.Text == "2022")
             {
-                string personFilePath = @"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\2022\" + lastNameTextBox.Text + "" + firstNameTextBox.Text + ".txt";
+                string personFilePath = @"E:\Desktop\contact-tracing\2022\" + lastNameTextBox.Text + "," + firstNameTextBox.Text + ".txt";
 
                 StreamWriter outputFile = new StreamWriter(personFilePath);
                 using (outputFile)

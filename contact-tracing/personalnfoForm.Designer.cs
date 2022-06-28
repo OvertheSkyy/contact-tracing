@@ -82,7 +82,7 @@
             this.clearAllBtn = new System.Windows.Forms.Button();
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.dateTodayLabel = new System.Windows.Forms.Label();
             this.dateOfCreationComboBox = new System.Windows.Forms.ComboBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -664,16 +664,16 @@
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 136;
             // 
-            // label2
+            // dateTodayLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(353, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 138;
-            this.label2.Text = "YEAR:";
+            this.dateTodayLabel.AutoSize = true;
+            this.dateTodayLabel.BackColor = System.Drawing.Color.Transparent;
+            this.dateTodayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTodayLabel.Location = new System.Drawing.Point(280, 37);
+            this.dateTodayLabel.Name = "dateTodayLabel";
+            this.dateTodayLabel.Size = new System.Drawing.Size(90, 13);
+            this.dateTodayLabel.TabIndex = 138;
+            this.dateTodayLabel.Text = "DATE TODAY:";
             // 
             // dateOfCreationComboBox
             // 
@@ -682,7 +682,7 @@
             this.dateOfCreationComboBox.Items.AddRange(new object[] {
             "2021",
             "2022"});
-            this.dateOfCreationComboBox.Location = new System.Drawing.Point(401, 34);
+            this.dateOfCreationComboBox.Location = new System.Drawing.Point(373, 34);
             this.dateOfCreationComboBox.Name = "dateOfCreationComboBox";
             this.dateOfCreationComboBox.Size = new System.Drawing.Size(121, 21);
             this.dateOfCreationComboBox.TabIndex = 139;
@@ -737,7 +737,7 @@
             this.Controls.Add(this.logoutBtn);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.dateOfCreationComboBox);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dateTodayLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.firstNameTextBox);
             this.Controls.Add(this.clearAllBtn);
@@ -855,7 +855,7 @@
         private System.Windows.Forms.Button clearAllBtn;
         private System.Windows.Forms.TextBox firstNameTextBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label dateTodayLabel;
         private System.Windows.Forms.ComboBox dateOfCreationComboBox;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.RichTextBox richTextBox1;

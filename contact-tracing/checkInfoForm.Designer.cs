@@ -54,6 +54,7 @@
             this.dateOfCreation.Name = "dateOfCreation";
             this.dateOfCreation.Size = new System.Drawing.Size(133, 21);
             this.dateOfCreation.TabIndex = 1;
+            this.dateOfCreation.SelectedIndexChanged += new System.EventHandler(this.dateOfCreation_SelectedIndexChanged);
             // 
             // dateFilterLabel
             // 
@@ -127,11 +128,12 @@
             // 
             // savedInfoRichTextBox
             // 
-            this.savedInfoRichTextBox.Location = new System.Drawing.Point(326, 58);
+            this.savedInfoRichTextBox.Location = new System.Drawing.Point(326, 108);
             this.savedInfoRichTextBox.Name = "savedInfoRichTextBox";
-            this.savedInfoRichTextBox.Size = new System.Drawing.Size(193, 302);
+            this.savedInfoRichTextBox.Size = new System.Drawing.Size(193, 252);
             this.savedInfoRichTextBox.TabIndex = 19;
             this.savedInfoRichTextBox.Text = "";
+            this.savedInfoRichTextBox.TextChanged += new System.EventHandler(this.savedInfoRichTextBox_TextChanged);
             // 
             // generatedQRPictureBox
             // 
@@ -171,12 +173,12 @@
             this.seePersonInfoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.seePersonInfoComboBox.FormattingEnabled = true;
             this.seePersonInfoComboBox.Items.AddRange(new object[] {
-            "2021",
-            "2022"});
+            ""});
             this.seePersonInfoComboBox.Location = new System.Drawing.Point(114, 59);
             this.seePersonInfoComboBox.Name = "seePersonInfoComboBox";
-            this.seePersonInfoComboBox.Size = new System.Drawing.Size(133, 21);
+            this.seePersonInfoComboBox.Size = new System.Drawing.Size(405, 21);
             this.seePersonInfoComboBox.TabIndex = 24;
+            this.seePersonInfoComboBox.SelectedIndexChanged += new System.EventHandler(this.seePersonInfoComboBox_SelectedIndexChanged);
             // 
             // checkInfoForm
             // 

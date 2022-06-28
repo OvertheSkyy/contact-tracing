@@ -14,6 +14,7 @@ namespace contact_tracing
 {
     public partial class checkInfoForm : Form
     {
+        
         public checkInfoForm()
         {
             InitializeComponent();
@@ -29,12 +30,7 @@ namespace contact_tracing
 
         private void showNameBtn_Click(object sender, EventArgs e)
         {
-            string[] filePathToString = Directory.GetFiles(@"E:\Desktop\contact-tracing\contact-tracing\contact-tracing\2021\");
 
-            foreach (string filePath in filePathToString)
-            {
-                seePersonInfoComboBox.Items.Add(filePath);
-            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -44,5 +40,51 @@ namespace contact_tracing
             this.Close();
         }
 
+        private void dateOfCreation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (dateOfCreation.Text == "2021")
+            {
+                dateOfCreationyr2021();
+            }
+
+            else if (dateOfCreation.Text == "2022")
+            {
+                dateOfCreationyr2022();
+            }
+        }
+        
+        private void dateOfCreationyr2021()
+        {
+            string[] filePathToString = Directory.GetFiles(@"E:\Desktop\contact-tracing\2021\");
+
+            foreach (string filePath in filePathToString)
+            {
+                seePersonInfoComboBox.Items.Add(filePath);
+            }
+        }
+
+        private void dateOfCreationyr2022()
+        {
+            string[] filePathToString = Directory.GetFiles(@"E:\Desktop\contact-tracing\2022\");
+
+            foreach (string filePath in filePathToString)
+            {
+                seePersonInfoComboBox.Items.Add(filePath);
+            }
+        }
+
+        private void seePersonInfoComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string personFilePath = seePersonInfoComboBox.SelectedItem as string;
+            StreamReader readFilePath = new StreamReader(personFilePath);
+           
+            savedInfoRichTextBox.Text = readFilePath.ReadToEnd();
+
+        }
+
+        private void savedInfoRichTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
