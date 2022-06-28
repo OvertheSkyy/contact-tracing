@@ -44,26 +44,31 @@ namespace contact_tracing
         {
             if (dateOfCreation.Text == "2019")
             {
+                seePersonInfoComboBox.Items.Clear();
                 dateOfCreationyr2019();
             }
 
             else if (dateOfCreation.Text == "2020")
             {
+                seePersonInfoComboBox.Items.Clear();
                 dateOfCreationyr2020();
             }
 
             else if (dateOfCreation.Text == "2021")
             {
+                seePersonInfoComboBox.Items.Clear();
                 dateOfCreationyr2021();
             }
 
             else if (dateOfCreation.Text == "2022")
             {
+                seePersonInfoComboBox.Items.Clear();
                 dateOfCreationyr2022();
             }
 
             else if (dateOfCreation.Text == "2023")
             {
+                seePersonInfoComboBox.Items.Clear();
                 dateOfCreationyr2023();
             }
         }
@@ -74,6 +79,7 @@ namespace contact_tracing
 
             foreach (string filePath in filePathToString)
             {
+                seePersonInfoComboBox.Items.Remove(filePath);
                 seePersonInfoComboBox.Items.Add(filePath);
             }
         }
@@ -81,11 +87,13 @@ namespace contact_tracing
         private void dateOfCreationyr2020()
         {
             string[] filePathToString = Directory.GetFiles(@"E:\Desktop\contact-tracing\2020\");
-
+            
             foreach (string filePath in filePathToString)
             {
+                seePersonInfoComboBox.Items.Remove(filePath);
                 seePersonInfoComboBox.Items.Add(filePath);
             }
+
         }
 
         private void dateOfCreationyr2021()
@@ -94,6 +102,7 @@ namespace contact_tracing
 
             foreach (string filePath in filePathToString)
             {
+                seePersonInfoComboBox.Items.Remove(filePath);
                 seePersonInfoComboBox.Items.Add(filePath);
             }
         }
@@ -104,6 +113,7 @@ namespace contact_tracing
 
             foreach (string filePath in filePathToString)
             {
+                seePersonInfoComboBox.Items.Remove(filePath);
                 seePersonInfoComboBox.Items.Add(filePath);
             }
         }
@@ -114,6 +124,7 @@ namespace contact_tracing
 
             foreach (string filePath in filePathToString)
             {
+                seePersonInfoComboBox.Items.Remove(filePath);
                 seePersonInfoComboBox.Items.Add(filePath);
             }
         }

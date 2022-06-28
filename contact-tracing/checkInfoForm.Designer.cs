@@ -130,9 +130,9 @@
             // 
             this.generatedQRPictureBox.BackColor = System.Drawing.Color.White;
             this.generatedQRPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.generatedQRPictureBox.Location = new System.Drawing.Point(46, 122);
+            this.generatedQRPictureBox.Location = new System.Drawing.Point(53, 122);
             this.generatedQRPictureBox.Name = "generatedQRPictureBox";
-            this.generatedQRPictureBox.Size = new System.Drawing.Size(226, 229);
+            this.generatedQRPictureBox.Size = new System.Drawing.Size(233, 229);
             this.generatedQRPictureBox.TabIndex = 21;
             this.generatedQRPictureBox.TabStop = false;
             // 
