@@ -43,5 +43,6 @@ namespace contact_tracing
             form.Hide();
             this.Close();
         }
+
     }
 }

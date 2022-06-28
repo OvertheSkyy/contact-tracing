@@ -36,10 +36,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.showNameBtn = new System.Windows.Forms.Button();
             this.savedInfoRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.seePersonInfoComboBox = new System.Windows.Forms.ComboBox();
             this.generatedQRPictureBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.seePersonInfoComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.generatedQRPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,15 +133,6 @@
             this.savedInfoRichTextBox.TabIndex = 19;
             this.savedInfoRichTextBox.Text = "";
             // 
-            // seePersonInfoComboBox
-            // 
-            this.seePersonInfoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.seePersonInfoComboBox.FormattingEnabled = true;
-            this.seePersonInfoComboBox.Location = new System.Drawing.Point(114, 59);
-            this.seePersonInfoComboBox.Name = "seePersonInfoComboBox";
-            this.seePersonInfoComboBox.Size = new System.Drawing.Size(417, 21);
-            this.seePersonInfoComboBox.TabIndex = 20;
-            // 
             // generatedQRPictureBox
             // 
             this.generatedQRPictureBox.BackColor = System.Drawing.Color.White;
@@ -175,6 +166,18 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // seePersonInfoComboBox
+            // 
+            this.seePersonInfoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.seePersonInfoComboBox.FormattingEnabled = true;
+            this.seePersonInfoComboBox.Items.AddRange(new object[] {
+            "2021",
+            "2022"});
+            this.seePersonInfoComboBox.Location = new System.Drawing.Point(114, 59);
+            this.seePersonInfoComboBox.Name = "seePersonInfoComboBox";
+            this.seePersonInfoComboBox.Size = new System.Drawing.Size(133, 21);
+            this.seePersonInfoComboBox.TabIndex = 24;
+            // 
             // checkInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,10 +185,10 @@
             this.BackColor = System.Drawing.Color.DarkTurquoise;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(543, 439);
+            this.Controls.Add(this.seePersonInfoComboBox);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.generatedQRPictureBox);
-            this.Controls.Add(this.seePersonInfoComboBox);
             this.Controls.Add(this.showNameBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.generateQRCode);
@@ -213,9 +216,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button showNameBtn;
         private System.Windows.Forms.RichTextBox savedInfoRichTextBox;
-        private System.Windows.Forms.ComboBox seePersonInfoComboBox;
         private System.Windows.Forms.PictureBox generatedQRPictureBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox seePersonInfoComboBox;
     }
 }
