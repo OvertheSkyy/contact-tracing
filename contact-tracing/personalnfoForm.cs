@@ -10,21 +10,39 @@ using System.Windows.Forms;
 using System.IO;
 using QRCoder;
 using System.Threading;
+using AForge.Video;
+using AForge.Video.DirectShow;
+using ZXing;
 
 namespace contact_tracing
 {
     public partial class personalInfoForm : Form
     {
-        Thread thread;
+        private Thread thread;
+        private FilterInfoCollection filterInfoCollection;
+        private VideoCaptureDevice videoCaptureDevice;
 
         public personalInfoForm()
         {
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void nameOfCamComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void infoOfQRCodeRTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo filterInfo in filterInfoCollection)
+                nameOfCamComboBox.Items.Add(filterInfo.Name);
+            nameOfCamComboBox.SelectedIndex = 0;
         }
 
         private void firstDoseYes_CheckedChanged(object sender, EventArgs e)
@@ -136,21 +154,37 @@ namespace contact_tracing
                 using (outputFile)
                 {
                     outputFile.WriteLine(personInfoLabel.Text);
-                    outputFile.WriteLine(nameLabel.Text + " " + lastNameTextBox.Text + "," + " " + firstNameTextBox.Text + " " + middleInitialTextBox.Text);
-                    outputFile.WriteLine(addressLabel.Text + " " + addressTextBox.Text);
-                    outputFile.WriteLine(dateOfBirthLabel.Text + " " + dateOfBirthTextBox.Text);
-                    outputFile.WriteLine(ageLabel.Text + " " + ageTextBox.Text);
-                    outputFile.WriteLine(sexLabel.Text + " " + sexSelectionComboBox.Text);
-                    outputFile.WriteLine(contactNoLabel.Text + " " + contactNoTextBox.Text);
+                    outputFile.WriteLine(nameLabel.Text);
+                    outputFile.WriteLine(lastNameTextBox.Text);
+                    outputFile.WriteLine(firstNameTextBox.Text);
+                    outputFile.WriteLine(middleInitialTextBox.Text);
+                    outputFile.WriteLine(addressTextBox.Text);
+                    outputFile.WriteLine(dateOfBirthLabel.Text);
+                    outputFile.WriteLine(dateOfBirthTextBox.Text);
+                    outputFile.WriteLine(ageLabel.Text);
+                    outputFile.WriteLine(ageTextBox.Text);
+                    outputFile.WriteLine(sexLabel.Text);
+                    outputFile.WriteLine(sexSelectionComboBox.Text);
+                    outputFile.WriteLine(contactNoLabel.Text);
+                    outputFile.WriteLine(contactNoTextBox.Text);
                     outputFile.WriteLine(healthFormLabel.Text);
-                    outputFile.WriteLine(firstDoseLabel.Text + " " + answerTextBox1.Text);
-                    outputFile.WriteLine(firstDoseDate.Text + " " + firstDoseDateTextBox.Text);
-                    outputFile.WriteLine(vaccineBrandLabel1.Text + " " + vaccineBrandTextBox1.Text);
-                    outputFile.WriteLine(secondDoseLabel.Text + " " + answerTextBox2.Text);
-                    outputFile.WriteLine(secondDoseDate.Text + " " + secondDoseDateTextBox.Text);
-                    outputFile.WriteLine(vaccineBrandLabel2.Text + " " + vaccineBrandTextBox2.Text);
-                    outputFile.WriteLine(boosterShotsLabel.Text + " " + answerTextBox3.Text);
-                    outputFile.WriteLine(dateTodayLabel.Text + " " + monthOfCreationComboBox.Text + "/" + dayOfCreationComboBox.Text + "/" + yearOfCreationComboBox.Text);
+                    outputFile.WriteLine(firstDoseLabel.Text);
+                    outputFile.WriteLine(answerTextBox1.Text);
+                    outputFile.WriteLine(firstDoseDate.Text);
+                    outputFile.WriteLine(firstDoseDateTextBox.Text);
+                    outputFile.WriteLine(vaccineBrandTextBox1.Text);
+                    outputFile.WriteLine(secondDoseLabel.Text);
+                    outputFile.WriteLine(answerTextBox2.Text);
+                    outputFile.WriteLine(secondDoseDate.Text);
+                    outputFile.WriteLine(secondDoseDateTextBox.Text);
+                    outputFile.WriteLine(vaccineBrandLabel2.Text);
+                    outputFile.WriteLine(vaccineBrandTextBox2.Text);
+                    outputFile.WriteLine(boosterShotsLabel.Text);
+                    outputFile.WriteLine(answerTextBox3.Text);
+                    outputFile.WriteLine(dateTodayLabel.Text);
+                    outputFile.WriteLine(monthOfCreationComboBox.Text);
+                    outputFile.WriteLine(dayOfCreationComboBox.Text);
+                    outputFile.WriteLine(yearOfCreationComboBox.Text);
 
                     outputFile.Close();
                 }
@@ -163,21 +197,37 @@ namespace contact_tracing
                 using (outputFile)
                 {
                     outputFile.WriteLine(personInfoLabel.Text);
-                    outputFile.WriteLine(nameLabel.Text + " " + lastNameTextBox.Text + "," + " " + firstNameTextBox.Text + " " + middleInitialTextBox.Text);
-                    outputFile.WriteLine(addressLabel.Text + " " + addressTextBox.Text);
-                    outputFile.WriteLine(dateOfBirthLabel.Text + " " + dateOfBirthTextBox.Text);
-                    outputFile.WriteLine(ageLabel.Text + " " + ageTextBox.Text);
-                    outputFile.WriteLine(sexLabel.Text + " " + sexSelectionComboBox.Text);
-                    outputFile.WriteLine(contactNoLabel.Text + " " + contactNoTextBox.Text);
+                    outputFile.WriteLine(nameLabel.Text);
+                    outputFile.WriteLine(lastNameTextBox.Text);
+                    outputFile.WriteLine(firstNameTextBox.Text);
+                    outputFile.WriteLine(middleInitialTextBox.Text);
+                    outputFile.WriteLine(addressTextBox.Text);
+                    outputFile.WriteLine(dateOfBirthLabel.Text);
+                    outputFile.WriteLine(dateOfBirthTextBox.Text);
+                    outputFile.WriteLine(ageLabel.Text);
+                    outputFile.WriteLine(ageTextBox.Text);
+                    outputFile.WriteLine(sexLabel.Text);
+                    outputFile.WriteLine(sexSelectionComboBox.Text);
+                    outputFile.WriteLine(contactNoLabel.Text);
+                    outputFile.WriteLine(contactNoTextBox.Text);
                     outputFile.WriteLine(healthFormLabel.Text);
-                    outputFile.WriteLine(firstDoseLabel.Text + " " + answerTextBox1.Text);
-                    outputFile.WriteLine(firstDoseDate.Text + " " + firstDoseDateTextBox.Text);
-                    outputFile.WriteLine(vaccineBrandLabel1.Text + " " + vaccineBrandTextBox1.Text);
-                    outputFile.WriteLine(secondDoseLabel.Text + " " + answerTextBox2.Text);
-                    outputFile.WriteLine(secondDoseDate.Text + " " + secondDoseDateTextBox.Text);
-                    outputFile.WriteLine(vaccineBrandLabel2.Text + " " + vaccineBrandTextBox2.Text);
-                    outputFile.WriteLine(boosterShotsLabel.Text + " " + answerTextBox3.Text);
-                    outputFile.WriteLine(dateTodayLabel.Text + " " + monthOfCreationComboBox.Text + "/" + dayOfCreationComboBox.Text + "/" + yearOfCreationComboBox.Text);
+                    outputFile.WriteLine(firstDoseLabel.Text);
+                    outputFile.WriteLine(answerTextBox1.Text);
+                    outputFile.WriteLine(firstDoseDate.Text);
+                    outputFile.WriteLine(firstDoseDateTextBox.Text);
+                    outputFile.WriteLine(vaccineBrandTextBox1.Text);
+                    outputFile.WriteLine(secondDoseLabel.Text);
+                    outputFile.WriteLine(answerTextBox2.Text);
+                    outputFile.WriteLine(secondDoseDate.Text);
+                    outputFile.WriteLine(secondDoseDateTextBox.Text);
+                    outputFile.WriteLine(vaccineBrandLabel2.Text);
+                    outputFile.WriteLine(vaccineBrandTextBox2.Text);
+                    outputFile.WriteLine(boosterShotsLabel.Text);
+                    outputFile.WriteLine(answerTextBox3.Text);
+                    outputFile.WriteLine(dateTodayLabel.Text);
+                    outputFile.WriteLine(monthOfCreationComboBox.Text);
+                    outputFile.WriteLine(dayOfCreationComboBox.Text);
+                    outputFile.WriteLine(yearOfCreationComboBox.Text);
 
                     outputFile.Close();
                 }
@@ -190,21 +240,37 @@ namespace contact_tracing
                 using (outputFile)
                 {
                     outputFile.WriteLine(personInfoLabel.Text);
-                    outputFile.WriteLine(nameLabel.Text + " " + lastNameTextBox.Text + "," + " " + firstNameTextBox.Text + " " + middleInitialTextBox.Text);
-                    outputFile.WriteLine(addressLabel.Text + " " + addressTextBox.Text);
-                    outputFile.WriteLine(dateOfBirthLabel.Text + " " + dateOfBirthTextBox.Text);
-                    outputFile.WriteLine(ageLabel.Text + " " + ageTextBox.Text);
-                    outputFile.WriteLine(sexLabel.Text + " " + sexSelectionComboBox.Text);
-                    outputFile.WriteLine(contactNoLabel.Text + " " + contactNoTextBox.Text);
+                    outputFile.WriteLine(nameLabel.Text);
+                    outputFile.WriteLine(lastNameTextBox.Text);
+                    outputFile.WriteLine(firstNameTextBox.Text);
+                    outputFile.WriteLine(middleInitialTextBox.Text);
+                    outputFile.WriteLine(addressTextBox.Text);
+                    outputFile.WriteLine(dateOfBirthLabel.Text);
+                    outputFile.WriteLine(dateOfBirthTextBox.Text);
+                    outputFile.WriteLine(ageLabel.Text);
+                    outputFile.WriteLine(ageTextBox.Text);
+                    outputFile.WriteLine(sexLabel.Text);
+                    outputFile.WriteLine(sexSelectionComboBox.Text);
+                    outputFile.WriteLine(contactNoLabel.Text);
+                    outputFile.WriteLine(contactNoTextBox.Text);
                     outputFile.WriteLine(healthFormLabel.Text);
-                    outputFile.WriteLine(firstDoseLabel.Text + " " + answerTextBox1.Text);
-                    outputFile.WriteLine(firstDoseDate.Text + " " + firstDoseDateTextBox.Text);
-                    outputFile.WriteLine(vaccineBrandLabel1.Text + " " + vaccineBrandTextBox1.Text);
-                    outputFile.WriteLine(secondDoseLabel.Text + " " + answerTextBox2.Text);
-                    outputFile.WriteLine(secondDoseDate.Text + " " + secondDoseDateTextBox.Text);
-                    outputFile.WriteLine(vaccineBrandLabel2.Text + " " + vaccineBrandTextBox2.Text);
-                    outputFile.WriteLine(boosterShotsLabel.Text + " " + answerTextBox3.Text);
-                    outputFile.WriteLine(dateTodayLabel.Text + " " + monthOfCreationComboBox.Text + "/" + dayOfCreationComboBox.Text + "/" + yearOfCreationComboBox.Text);
+                    outputFile.WriteLine(firstDoseLabel.Text);
+                    outputFile.WriteLine(answerTextBox1.Text);
+                    outputFile.WriteLine(firstDoseDate.Text);
+                    outputFile.WriteLine(firstDoseDateTextBox.Text);
+                    outputFile.WriteLine(vaccineBrandTextBox1.Text);
+                    outputFile.WriteLine(secondDoseLabel.Text);
+                    outputFile.WriteLine(answerTextBox2.Text);
+                    outputFile.WriteLine(secondDoseDate.Text);
+                    outputFile.WriteLine(secondDoseDateTextBox.Text);
+                    outputFile.WriteLine(vaccineBrandLabel2.Text);
+                    outputFile.WriteLine(vaccineBrandTextBox2.Text);
+                    outputFile.WriteLine(boosterShotsLabel.Text);
+                    outputFile.WriteLine(answerTextBox3.Text);
+                    outputFile.WriteLine(dateTodayLabel.Text);
+                    outputFile.WriteLine(monthOfCreationComboBox.Text);
+                    outputFile.WriteLine(dayOfCreationComboBox.Text);
+                    outputFile.WriteLine(yearOfCreationComboBox.Text);
 
                     outputFile.Close();
                 }
@@ -217,21 +283,37 @@ namespace contact_tracing
                 using (outputFile)
                 {
                     outputFile.WriteLine(personInfoLabel.Text);
-                    outputFile.WriteLine(nameLabel.Text + " " + lastNameTextBox.Text + "," + " " + firstNameTextBox.Text + " " + middleInitialTextBox.Text);
-                    outputFile.WriteLine(addressLabel.Text + " " + addressTextBox.Text);
-                    outputFile.WriteLine(dateOfBirthLabel.Text + " " + dateOfBirthTextBox.Text);
-                    outputFile.WriteLine(ageLabel.Text + " " + ageTextBox.Text);
-                    outputFile.WriteLine(sexLabel.Text + " " + sexSelectionComboBox.Text);
-                    outputFile.WriteLine(contactNoLabel.Text + " " + contactNoTextBox.Text);
+                    outputFile.WriteLine(nameLabel.Text);
+                    outputFile.WriteLine(lastNameTextBox.Text);
+                    outputFile.WriteLine(firstNameTextBox.Text);
+                    outputFile.WriteLine(middleInitialTextBox.Text);
+                    outputFile.WriteLine(addressTextBox.Text);
+                    outputFile.WriteLine(dateOfBirthLabel.Text);
+                    outputFile.WriteLine(dateOfBirthTextBox.Text);
+                    outputFile.WriteLine(ageLabel.Text);
+                    outputFile.WriteLine(ageTextBox.Text);
+                    outputFile.WriteLine(sexLabel.Text);
+                    outputFile.WriteLine(sexSelectionComboBox.Text);
+                    outputFile.WriteLine(contactNoLabel.Text);
+                    outputFile.WriteLine(contactNoTextBox.Text);
                     outputFile.WriteLine(healthFormLabel.Text);
-                    outputFile.WriteLine(firstDoseLabel.Text + " " + answerTextBox1.Text);
-                    outputFile.WriteLine(firstDoseDate.Text + " " + firstDoseDateTextBox.Text);
-                    outputFile.WriteLine(vaccineBrandLabel1.Text + " " + vaccineBrandTextBox1.Text);
-                    outputFile.WriteLine(secondDoseLabel.Text + " " + answerTextBox2.Text);
-                    outputFile.WriteLine(secondDoseDate.Text + " " + secondDoseDateTextBox.Text);
-                    outputFile.WriteLine(vaccineBrandLabel2.Text + " " + vaccineBrandTextBox2.Text);
-                    outputFile.WriteLine(boosterShotsLabel.Text + " " + answerTextBox3.Text);
-                    outputFile.WriteLine(dateTodayLabel.Text + " " + monthOfCreationComboBox.Text + "/" + dayOfCreationComboBox.Text + "/" + yearOfCreationComboBox.Text);
+                    outputFile.WriteLine(firstDoseLabel.Text);
+                    outputFile.WriteLine(answerTextBox1.Text);
+                    outputFile.WriteLine(firstDoseDate.Text);
+                    outputFile.WriteLine(firstDoseDateTextBox.Text);
+                    outputFile.WriteLine(vaccineBrandTextBox1.Text);
+                    outputFile.WriteLine(secondDoseLabel.Text);
+                    outputFile.WriteLine(answerTextBox2.Text);
+                    outputFile.WriteLine(secondDoseDate.Text);
+                    outputFile.WriteLine(secondDoseDateTextBox.Text);
+                    outputFile.WriteLine(vaccineBrandLabel2.Text);
+                    outputFile.WriteLine(vaccineBrandTextBox2.Text);
+                    outputFile.WriteLine(boosterShotsLabel.Text);
+                    outputFile.WriteLine(answerTextBox3.Text);
+                    outputFile.WriteLine(dateTodayLabel.Text);
+                    outputFile.WriteLine(monthOfCreationComboBox.Text);
+                    outputFile.WriteLine(dayOfCreationComboBox.Text);
+                    outputFile.WriteLine(yearOfCreationComboBox.Text);
 
                     outputFile.Close();
                 }
@@ -244,21 +326,37 @@ namespace contact_tracing
                 using (outputFile)
                 {
                     outputFile.WriteLine(personInfoLabel.Text);
-                    outputFile.WriteLine(nameLabel.Text + " " + lastNameTextBox.Text + "," + " " + firstNameTextBox.Text + " " + middleInitialTextBox.Text);
-                    outputFile.WriteLine(addressLabel.Text + " " + addressTextBox.Text);
-                    outputFile.WriteLine(dateOfBirthLabel.Text + " " + dateOfBirthTextBox.Text);
-                    outputFile.WriteLine(ageLabel.Text + " " + ageTextBox.Text);
-                    outputFile.WriteLine(sexLabel.Text + " " + sexSelectionComboBox.Text);
-                    outputFile.WriteLine(contactNoLabel.Text + " " + contactNoTextBox.Text);
+                    outputFile.WriteLine(nameLabel.Text);
+                    outputFile.WriteLine(lastNameTextBox.Text);
+                    outputFile.WriteLine(firstNameTextBox.Text);
+                    outputFile.WriteLine(middleInitialTextBox.Text);
+                    outputFile.WriteLine(addressTextBox.Text);
+                    outputFile.WriteLine(dateOfBirthLabel.Text);
+                    outputFile.WriteLine(dateOfBirthTextBox.Text);
+                    outputFile.WriteLine(ageLabel.Text);
+                    outputFile.WriteLine(ageTextBox.Text);
+                    outputFile.WriteLine(sexLabel.Text);
+                    outputFile.WriteLine(sexSelectionComboBox.Text);
+                    outputFile.WriteLine(contactNoLabel.Text);
+                    outputFile.WriteLine(contactNoTextBox.Text);
                     outputFile.WriteLine(healthFormLabel.Text);
-                    outputFile.WriteLine(firstDoseLabel.Text + " " + answerTextBox1.Text);
-                    outputFile.WriteLine(firstDoseDate.Text + " " + firstDoseDateTextBox.Text);
-                    outputFile.WriteLine(vaccineBrandLabel1.Text + " " + vaccineBrandTextBox1.Text);
-                    outputFile.WriteLine(secondDoseLabel.Text + " " + answerTextBox2.Text);
-                    outputFile.WriteLine(secondDoseDate.Text + " " + secondDoseDateTextBox.Text);
-                    outputFile.WriteLine(vaccineBrandLabel2.Text + " " + vaccineBrandTextBox2.Text);
-                    outputFile.WriteLine(boosterShotsLabel.Text + " " + answerTextBox3.Text);
-                    outputFile.WriteLine(dateTodayLabel.Text + " " + monthOfCreationComboBox.Text + "/" + dayOfCreationComboBox.Text + "/" + yearOfCreationComboBox.Text);
+                    outputFile.WriteLine(firstDoseLabel.Text);
+                    outputFile.WriteLine(answerTextBox1.Text);
+                    outputFile.WriteLine(firstDoseDate.Text);
+                    outputFile.WriteLine(firstDoseDateTextBox.Text);
+                    outputFile.WriteLine(vaccineBrandTextBox1.Text);
+                    outputFile.WriteLine(secondDoseLabel.Text);
+                    outputFile.WriteLine(answerTextBox2.Text);
+                    outputFile.WriteLine(secondDoseDate.Text);
+                    outputFile.WriteLine(secondDoseDateTextBox.Text);
+                    outputFile.WriteLine(vaccineBrandLabel2.Text);
+                    outputFile.WriteLine(vaccineBrandTextBox2.Text);
+                    outputFile.WriteLine(boosterShotsLabel.Text);
+                    outputFile.WriteLine(answerTextBox3.Text);
+                    outputFile.WriteLine(dateTodayLabel.Text);
+                    outputFile.WriteLine(monthOfCreationComboBox.Text);
+                    outputFile.WriteLine(dayOfCreationComboBox.Text);
+                    outputFile.WriteLine(yearOfCreationComboBox.Text);
 
                     outputFile.Close();
                 }
@@ -267,8 +365,14 @@ namespace contact_tracing
 
         private void checkInfoBtn_Click(object sender, EventArgs e)
         {
-            checkInfoForm form = new checkInfoForm();
-            form.Show();
+            thread = new Thread(openNewForm);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+        }
+
+        private void openNewForm()
+        {
+            Application.Run(new checkInfoForm());
         }
 
         private void clearAllBtn_Click(object sender, EventArgs e)
@@ -313,5 +417,83 @@ namespace contact_tracing
             Application.Run(new loginForm());
         }
 
+        private void readQRCodeBtn_Click(object sender, EventArgs e)
+        {
+            videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[nameOfCamComboBox.SelectedIndex].MonikerString);
+            videoCaptureDevice.NewFrame += capturingQRCode_NewFrame;
+            videoCaptureDevice.Start();
+            capturingQRTimer.Start();
+        }
+
+        private void capturingQRCode_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+            capturingQRDevice.Image = (Bitmap)eventArgs.Frame.Clone();
+        }
+
+        private void personalInfoForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (videoCaptureDevice.IsRunning)
+                videoCaptureDevice.Stop();
+        }
+
+        private void capturingQRTimer_Tick(object sender, EventArgs e)
+        {
+            if (capturingQRDevice.Image != null)
+            {
+                BarcodeReader barcodeReader = new BarcodeReader();
+                Result result = barcodeReader.Decode((Bitmap)capturingQRDevice.Image);
+                if (result != null)
+                {
+                    infoOfQRCodeRTB.Text = result.ToString();
+                    capturingQRTimer.Stop();
+                    if (videoCaptureDevice.IsRunning)
+                        videoCaptureDevice.Stop();
+                }
+            }
+        }
+
+        private void autoFillBtn_Click(object sender, EventArgs e)
+        {
+            string[] readQRInfo = infoOfQRCodeRTB.Lines;
+
+                lastNameTextBox.Text = readQRInfo[2];
+                firstNameTextBox.Text = readQRInfo[3];
+                middleInitialTextBox.Text = readQRInfo[4];
+                addressTextBox.Text = readQRInfo[5];
+                dateOfBirthTextBox.Text = readQRInfo[7];
+                ageTextBox.Text = readQRInfo[9];
+                sexSelectionComboBox.Text = readQRInfo[11];
+                contactNoTextBox.Text = readQRInfo[13];
+
+                if (readQRInfo[16] == "Yes")
+                {
+                    firstDoseYes.Checked = true;
+                }
+                else if (readQRInfo[16] == "No")
+                { 
+                    firstDoseNo.Checked = true;
+                }
+                answerTextBox1.Text = readQRInfo[16];
+                
+                firstDoseDateTextBox.Text = readQRInfo[18];
+                vaccineBrandTextBox1.Text = readQRInfo[19];
+                answerTextBox2.Text = readQRInfo[21];
+                if (readQRInfo[21] == "Yes")
+                {
+                    secondDoseYes.Checked = true;
+                }
+                else if (readQRInfo[21] == "No")
+                {
+                    secondDoseNo.Checked = true;
+                }
+
+                secondDoseDateTextBox.Text = readQRInfo[23];
+                vaccineBrandTextBox2.Text = readQRInfo[25];
+                answerTextBox3.Text = readQRInfo[27];
+                monthOfCreationComboBox.Text = readQRInfo[29];
+                dayOfCreationComboBox.Text = readQRInfo[30];
+                yearOfCreationComboBox.Text = readQRInfo[31];
+
+        }
     }
 }

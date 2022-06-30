@@ -38,17 +38,17 @@
             this.privacyPolicyParagraph.AutoSize = true;
             this.privacyPolicyParagraph.BackColor = System.Drawing.Color.Transparent;
             this.privacyPolicyParagraph.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.privacyPolicyParagraph.Font = new System.Drawing.Font("Microsoft Tai Le", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.privacyPolicyParagraph.Font = new System.Drawing.Font("Microsoft Tai Le", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.privacyPolicyParagraph.Location = new System.Drawing.Point(11, 14);
             this.privacyPolicyParagraph.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.privacyPolicyParagraph.Name = "privacyPolicyParagraph";
-            this.privacyPolicyParagraph.Size = new System.Drawing.Size(921, 750);
+            this.privacyPolicyParagraph.Size = new System.Drawing.Size(940, 750);
             this.privacyPolicyParagraph.TabIndex = 0;
             this.privacyPolicyParagraph.Text = resources.GetString("privacyPolicyParagraph.Text");
             // 
             // returnHomeBtn
             // 
-            this.returnHomeBtn.Location = new System.Drawing.Point(423, 767);
+            this.returnHomeBtn.Location = new System.Drawing.Point(421, 779);
             this.returnHomeBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.returnHomeBtn.Name = "returnHomeBtn";
             this.returnHomeBtn.Size = new System.Drawing.Size(74, 21);
@@ -62,6 +62,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(939, 800);
             this.Controls.Add(this.returnHomeBtn);
             this.Controls.Add(this.privacyPolicyParagraph);

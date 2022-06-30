@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(checkInfoForm));
             this.dateOfCreation = new System.Windows.Forms.ComboBox();
             this.dateFilterLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.generateQRCode = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.savedInfoRichTextBox = new System.Windows.Forms.RichTextBox();
             this.generatedQRPictureBox = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.allRightsReservedLabel = new System.Windows.Forms.Label();
             this.seePersonInfoComboBox = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.closeFormBtn = new System.Windows.Forms.Button();
+            this.savedInfoRichTextBox = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.generatedQRPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +69,7 @@
             this.dateFilterLabel.Name = "dateFilterLabel";
             this.dateFilterLabel.Size = new System.Drawing.Size(96, 12);
             this.dateFilterLabel.TabIndex = 6;
-            this.dateFilterLabel.Text = "DATE OF CREATION";
+            this.dateFilterLabel.Text = "YEAR OF CREATION";
             // 
             // label3
             // 
@@ -76,7 +77,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(311, 89);
+            this.label3.Location = new System.Drawing.Point(339, 149);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(184, 16);
             this.label3.TabIndex = 10;
@@ -87,7 +88,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1, 9);
+            this.label4.Location = new System.Drawing.Point(169, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(212, 16);
             this.label4.TabIndex = 11;
@@ -97,7 +98,7 @@
             // 
             this.generateQRCode.BackColor = System.Drawing.Color.Transparent;
             this.generateQRCode.FlatAppearance.BorderSize = 0;
-            this.generateQRCode.Location = new System.Drawing.Point(102, 381);
+            this.generateQRCode.Location = new System.Drawing.Point(90, 454);
             this.generateQRCode.Name = "generateQRCode";
             this.generateQRCode.Size = new System.Drawing.Size(111, 23);
             this.generateQRCode.TabIndex = 13;
@@ -111,53 +112,32 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(75, 89);
+            this.label2.Location = new System.Drawing.Point(71, 149);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(173, 16);
             this.label2.TabIndex = 16;
             this.label2.Text = "GENERATED QR CODE";
             // 
-            // savedInfoRichTextBox
-            // 
-            this.savedInfoRichTextBox.Location = new System.Drawing.Point(302, 108);
-            this.savedInfoRichTextBox.Name = "savedInfoRichTextBox";
-            this.savedInfoRichTextBox.Size = new System.Drawing.Size(205, 252);
-            this.savedInfoRichTextBox.TabIndex = 19;
-            this.savedInfoRichTextBox.Text = "";
-            this.savedInfoRichTextBox.TextChanged += new System.EventHandler(this.savedInfoRichTextBox_TextChanged);
-            // 
             // generatedQRPictureBox
             // 
             this.generatedQRPictureBox.BackColor = System.Drawing.Color.White;
             this.generatedQRPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.generatedQRPictureBox.Location = new System.Drawing.Point(53, 122);
+            this.generatedQRPictureBox.Location = new System.Drawing.Point(12, 168);
             this.generatedQRPictureBox.Name = "generatedQRPictureBox";
-            this.generatedQRPictureBox.Size = new System.Drawing.Size(233, 229);
+            this.generatedQRPictureBox.Size = new System.Drawing.Size(282, 280);
             this.generatedQRPictureBox.TabIndex = 21;
             this.generatedQRPictureBox.TabStop = false;
             // 
-            // label1
+            // allRightsReservedLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1, 420);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 12);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "All rights reserved.";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Location = new System.Drawing.Point(438, 383);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(81, 21);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "NAME";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.allRightsReservedLabel.AutoSize = true;
+            this.allRightsReservedLabel.BackColor = System.Drawing.Color.Transparent;
+            this.allRightsReservedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.allRightsReservedLabel.Location = new System.Drawing.Point(1, 484);
+            this.allRightsReservedLabel.Name = "allRightsReservedLabel";
+            this.allRightsReservedLabel.Size = new System.Drawing.Size(83, 12);
+            this.allRightsReservedLabel.TabIndex = 22;
+            this.allRightsReservedLabel.Text = "All rights reserved.";
             // 
             // seePersonInfoComboBox
             // 
@@ -167,7 +147,7 @@
             ""});
             this.seePersonInfoComboBox.Location = new System.Drawing.Point(102, 59);
             this.seePersonInfoComboBox.Name = "seePersonInfoComboBox";
-            this.seePersonInfoComboBox.Size = new System.Drawing.Size(405, 21);
+            this.seePersonInfoComboBox.Size = new System.Drawing.Size(367, 21);
             this.seePersonInfoComboBox.TabIndex = 24;
             this.seePersonInfoComboBox.SelectedIndexChanged += new System.EventHandler(this.seePersonInfoComboBox_SelectedIndexChanged);
             // 
@@ -182,17 +162,40 @@
             this.label5.TabIndex = 25;
             this.label5.Text = "LOOK FOR NAME:";
             // 
+            // closeFormBtn
+            // 
+            this.closeFormBtn.BackColor = System.Drawing.Color.Transparent;
+            this.closeFormBtn.FlatAppearance.BorderSize = 0;
+            this.closeFormBtn.Location = new System.Drawing.Point(485, 27);
+            this.closeFormBtn.Name = "closeFormBtn";
+            this.closeFormBtn.Size = new System.Drawing.Size(60, 21);
+            this.closeFormBtn.TabIndex = 30;
+            this.closeFormBtn.Text = "Close";
+            this.closeFormBtn.UseVisualStyleBackColor = false;
+            this.closeFormBtn.Click += new System.EventHandler(this.closeFormBtn_Click);
+            // 
+            // savedInfoRichTextBox
+            // 
+            this.savedInfoRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.savedInfoRichTextBox.Location = new System.Drawing.Point(310, 168);
+            this.savedInfoRichTextBox.Name = "savedInfoRichTextBox";
+            this.savedInfoRichTextBox.Size = new System.Drawing.Size(235, 280);
+            this.savedInfoRichTextBox.TabIndex = 31;
+            this.savedInfoRichTextBox.Text = "";
+            // 
             // checkInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(543, 439);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(557, 500);
+            this.Controls.Add(this.savedInfoRichTextBox);
+            this.Controls.Add(this.closeFormBtn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.seePersonInfoComboBox);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.allRightsReservedLabel);
             this.Controls.Add(this.generatedQRPictureBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.generateQRCode);
@@ -200,11 +203,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dateFilterLabel);
             this.Controls.Add(this.dateOfCreation);
-            this.Controls.Add(this.savedInfoRichTextBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "checkInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Name of Contact";
+            this.Text = "Check Your Information";
+            this.Load += new System.EventHandler(this.checkInfoForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.generatedQRPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -218,11 +221,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button generateQRCode;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox savedInfoRichTextBox;
         private System.Windows.Forms.PictureBox generatedQRPictureBox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label allRightsReservedLabel;
         private System.Windows.Forms.ComboBox seePersonInfoComboBox;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button closeFormBtn;
+        private System.Windows.Forms.RichTextBox savedInfoRichTextBox;
     }
 }

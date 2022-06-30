@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(personalInfoForm));
             this.answerTextBox3 = new System.Windows.Forms.TextBox();
             this.boosterShotsLabel = new System.Windows.Forms.Label();
@@ -82,8 +83,6 @@
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTodayLabel = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.logoutBtn = new System.Windows.Forms.Button();
             this.checkInfoBtn = new System.Windows.Forms.Button();
             this.lastNameTextBox = new System.Windows.Forms.TextBox();
@@ -91,6 +90,16 @@
             this.dayOfCreationComboBox = new System.Windows.Forms.ComboBox();
             this.monthOfCreationComboBox = new System.Windows.Forms.ComboBox();
             this.sexSelectionComboBox = new System.Windows.Forms.ComboBox();
+            this.nameOfCamComboBox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.readQRCodeBtn = new System.Windows.Forms.Button();
+            this.capturingQRDevice = new System.Windows.Forms.PictureBox();
+            this.capturingQRTimer = new System.Windows.Forms.Timer(this.components);
+            this.infoOfQRCodeRTB = new System.Windows.Forms.RichTextBox();
+            this.autoFillBtn = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.capturingQRDevice)).BeginInit();
             this.SuspendLayout();
             // 
             // answerTextBox3
@@ -611,7 +620,7 @@
             this.appName.BackColor = System.Drawing.Color.Transparent;
             this.appName.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.appName.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.appName.Location = new System.Drawing.Point(139, 9);
+            this.appName.Location = new System.Drawing.Point(426, 9);
             this.appName.Name = "appName";
             this.appName.Size = new System.Drawing.Size(250, 16);
             this.appName.TabIndex = 133;
@@ -667,14 +676,6 @@
             this.dateTodayLabel.Size = new System.Drawing.Size(90, 13);
             this.dateTodayLabel.TabIndex = 138;
             this.dateTodayLabel.Text = "DATE TODAY:";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(546, 34);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(380, 382);
-            this.richTextBox1.TabIndex = 140;
-            this.richTextBox1.Text = "PLANNING TO ADD SCANNER HERE TO AUTOCOMPLETE THE INFORMATION ON THE LEFT";
             // 
             // logoutBtn
             // 
@@ -797,13 +798,110 @@
             this.sexSelectionComboBox.Size = new System.Drawing.Size(160, 21);
             this.sexSelectionComboBox.TabIndex = 147;
             // 
+            // nameOfCamComboBox
+            // 
+            this.nameOfCamComboBox.FormattingEnabled = true;
+            this.nameOfCamComboBox.Location = new System.Drawing.Point(649, 32);
+            this.nameOfCamComboBox.Name = "nameOfCamComboBox";
+            this.nameOfCamComboBox.Size = new System.Drawing.Size(286, 21);
+            this.nameOfCamComboBox.TabIndex = 149;
+            this.nameOfCamComboBox.SelectedIndexChanged += new System.EventHandler(this.nameOfCamComboBox_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(581, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 13);
+            this.label2.TabIndex = 150;
+            this.label2.Text = "CAMERA:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(675, 60);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(126, 13);
+            this.label3.TabIndex = 151;
+            this.label3.Text = "QR CODE SCANNER";
+            // 
+            // readQRCodeBtn
+            // 
+            this.readQRCodeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.readQRCodeBtn.Location = new System.Drawing.Point(711, 401);
+            this.readQRCodeBtn.Name = "readQRCodeBtn";
+            this.readQRCodeBtn.Size = new System.Drawing.Size(68, 21);
+            this.readQRCodeBtn.TabIndex = 152;
+            this.readQRCodeBtn.Text = "SCAN";
+            this.readQRCodeBtn.UseVisualStyleBackColor = true;
+            this.readQRCodeBtn.Click += new System.EventHandler(this.readQRCodeBtn_Click);
+            // 
+            // capturingQRDevice
+            // 
+            this.capturingQRDevice.BackColor = System.Drawing.Color.White;
+            this.capturingQRDevice.Location = new System.Drawing.Point(564, 76);
+            this.capturingQRDevice.Name = "capturingQRDevice";
+            this.capturingQRDevice.Size = new System.Drawing.Size(356, 319);
+            this.capturingQRDevice.TabIndex = 154;
+            this.capturingQRDevice.TabStop = false;
+            // 
+            // capturingQRTimer
+            // 
+            this.capturingQRTimer.Interval = 1000;
+            this.capturingQRTimer.Tick += new System.EventHandler(this.capturingQRTimer_Tick);
+            // 
+            // infoOfQRCodeRTB
+            // 
+            this.infoOfQRCodeRTB.Location = new System.Drawing.Point(936, 76);
+            this.infoOfQRCodeRTB.Name = "infoOfQRCodeRTB";
+            this.infoOfQRCodeRTB.ReadOnly = true;
+            this.infoOfQRCodeRTB.Size = new System.Drawing.Size(293, 319);
+            this.infoOfQRCodeRTB.TabIndex = 156;
+            this.infoOfQRCodeRTB.Text = "";
+            this.infoOfQRCodeRTB.TextChanged += new System.EventHandler(this.infoOfQRCodeRTB_TextChanged);
+            // 
+            // autoFillBtn
+            // 
+            this.autoFillBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.autoFillBtn.Location = new System.Drawing.Point(1030, 401);
+            this.autoFillBtn.Name = "autoFillBtn";
+            this.autoFillBtn.Size = new System.Drawing.Size(113, 21);
+            this.autoFillBtn.TabIndex = 157;
+            this.autoFillBtn.Text = "AUTO-FILL FORM";
+            this.autoFillBtn.UseVisualStyleBackColor = true;
+            this.autoFillBtn.Click += new System.EventHandler(this.autoFillBtn_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(1012, 58);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(153, 13);
+            this.label4.TabIndex = 158;
+            this.label4.Text = "QR CODE INFORMATION";
+            // 
             // personalInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(938, 432);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1240, 436);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.autoFillBtn);
+            this.Controls.Add(this.infoOfQRCodeRTB);
+            this.Controls.Add(this.capturingQRDevice);
+            this.Controls.Add(this.readQRCodeBtn);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.nameOfCamComboBox);
             this.Controls.Add(this.sexSelectionComboBox);
             this.Controls.Add(this.monthOfCreationComboBox);
             this.Controls.Add(this.dayOfCreationComboBox);
@@ -811,7 +909,6 @@
             this.Controls.Add(this.lastNameTextBox);
             this.Controls.Add(this.checkInfoBtn);
             this.Controls.Add(this.logoutBtn);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.dateTodayLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.firstNameTextBox);
@@ -865,11 +962,12 @@
             this.Controls.Add(this.firstDoseDate);
             this.Controls.Add(this.secondDoseLabel);
             this.Controls.Add(this.firstDoseLabel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "personalInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
+            this.Text = "Person Information Form";
             this.Load += new System.EventHandler(this.Form2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.capturingQRDevice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -929,8 +1027,6 @@
         private System.Windows.Forms.TextBox firstNameTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label dateTodayLabel;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button logoutBtn;
         private System.Windows.Forms.Button checkInfoBtn;
         private System.Windows.Forms.TextBox lastNameTextBox;
@@ -938,5 +1034,14 @@
         private System.Windows.Forms.ComboBox dayOfCreationComboBox;
         private System.Windows.Forms.ComboBox monthOfCreationComboBox;
         private System.Windows.Forms.ComboBox sexSelectionComboBox;
+        private System.Windows.Forms.ComboBox nameOfCamComboBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button readQRCodeBtn;
+        private System.Windows.Forms.PictureBox capturingQRDevice;
+        private System.Windows.Forms.Timer capturingQRTimer;
+        private System.Windows.Forms.RichTextBox infoOfQRCodeRTB;
+        private System.Windows.Forms.Button autoFillBtn;
+        private System.Windows.Forms.Label label4;
     }
 }

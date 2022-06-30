@@ -33,6 +33,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.exitBtn = new System.Windows.Forms.Button();
             this.designPanel = new System.Windows.Forms.Panel();
+            this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.personPictureBox = new System.Windows.Forms.PictureBox();
             this.contactInfoLabel = new System.Windows.Forms.Label();
             this.loginBtn = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@
             this.verLabel = new System.Windows.Forms.Label();
             this.aboutBtn = new System.Windows.Forms.Button();
             this.appNameLabel = new System.Windows.Forms.Label();
-            this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.designPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.personPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -100,6 +100,13 @@
             this.designPanel.Name = "designPanel";
             this.designPanel.Size = new System.Drawing.Size(233, 377);
             this.designPanel.TabIndex = 66;
+            // 
+            // usernameTextBox
+            // 
+            this.usernameTextBox.Location = new System.Drawing.Point(42, 194);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(152, 20);
+            this.usernameTextBox.TabIndex = 79;
             // 
             // personPictureBox
             // 
@@ -208,13 +215,6 @@
             this.appNameLabel.Size = new System.Drawing.Size(250, 16);
             this.appNameLabel.TabIndex = 67;
             this.appNameLabel.Text = "COVID 19 - Health Contact Tracing App";
-            // 
-            // usernameTextBox
-            // 
-            this.usernameTextBox.Location = new System.Drawing.Point(42, 194);
-            this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(152, 20);
-            this.usernameTextBox.TabIndex = 79;
             // 
             // loginForm
             // 

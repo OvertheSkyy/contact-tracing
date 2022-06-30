@@ -1,7 +1,16 @@
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\contact-tracing.exe.config
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\contact-tracing.exe
-E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\contact-tracing.pdb
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\AForge.dll
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\AForge.Video.DirectShow.dll
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\AForge.Video.dll
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\QRCoder.dll
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\zxing.dll
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\zxing.presentation.dll
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\AForge.xml
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\AForge.Video.xml
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\AForge.Video.DirectShow.xml
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\zxing.xml
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\zxing.presentation.xml
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tracing.csproj.AssemblyReference.cache
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tracing.csproj.SuggestedBindingRedirects.cache
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\Interop.WMPLib.dll
@@ -16,3 +25,6 @@ E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tra
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tracing.csproj.CopyComplete
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tracing.exe
 E:\Desktop\contact-tracing\contact-tracing\contact-tracing\obj\Debug\contact-tracing.pdb
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\contact-tracing.pdb
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\BasselTech CamCapture.dll
+E:\Desktop\contact-tracing\contact-tracing\contact-tracing\bin\Debug\MessagingToolkit.QRCode.dll

@@ -14,62 +14,54 @@ namespace contact_tracing
 {
     public partial class checkInfoForm : Form
     {
-        
+
         public checkInfoForm()
         {
             InitializeComponent();
         }
 
-        private void generateQRCode_Click(object sender, EventArgs e)
-        {
-            QRCodeGenerator QR = new QRCodeGenerator();
-            QRCodeData personInfo = QR.CreateQrCode(savedInfoRichTextBox.Text, QRCodeGenerator.ECCLevel.Q);
-            QRCode code = new QRCode(personInfo);
-            generatedQRPictureBox.Image = code.GetGraphic(3);
-        }
-
-        private void showNameBtn_Click(object sender, EventArgs e)
+        private void checkInfoForm_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            personalInfoForm form = new personalInfoForm();
-            form.Hide();
-            this.Close();
         }
 
         private void dateOfCreation_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (dateOfCreation.Text == "2019")
+            try
             {
-                seePersonInfoComboBox.Items.Clear();
-                dateOfCreationyr2019();
-            }
+                if (dateOfCreation.Text == "2019")
+                {
+                    seePersonInfoComboBox.Items.Clear();
+                    dateOfCreationyr2019();
+                }
 
-            else if (dateOfCreation.Text == "2020")
-            {
-                seePersonInfoComboBox.Items.Clear();
-                dateOfCreationyr2020();
-            }
+                else if (dateOfCreation.Text == "2020")
+                {
+                    seePersonInfoComboBox.Items.Clear();
+                    dateOfCreationyr2020();
+                }
 
-            else if (dateOfCreation.Text == "2021")
-            {
-                seePersonInfoComboBox.Items.Clear();
-                dateOfCreationyr2021();
-            }
+                else if (dateOfCreation.Text == "2021")
+                {
+                    seePersonInfoComboBox.Items.Clear();
+                    dateOfCreationyr2021();
+                }
 
-            else if (dateOfCreation.Text == "2022")
-            {
-                seePersonInfoComboBox.Items.Clear();
-                dateOfCreationyr2022();
-            }
+                else if (dateOfCreation.Text == "2022")
+                {
+                    seePersonInfoComboBox.Items.Clear();
+                    dateOfCreationyr2022();
+                }
 
-            else if (dateOfCreation.Text == "2023")
+                else if (dateOfCreation.Text == "2023")
+                {
+                    seePersonInfoComboBox.Items.Clear();
+                    dateOfCreationyr2023();
+                }
+            }
+            catch
             {
-                seePersonInfoComboBox.Items.Clear();
-                dateOfCreationyr2023();
+
             }
         }
 
@@ -87,7 +79,7 @@ namespace contact_tracing
         private void dateOfCreationyr2020()
         {
             string[] filePathToString = Directory.GetFiles(@"E:\Desktop\contact-tracing\2020\");
-            
+
             foreach (string filePath in filePathToString)
             {
                 seePersonInfoComboBox.Items.Remove(filePath);
@@ -133,14 +125,22 @@ namespace contact_tracing
         {
             string personFilePath = seePersonInfoComboBox.SelectedItem as string;
             StreamReader readFilePath = new StreamReader(personFilePath);
-           
+
             savedInfoRichTextBox.Text = readFilePath.ReadToEnd();
 
         }
 
-        private void savedInfoRichTextBox_TextChanged(object sender, EventArgs e)
+        private void generateQRCode_Click(object sender, EventArgs e)
         {
+            QRCodeGenerator QR = new QRCodeGenerator();
+            QRCodeData personInfo = QR.CreateQrCode(savedInfoRichTextBox.Text, QRCodeGenerator.ECCLevel.Q);
+            QRCode code = new QRCode(personInfo);
+            generatedQRPictureBox.Image = code.GetGraphic(3);
+        }
 
+        private void closeFormBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
